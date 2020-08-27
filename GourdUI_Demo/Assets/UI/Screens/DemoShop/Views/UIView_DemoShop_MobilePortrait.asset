@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a30235a75a4f44eca082bf75bcbcbd6d, type: 3}
+  m_Name: UIView_DemoShop_MobilePortrait
+  m_EditorClassIdentifier: 
+  data:
+    prefab: {fileID: 4055948165025291091, guid: 1a5d8448dd0d04cfbad3215cfbc39699,
+      type: 3}
+    filterData:
+      inputFilterData:
+        mouseKB: 1
+        controller: 1
+        touchscreen: 1
+      orientationFilterData:
+        portrait: 1
+        landscape: 0
+      platformFilterData:
+        desktop: 0
+        mobile: 1
+        console: 1
+    viewSpecificTriggers: []

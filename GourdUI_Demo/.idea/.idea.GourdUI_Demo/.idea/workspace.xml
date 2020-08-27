@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0ff7ae49-a623-44e1-8de4-69eeedb19ed3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../GourdUI/CHANGELOG.md.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Editor.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/README.md.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Components.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Components/MonoUIView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Components/MonoUIView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Components/SafeArea.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Components/SafeArea.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Core.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Core/Data.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Core/Data/GourdUISystemData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Core/Data/GourdUISystemData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Core/GourdUI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Core/GourdUI.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Core/GourdUICore.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Core/GourdUICore.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Core/IGourdUI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Core/IGourdUI.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Cursor.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Cursor/UICursorController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Cursor/UICursorController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Device.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Device/Components.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Device/Components/DeviceUpdateHook.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Device/Components/DeviceUpdateHook.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Device/CoreDevice.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Device/CoreDevice.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Device/ICoreDevice.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Device/ICoreDevice.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Device/ISafeArea.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Device/ISafeArea.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Input.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Input/IUIInputListener.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Input/IUIInputListener.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Input/UIInputTriggerListener.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Input/UIInputTriggerListener.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Screens.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Screens/Data.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Screens/Data/UIScreenConfigData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Screens/Data/UIScreenConfigData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Screens/Data/UIScreenConfigDataTemplate.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Screens/Data/UIScreenConfigDataTemplate.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Screens/Data/UIScreenDataManifest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Screens/Data/UIScreenDataManifest.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Screens/UIScreen.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Screens/UIScreen.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Triggers.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Triggers/Data.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Triggers/Data/UITriggerBaseConfigDataTemplate.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Triggers/Data/UITriggerBaseConfigDataTemplate.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Triggers/Data/UITriggerKeyCodeConfigData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Triggers/Data/UITriggerKeyCodeConfigData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Triggers/Data/UITriggerKeyCodeConfigDataTemplate.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Triggers/Data/UITriggerKeyCodeConfigDataTemplate.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Triggers/Data/UITriggerManualCodeConfigData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Triggers/Data/UITriggerManualCodeConfigData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Triggers/Data/UITriggerManualCodeConfigDataTemplate.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Triggers/Data/UITriggerManualCodeConfigDataTemplate.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/ViewFilters.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/ViewFilters/Data.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/ViewFilters/Data/UIViewFilterConfigData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/ViewFilters/Data/UIViewFilterConfigData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/ViewFilters/Data/UIViewFilterInputConfigData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/ViewFilters/Data/UIViewFilterInputConfigData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/ViewFilters/Data/UIViewFilterOrientationConfigData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/ViewFilters/Data/UIViewFilterOrientationConfigData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/ViewFilters/Data/UIViewFilterPlatformConfigData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/ViewFilters/Data/UIViewFilterPlatformConfigData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/ViewFilters/UIViewFilterResolver.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/ViewFilters/UIViewFilterResolver.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Views.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Views/Data.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Views/Data/UIViewConfigData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Views/Data/UIViewConfigData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Views/Data/UIViewConfigDataTemplate.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Views/Data/UIViewConfigDataTemplate.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Views/IUIView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Views/IUIView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/com.mstephens.gourdUI.asmdef" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/com.mstephens.gourdUI.asmdef.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Tests.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/package.json.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.GourdUI_Demo/.idea/contentModel.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.GourdUI_Demo/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.GourdUI_Demo/.idea/indexLayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.GourdUI_Demo/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.GourdUI_Demo/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.GourdUI_Demo/.idea/projectSettingsUpdater.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.GourdUI_Demo/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.GourdUI_Demo/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.GourdUI_Demo/riderModule.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Clothes.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Clothes/Cloak_02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Clothes/Cloak_02.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Clothes/Cloak_03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Clothes/Cloak_03.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Clothes/Necklace_02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Clothes/Necklace_02.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Clothes/Necklace_03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Clothes/Necklace_03.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Clothes/Ornament_02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Clothes/Ornament_02.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Clothes/Ornament_03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Clothes/Ornament_03.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Clothes/Shirt_00.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Clothes/Shirt_00.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Clothes/Shirt_01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Clothes/Shirt_01.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Clothes/metal chest plate.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Clothes/metal chest plate.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Items.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Items/Berry_02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Items/Berry_02.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Items/Berry_03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Items/Berry_03.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Items/Book_00.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Items/Book_00.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Items/Book_03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Items/Book_03.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Items/Coin_03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Items/Coin_03.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Items/Crystal Ball_02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Items/Crystal Ball_02.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Items/Crystal Ball_03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Items/Crystal Ball_03.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Items/Flower Bunch_03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Items/Flower Bunch_03.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Items/Gems_01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Items/Gems_01.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Items/Gems_03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Items/Gems_03.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Items/Metal Case_00.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Items/Metal Case_00.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Items/Metal Case_01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Items/Metal Case_01.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Items/Parchment_02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Items/Parchment_02.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Items/Ruin Stone_01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Items/Ruin Stone_01.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Items/Ruin Stone_02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Items/Ruin Stone_02.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Items/Small Potion_00.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Items/Small Potion_00.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Items/Small Potion_03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Items/Small Potion_03.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Items/Wood_00.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Items/Wood_00.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Items/Wood_01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Items/Wood_01.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Weapons.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Weapons/Essence_03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Weapons/Essence_03.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Weapons/metal sword.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Icons/Basic RPG Item Free/Weapons/metal sword.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Data.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Data/Shop.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Data/Shop/Categories.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Data/Shop/Categories/ShopCategory_Clothes.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Data/Shop/Categories/ShopCategory_Clothes.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Data/Shop/Categories/ShopCategory_Items.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Data/Shop/Categories/ShopCategory_Items.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Data/Shop/Categories/ShopCategory_Weapons.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Data/Shop/Categories/ShopCategory_Weapons.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Data/Shop/Items.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Data/Shop/Items/ShopItem_Cloak1.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Data/Shop/Items/ShopItem_Cloak1.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Data/Shop/Items/ShopItem_Cloak2.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Data/Shop/Items/ShopItem_Cloak2.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Data/Shop/Items/ShopItem_Sword.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Data/Shop/Items/ShopItem_Sword.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/GourdUI.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/GourdUI/Core System Data.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/GourdUI/Core System Data.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/GourdUI/UIScreen Manifest.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/GourdUI/UIScreen Manifest.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Shop.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Shop/ShopCategoryData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Shop/ShopItemInstanceData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Shop/ShopItemInstanceData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Documentation.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Documentation/TextMesh Pro User Guide 2016.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Documentation/TextMesh Pro User Guide 2016.pdf.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/LiberationSans.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/LiberationSans.ttf.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Drop Shadow.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Drop Shadow.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Outline.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Outline.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Sprite Assets.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Sprite Assets/EmojiOne.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Sprite Assets/EmojiOne.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Style Sheets.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/TMP Settings.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/TMP Settings.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_Sprite.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_Sprite.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMPro.cginc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMPro.cginc.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites/EmojiOne.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites/EmojiOne.json.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites/EmojiOne.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites/EmojiOne.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Data.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Data/Triggers.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Data/Triggers/KeyCode Triggers.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Data/Triggers/KeyCode Triggers/UITrigger_KeyCode_Space.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Data/Triggers/KeyCode Triggers/UITrigger_KeyCode_Space.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Data/Triggers/Manual Triggers.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Data/Triggers/Manual Triggers/UITrigger_ManualString_DemoShop.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Data/Triggers/Manual Triggers/UITrigger_ManualString_DemoShop.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Data.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Prefabs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Prefabs/Button_ShopSelection.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Prefabs/Button_ShopSelection.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Prefabs/UIScreen_DemoShop.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Prefabs/UIScreen_DemoShop.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Prefabs/UIView_DemoShopMobilePortrait.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Prefabs/UIView_DemoShopMobilePortrait.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/DemoShopItemDetailsPanel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/DemoShopItemDetailsPanel.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/DemoShopItemSelectionButtonInstance.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/DemoShopItemSelectionButtonInstance.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/UIScreen_DemoShop.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/UIScreen_DemoShop.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/UIView_DemoShop.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/UIView_DemoShop.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/UIScreen_DemoShop_Data.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/UIScreen_DemoShop_Data.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Views.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Views/UIView_DemoShop_MobilePortrait.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Views/UIView_DemoShop_MobilePortrait.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/com.mstephens.gourdUIDemo.asmdef" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/com.mstephens.gourdUIDemo.asmdef.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/Artifacts/06/067e571f90dcd07b5d01f7695bb40fda" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/Artifacts/0c/0c8709cb88fb5336ac6ba25a65df959a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/Artifacts/17/17bbe18111dd94bc63c13b8947baa714" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/Artifacts/18/188c35c43b5133458c589e8f5b1bcc70" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/Artifacts/21/21ac16e73a989a1e0c2b8465e77bb23f" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/Artifacts/23/232a1d0f9067420d1f9c85fb94a3be20" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/Artifacts/27/27efb8fea11ccb2f4df09c0cbff0a88c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/Artifacts/2c/2c2759fbffe91e59608952bbcca96e93" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/Artifacts/4f/4f7ed23d1f5a8b59dd830597298cc4c3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/Artifacts/55/55f84f1195a9125ecc2fda85bf2c8d19" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/Artifacts/60/60619d5d7ffb56043cb7588d06da8cfe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/Artifacts/71/7149df9a7c9c39ceb1a6604285223a0c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/Artifacts/73/730e00aab66f83202a9e67c725acb11e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/Artifacts/7b/7b2c09d294b41d8fa74a550772d776b1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/Artifacts/80/8027d15127e6526d6be10a32fe221a96" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/Artifacts/8a/8adfdb09763da935d8bf43c731fdf6e3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/Artifacts/91/91a9a9efe34b137845cfbc9e98ba3e7a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/Artifacts/ac/ac3a0ef74f7aa01fc9561c6e7e998417" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/Artifacts/bf/bf5a414ecfa9dad5c9c04f3ad6a5f653" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/Artifacts/c4/c4c6ae84c8012a9a9eb707f0c75d87a2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/Artifacts/cf/cf00a2fd4bede6f6051afcb2877524d8" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/Artifacts/d4/d498688b519ddc00aaa048ba6125f6cb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/Artifacts/d6/d6f4b4556cdd2995a95b71e166ec8c63" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/Artifacts/ea/eaf8ecf55afec5c73ddae1f1648395b7" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/Artifacts/f0/f0d4d17168ffc2a0a854943c2d96b287" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/Artifacts/f4/f494e58cfceb985a77065d808a2297f4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/Artifacts/f8/f8e842ecd1df39468a5a40afd021f3d1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/Artifacts/fc/fc708448ac04482fe6b185e17bb2da50" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/EditorSnapSettings.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/1b47ed-mainStage.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/44a823-mainStage.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/UIElements/EditorWindows/UnityEditor.PackageManager.UI.PackageManagerWindow.pref" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/com.mstephens.gourdUI.csproj.DotSettings" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/Debug/.NETFramework,Version=v4.7.1.AssemblyAttributes.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp-Editor.csprojAssemblyReference.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GourdUI/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../GourdUI/package.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../GourdUI/Runtime/Screens/Data/UIScreenConfigDataTemplate.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../GourdUI/Runtime/Screens/Data/UIScreenConfigData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Shop/ShopItemInstanceData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Shop/ShopCategoryData.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Components/SafeArea.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Data/UIScreenTriggerConfigData.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Data/UIScreenTriggerCodeDataTemplate.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Triggers/Data/UIScreenTriggerInputConfigDat.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Triggers/Data/UIScreenTriggerCodeConfigDataTemplate.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Triggers/Data/UIScreenTriggerInputConfigDataTemplate.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Triggers/Data/UIScreenTriggerCodeConfigData.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Triggers/Data/UIScreenTriggerInputConfigData.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Data/UIScreenConfigData.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Triggers/UIScreenTriggerInputKeycode.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Triggers/UIScreenTrigger.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Triggers/UIScreenTriggerBase.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Triggers/IUIScreenTriggerable.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Triggers/UIScreenTriggerCode.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Triggers/UIScreenTriggerInputAction.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Triggers/UIScreenTriggerResolver.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Runtime/View/Data/UIViewConfigData.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Triggers/UITriggerBaseConfigDataTemplate.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Triggers/UITriggerCodeConfigData.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Triggers/UITriggerCodeConfigDataTemplate.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Triggers/UITriggerKeyCodeConfigData.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Triggers/UITriggerManualCodeConfigData.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Triggers/UITriggerManualCodeConfigDataTemplate.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Triggers/UITriggerKeyCodeConfigDataTemplate.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Views/Data/UIViewConfigDataTemplate.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Screens/Data/UIScreenConfigData.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Core/IGourdUI.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Screens/Data/UIScreenDataManifest.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Views/UIViewSpawnerHook.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Screens/Data/UIScreenConfigDataTemplate.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UIViews/UIView_DemoShopMobilePortrait.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Core/GourdUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UIScreens/UIScreen_DemoShop.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Runtime/ViewFilters/Data/UIViewFilterOrientationConfigData.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Runtime/ViewFilters/Data/UIViewFilterInputConfigData.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Views/Data/UIViewConfigData.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Runtime/ViewFilters/Data/UIViewFilterConfigData.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Runtime/ViewFilters/UIViewFilterResolver.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Device/CoreDevice.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Runtime/ViewFilters/Data/UIViewFilterPlatformConfigData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Shop/ShopItemInstanceData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Shop/ShopCategoryData.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Views/IUIView.cs" />
+        <option value="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/UIView_DemoShopMobilePortrait.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Screens/UIScreen.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Components/MonoUIView.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Core/GourdUICore.cs" />
+        <option value="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/DemoShopItemSelectionButtonInstance.cs" />
+        <option value="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/UIView_DemoShop.cs" />
+        <option value="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/UIScreen_DemoShop.cs" />
+        <option value="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/DemoShopItemDetailsPanel.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1gdzEKcDWhOjXPqhrAweFs94DIZ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0ff7ae49-a623-44e1-8de4-69eeedb19ed3" name="Default Changelist" comment="" />
+      <created>1598459187305</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1598459187305</updated>
+      <workItem from="1598459187947" duration="27580000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="278" y="-1000" key="RiderGenerateDialog" timestamp="1598544939246">
+      <screen x="-814" y="-1417" width="2560" height="1417" />
+    </state>
+    <state x="278" y="-1000" key="RiderGenerateDialog/-814.-1417.2560.1417/0.23.1792.1097@-814.-1417.2560.1417" timestamp="1598544939246" />
+    <state x="-33" y="-1070" key="SettingsEditor" timestamp="1598459867203">
+      <screen x="-814" y="-1417" width="2560" height="1417" />
+    </state>
+    <state x="-33" y="-1070" key="SettingsEditor/-814.-1417.2560.1417/0.23.1792.1097@-814.-1417.2560.1417" timestamp="1598459867203" />
+    <state x="129" y="-1094" width="672" height="678" key="search.everywhere.popup" timestamp="1598533925736">
+      <screen x="-814" y="-1417" width="2560" height="1417" />
+    </state>
+    <state x="129" y="-1094" width="672" height="678" key="search.everywhere.popup/-814.-1417.2560.1417/0.23.1792.1097@-814.-1417.2560.1417" timestamp="1598533925736" />
+  </component>
+</project>
