@@ -11,7 +11,7 @@ namespace GourdUI
         /// Returns the current app device data.
         /// </summary>
         /// <returns>The current data for the app device.</returns>
-        CoreDevice.AppDeviceData DeviceData();
+        AppDeviceData DeviceData();
 
         /// <summary>
         /// Registers a UI safe area to respond to safe area changes.

@@ -1,28 +1,19 @@
 ﻿using GourdUI;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIScreen_DemoShop : UIScreen
+public partial class UIScreen_DemoShop : UIScreen
 {
     #region View Interface
 
-    public interface IDemoShopView : IUIView
-    {
-        TMP_Text CurrencyAmountText();
-        DemoShopItemDetailsPanel ItemDetailsPanel();
-        Transform ItemGridParent();
-        UnityEngine.UI.Button Category1SelectButton();
-        UnityEngine.UI.Button Category2SelectButton();
-        UnityEngine.UI.Button Category3SelectButton();
-    }
-    private IDemoShopView _currentView;
+    private IDemoShopViewContract _viewContract;
 
     #endregion View Interface
 
 
     #region Data
 
+    [Header("References")]
     public DemoShopItemSelectionButtonInstance itemButtonPrefab;
     public ShopCategoryData category1Data;
     public ShopCategoryData category2Data;
@@ -41,13 +32,13 @@ public class UIScreen_DemoShop : UIScreen
     
     #region Setup
 
-    protected override void SetupView<T>(T viewAsInterface)
+    protected override void SetupView<T>(T contract)
     {
-        _currentView = viewAsInterface as IDemoShopView;
-        _currentView.Category1SelectButton().onClick.AddListener(OnCategory1Selected);
-        _currentView.Category2SelectButton().onClick.AddListener(OnCategory2Selected);
-        _currentView.Category3SelectButton().onClick.AddListener(OnCategory3Selected);
-        _currentView.ItemDetailsPanel().purchaseItemButton.onClick.AddListener(
+        _viewContract = contract as IDemoShopViewContract;
+        _viewContract.Category1SelectButton().onClick.AddListener(OnCategory1Selected);
+        _viewContract.Category2SelectButton().onClick.AddListener(OnCategory2Selected);
+        _viewContract.Category3SelectButton().onClick.AddListener(OnCategory3Selected);
+        _viewContract.ItemDetailsPanel().purchaseItemButton.onClick.AddListener(
             OnCurrentSelectedItemPurchased);
         
         // Populate new items
@@ -100,7 +91,7 @@ public class UIScreen_DemoShop : UIScreen
 
     private void ClearItemGrid()
     {
-        foreach (Transform child in _currentView.ItemGridParent())
+        foreach (Transform child in _viewContract.ItemGridParent())
         {
             Destroy(child.gameObject);
         }
@@ -110,7 +101,7 @@ public class UIScreen_DemoShop : UIScreen
     {
         foreach (ShopItemInstanceData item in data.categoryItems)
         {
-            Transform grid = _currentView.ItemGridParent();
+            Transform grid = _viewContract.ItemGridParent();
             DemoShopItemSelectionButtonInstance button = Instantiate(itemButtonPrefab, grid);
             button.PopulateSelection(item);
             
@@ -123,8 +114,8 @@ public class UIScreen_DemoShop : UIScreen
     private void OnItemButtonSelected(ShopItemInstanceData data)
     {
         _currentSelectedItem = data;
-        _currentView.ItemDetailsPanel().OnItemSelected(data);
-        _currentView.ItemDetailsPanel().gameObject.SetActive(true);
+        _viewContract.ItemDetailsPanel().OnItemSelected(data);
+        _viewContract.ItemDetailsPanel().gameObject.SetActive(true);
     }
 
     private void OnCurrentSelectedItemPurchased()

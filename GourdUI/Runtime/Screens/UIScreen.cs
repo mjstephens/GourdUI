@@ -40,7 +40,7 @@ namespace GourdUI
         /// </summary>
         public virtual void OnScreenInstantiated()
         {
-            FindValidUIView();
+            FindValidUIView(GourdUI.Device.DeviceData());
             if (configBaseData.data.activeOnLoad)
             {
                 GourdUI.Core.AddScreenToStack(this, 0);
@@ -86,21 +86,29 @@ namespace GourdUI
         /// <summary>
         /// Responds to app device data updates.
         /// </summary>
-        public void OnAppDeviceDataUpdated()
+        public void OnAppDeviceDataUpdated(AppDeviceData deviceData)
         {
-            FindValidUIView();
+            // Find valid UI views for the new device data
+            FindValidUIView(deviceData);
+            
+            // Update view filter components on active view
+            if (_currentViewObject != null)
+            {
+                (_currentViewObject as IUIViewContract).OnDeviceDataUpdate(deviceData);
+            }
         }
         
         /// <summary>
         /// Sets the proper view for this screen based on AppDevice data.
         /// </summary>
-        private void FindValidUIView()
+        /// <param name="deviceData"></param>
+        private void FindValidUIView(AppDeviceData deviceData)
         {
             // Find based on filters
             List<UIViewConfigData> _validViews  = new List<UIViewConfigData>();
             foreach (var view in configBaseData.data.views)
             {
-                if (GourdUI.Core.UIViewIsValidForDevice(view.data))
+                if (GourdUI.Core.UIViewIsValidForDevice(view.data, deviceData))
                 {
                     _validViews.Add(view.data);
                 }
@@ -148,9 +156,9 @@ namespace GourdUI
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="viewAsInterface"></param>
+        /// <param name="contract"></param>
         /// <typeparam name="T"></typeparam>
-        protected abstract void SetupView<T>(T viewAsInterface) where T: IUIView;
+        protected abstract void SetupView<T>(T contract) where T: IUIViewContract;
 
         #endregion View
         
@@ -179,7 +187,7 @@ namespace GourdUI
 
         private void DestroyCurrentView()
         {
-            Destroy(_currentViewObject);
+            Destroy(_currentViewObject.gameObject);
         }
 
         #endregion Utility

@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIView_DemoShop : MonoUIView, UIScreen_DemoShop.IDemoShopView
+public class UIView_DemoShop : MonoUIView, IDemoShopViewContract
 {
     #region Variables
 
@@ -33,22 +33,22 @@ public class UIView_DemoShop : MonoUIView, UIScreen_DemoShop.IDemoShopView
         return _itemDetailsPanel;
     }
 
-    Transform UIScreen_DemoShop.IDemoShopView.ItemGridParent()
+    Transform IDemoShopViewContract.ItemGridParent()
     {
         return _itemGridParent;
     }
 
-    Button UIScreen_DemoShop.IDemoShopView.Category1SelectButton()
+    Button IDemoShopViewContract.Category1SelectButton()
     {
         return _category1SelectButton;
     }
 
-    Button UIScreen_DemoShop.IDemoShopView.Category2SelectButton()
+    Button IDemoShopViewContract.Category2SelectButton()
     {
         return _category2SelectButton;
     }
 
-    Button UIScreen_DemoShop.IDemoShopView.Category3SelectButton()
+    Button IDemoShopViewContract.Category3SelectButton()
     {
         return _category3SelectButton;
     }

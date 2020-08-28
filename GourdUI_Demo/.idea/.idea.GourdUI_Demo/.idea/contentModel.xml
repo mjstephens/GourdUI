@@ -19,6 +19,7 @@
         <e p="UICursorController.cs" t="Include" />
       </e>
       <e p="Device" t="Include">
+        <e p="AppDeviceData.cs" t="Include" />
         <e p="Components" t="Include">
           <e p="DeviceUpdateHook.cs" t="Include" />
         </e>
@@ -48,11 +49,17 @@
         </e>
       </e>
       <e p="ViewFilters" t="Include">
+        <e p="Components" t="Include">
+          <e p="UIViewFilterComponent.cs" t="Include" />
+        </e>
         <e p="Data" t="Include">
-          <e p="UIViewFilterConfigData.cs" t="Include" />
+          <e p="UIViewFilterBaseConfigDataTemplate.cs" t="Include" />
           <e p="UIViewFilterInputConfigData.cs" t="Include" />
+          <e p="UIViewFilterInputConfigDataTemplate.cs" t="Include" />
           <e p="UIViewFilterOrientationConfigData.cs" t="Include" />
+          <e p="UIViewFilterOrientationConfigDataTemplate.cs" t="Include" />
           <e p="UIViewFilterPlatformConfigData.cs" t="Include" />
+          <e p="UIViewFilterPlatformConfigDataTemplate.cs" t="Include" />
         </e>
         <e p="UIViewFilterResolver.cs" t="Include" />
       </e>
@@ -61,7 +68,7 @@
           <e p="UIViewConfigData.cs" t="Include" />
           <e p="UIViewConfigDataTemplate.cs" t="Include" />
         </e>
-        <e p="IUIView.cs" t="Include" />
+        <e p="IUIViewContract.cs" t="Include" />
       </e>
     </e>
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
@@ -110,6 +117,7 @@
               <e p="Scripts" t="Include">
                 <e p="DemoShopItemDetailsPanel.cs" t="Include" />
                 <e p="DemoShopItemSelectionButtonInstance.cs" t="Include" />
+                <e p="IDemoShopViewContract.cs" t="Include" />
                 <e p="UIScreen_DemoShop.cs" t="Include" />
                 <e p="UIView_DemoShop.cs" t="Include" />
               </e>

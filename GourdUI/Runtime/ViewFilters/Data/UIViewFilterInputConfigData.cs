@@ -1,10 +1,10 @@
 namespace GourdUI
 {
     [System.Serializable]
-    public class UIViewFilterInputConfigData
+    public struct UIViewFilterInputConfigData
     {
-        public bool mouseKB = true;
-        public bool controller = true;
-        public bool touchscreen = true;
+        public bool mouseKB;
+        public bool controller;
+        public bool touchscreen;
     }
 }

@@ -38,13 +38,14 @@ namespace GourdUI
         /// Responds to app device data updates.
         /// </summary>
         /// <param name="deviceData">The updated device data.</param>
-        void OnAppDeviceUpdated(CoreDevice.AppDeviceData deviceData);
+        void OnAppDeviceUpdated(AppDeviceData deviceData);
 
         /// <summary>
         /// Returns true if the given UIView is valid for the current device settings.
         /// </summary>
         /// <param name="viewData"></param>
+        /// <param name="deviceData"></param>
         /// <returns></returns>
-        bool UIViewIsValidForDevice(UIViewConfigData viewData);
+        bool UIViewIsValidForDevice(UIViewConfigData viewData, AppDeviceData deviceData);
     }
 }

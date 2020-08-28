@@ -23,16 +23,6 @@ namespace GourdUI
         }
         
         #region Device Data
-        
-        /// <summary>
-        /// Holds information about the current state of the device.
-        /// </summary>
-        public struct AppDeviceData
-        {
-            public DevicePlatform platform;
-            public DeviceOrientation orientation;
-            public DeviceInput input;
-        }
 
         public enum DevicePlatform
         {

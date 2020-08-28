@@ -169,17 +169,17 @@ namespace GourdUI
 
         #region View
         
-        void IGourdUI.OnAppDeviceUpdated(CoreDevice.AppDeviceData deviceData)
+        void IGourdUI.OnAppDeviceUpdated(AppDeviceData deviceData)
         {
             foreach (var screen in _currentUIScreens)
             {
-                screen.OnAppDeviceDataUpdated();
+                screen.OnAppDeviceDataUpdated(deviceData);
             }
         }
 
-        bool IGourdUI.UIViewIsValidForDevice(UIViewConfigData viewData)
+        bool IGourdUI.UIViewIsValidForDevice(UIViewConfigData viewData, AppDeviceData deviceData)
         {
-            return UIViewFilterResolver.ViewFilterResult(viewData, GourdUI.Device.DeviceData());
+            return UIViewFilterResolver.ViewFilterResult(viewData.filterData, deviceData);
         }
 
         #endregion View

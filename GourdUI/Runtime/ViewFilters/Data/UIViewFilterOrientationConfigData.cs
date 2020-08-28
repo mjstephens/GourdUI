@@ -1,9 +1,9 @@
 namespace GourdUI
 {
     [System.Serializable]
-    public class UIViewFilterOrientationConfigData
+    public struct UIViewFilterOrientationConfigData
     {
-        public bool portrait = true;
-        public bool landscape = true;
+        public bool portrait;
+        public bool landscape;
     }
 }

@@ -15,16 +15,5 @@ MonoBehaviour:
   data:
     prefab: {fileID: 4055948165025291091, guid: 1a5d8448dd0d04cfbad3215cfbc39699,
       type: 3}
-    filterData:
-      inputFilterData:
-        mouseKB: 1
-        controller: 1
-        touchscreen: 1
-      orientationFilterData:
-        portrait: 1
-        landscape: 0
-      platformFilterData:
-        desktop: 0
-        mobile: 1
-        console: 1
+    filterData: []
     viewSpecificTriggers: []

@@ -10,7 +10,7 @@ namespace GourdUI
         public GameObject prefab;
 
         [Header("Filters")] 
-        public UIViewFilterConfigData filterData;
+        public UIViewFilterBaseConfigDataTemplate[] filterData;
 
         [Header("Triggers")] 
         public UITriggerBaseConfigDataTemplate[] viewSpecificTriggers;

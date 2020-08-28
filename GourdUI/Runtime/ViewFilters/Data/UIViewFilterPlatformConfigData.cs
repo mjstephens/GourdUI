@@ -1,10 +1,10 @@
 namespace GourdUI
 {
     [System.Serializable]
-    public class UIViewFilterPlatformConfigData
+    public struct UIViewFilterPlatformConfigData
     {
-        public bool desktop = true;
-        public bool mobile = true;
-        public bool console = true;
+        public bool desktop;
+        public bool mobile;
+        public bool console;
     }
 }
