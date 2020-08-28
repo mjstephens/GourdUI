@@ -20,10 +20,10 @@ namespace GourdUI
         }
 
         #endregion Initialization
-
+        
 
         #region Filter Components
-
+        
         void IUIViewContract.OnDeviceDataUpdate(AppDeviceData deviceData)
         {
             FilterComponents(deviceData);

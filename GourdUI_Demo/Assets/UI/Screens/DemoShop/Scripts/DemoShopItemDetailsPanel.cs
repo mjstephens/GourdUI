@@ -7,6 +7,7 @@ public class DemoShopItemDetailsPanel : MonoBehaviour
     #region References
 
     public Button purchaseItemButton;
+    public Button closePanelButton;
     public TMP_Text itemNameText;
     public TMP_Text itemCostText;
     public Image itemIcon;

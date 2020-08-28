@@ -150,7 +150,12 @@ namespace GourdUI
             // Instantiate new view
             _currentViewData = viewData;
             _currentViewObject = Instantiate(viewData.prefab, transform).GetComponent<MonoUIView>();
+            
+            // Setup view
             SetupView(_currentViewObject);
+            
+            // View should be g2g
+            OnViewReady();
         }
         
         /// <summary>
@@ -159,6 +164,11 @@ namespace GourdUI
         /// <param name="contract"></param>
         /// <typeparam name="T"></typeparam>
         protected abstract void SetupView<T>(T contract) where T: IUIViewContract;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        protected abstract void OnViewReady();
 
         #endregion View
         

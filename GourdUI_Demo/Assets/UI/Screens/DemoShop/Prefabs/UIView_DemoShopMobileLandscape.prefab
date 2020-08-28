@@ -1279,6 +1279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   purchaseItemButton: {fileID: 418758191130870929}
+  closePanelButton: {fileID: 1160606443179060533}
   itemNameText: {fileID: 6243142227396144364}
   itemCostText: {fileID: 4522663285720809516}
   itemIcon: {fileID: 3767578807891497915}

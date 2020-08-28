@@ -21,7 +21,7 @@ public class UIView_DemoShop : MonoUIView, IUIContract_DemoShop
     private Button _category3SelectButton;
 
     #endregion Variables
-
+    
 
     #region Contract
 
