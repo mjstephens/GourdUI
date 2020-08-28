@@ -19,6 +19,8 @@ public class UIView_DemoShop : MonoUIView, IUIContract_DemoShop
     private Button _category2SelectButton;
     [SerializeField] 
     private Button _category3SelectButton;
+    [SerializeField] 
+    private Button _exitShopButton;
 
     #endregion Variables
     
@@ -53,6 +55,11 @@ public class UIView_DemoShop : MonoUIView, IUIContract_DemoShop
     Button IUIContract_DemoShop.Category3SelectButton()
     {
         return _category3SelectButton;
+    }
+    
+    Button IUIContract_DemoShop.ExitShopButton()
+    {
+        return _exitShopButton;
     }
 
     #endregion Contract

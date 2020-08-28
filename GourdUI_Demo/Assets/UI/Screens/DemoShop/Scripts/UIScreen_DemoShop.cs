@@ -24,7 +24,7 @@ public class UIScreen_DemoShop : UIScreen
 
     #region State
 
-    public class UIState_DemoShop
+    public class UIState_DemoShop 
     {
         public int currentSelectedCategory;
         public ShopItemInstanceData currentSelectedItem;
@@ -47,6 +47,7 @@ public class UIScreen_DemoShop : UIScreen
         _viewContract.Category1SelectButton().onClick.AddListener(OnCategory1Selected);
         _viewContract.Category2SelectButton().onClick.AddListener(OnCategory2Selected);
         _viewContract.Category3SelectButton().onClick.AddListener(OnCategory3Selected);
+        _viewContract.ExitShopButton().onClick.AddListener(OnExitShopButtonPressed);
         _viewContract.ItemDetailsPanel().purchaseItemButton.onClick.AddListener(
             OnCurrentSelectedItemPurchased);
         _viewContract.ItemDetailsPanel().closePanelButton.onClick.AddListener(
@@ -161,11 +162,17 @@ public class UIScreen_DemoShop : UIScreen
     private void OnCloseItemPanelButtonSelected()
     {
         _state.currentSelectedItem = null;
+        _viewContract.ItemDetailsPanel().gameObject.SetActive(false);
     }
 
     private void OnCurrentSelectedItemPurchased()
     {
         Debug.Log("Purchased: " + _state.currentSelectedItem.name);
+    }
+
+    private void OnExitShopButtonPressed()
+    {
+        OnScreenDisabled();
     }
 
     #endregion  UI Logic

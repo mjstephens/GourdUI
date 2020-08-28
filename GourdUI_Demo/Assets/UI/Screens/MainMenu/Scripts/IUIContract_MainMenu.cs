@@ -1,4 +1,9 @@
-$HEADER$namespace $NAMESPACE$
+using GourdUI;
+
+namespace UI.Screens.MainMenu.Scripts
 {
-  public class $CLASS$ {$END$}
+    public interface IUIContract_MainMenu : IUIViewContract
+    {
+        UnityEngine.UI.Button OpenDemoShopButton();
+    }
 }

@@ -2,7 +2,6 @@ using GourdUI;
 using TMPro;
 using UnityEngine;
 
-
 public interface IUIContract_DemoShop : IUIViewContract
 {
     TMP_Text CurrencyAmountText();
@@ -11,4 +10,5 @@ public interface IUIContract_DemoShop : IUIViewContract
     UnityEngine.UI.Button Category1SelectButton();
     UnityEngine.UI.Button Category2SelectButton();
     UnityEngine.UI.Button Category3SelectButton();
+    UnityEngine.UI.Button ExitShopButton();
 }

@@ -16,11 +16,11 @@ MonoBehaviour:
     screenType: 0
     freezeSimulation: 0
     lockUIUntilDismissed: 0
-    activeOnLoad: 1
+    activeOnLoad: 0
     views:
     - {fileID: 11400000, guid: aff4efa8e676242a4889d6660ba5ced5, type: 2}
     - {fileID: 11400000, guid: dccb6008d014c4efa90ec1566d600bd9, type: 2}
     triggers:
     - {fileID: 11400000, guid: 52ee2e1312d7e4c92aabd410be3347f1, type: 2}
     - {fileID: 11400000, guid: 4446381e4d99c43008b6cd1605cfe3d9, type: 2}
-    triggerCode: 
+    triggerCode: demoShop

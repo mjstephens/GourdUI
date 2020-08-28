@@ -122,6 +122,13 @@
                 <e p="UIView_DemoShop.cs" t="Include" />
               </e>
             </e>
+            <e p="MainMenu" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="IUIContract_MainMenu.cs" t="Include" />
+                <e p="UIScreen_MainMenu.cs" t="Include" />
+                <e p="UIView_MainMenu.cs" t="Include" />
+              </e>
+            </e>
           </e>
         </e>
       </e>
