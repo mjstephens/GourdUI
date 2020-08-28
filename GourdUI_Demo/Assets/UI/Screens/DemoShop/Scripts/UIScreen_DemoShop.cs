@@ -2,11 +2,11 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public partial class UIScreen_DemoShop : UIScreen
+public class UIScreen_DemoShop : UIScreen
 {
     #region View Interface
 
-    private IDemoShopViewContract _viewContract;
+    private IUIContract_DemoShop _viewContract;
 
     #endregion View Interface
 
@@ -34,7 +34,7 @@ public partial class UIScreen_DemoShop : UIScreen
 
     protected override void SetupView<T>(T contract)
     {
-        _viewContract = contract as IDemoShopViewContract;
+        _viewContract = contract as IUIContract_DemoShop;
         _viewContract.Category1SelectButton().onClick.AddListener(OnCategory1Selected);
         _viewContract.Category2SelectButton().onClick.AddListener(OnCategory2Selected);
         _viewContract.Category3SelectButton().onClick.AddListener(OnCategory3Selected);

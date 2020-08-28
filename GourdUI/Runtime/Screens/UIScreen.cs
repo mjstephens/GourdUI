@@ -13,7 +13,7 @@ namespace GourdUI
         /// <summary>
         /// The current active UIView for this screen.
         /// </summary>
-        protected MonoUIView _currentViewObject;
+        private MonoUIView _currentViewObject;
 
         /// <summary>
         /// 

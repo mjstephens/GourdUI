@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine;
 
 
-public interface IDemoShopViewContract : IUIViewContract
+public interface IUIContract_DemoShop : IUIViewContract
 {
     TMP_Text CurrencyAmountText();
     DemoShopItemDetailsPanel ItemDetailsPanel();

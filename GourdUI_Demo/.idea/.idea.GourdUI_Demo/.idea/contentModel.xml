@@ -117,7 +117,7 @@
               <e p="Scripts" t="Include">
                 <e p="DemoShopItemDetailsPanel.cs" t="Include" />
                 <e p="DemoShopItemSelectionButtonInstance.cs" t="Include" />
-                <e p="IDemoShopViewContract.cs" t="Include" />
+                <e p="IUIContract_DemoShop.cs" t="Include" />
                 <e p="UIScreen_DemoShop.cs" t="Include" />
                 <e p="UIView_DemoShop.cs" t="Include" />
               </e>
