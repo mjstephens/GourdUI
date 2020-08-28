@@ -34,12 +34,15 @@ namespace GourdUI
         /// </summary>
         private void FilterComponents(AppDeviceData deviceData)
         {
-            foreach (UIViewFilterComponent filterComponent in _filterComponents)
+            if (_filterComponents != null)
             {
-                filterComponent.gameObject.SetActive(
-                    UIViewFilterResolver.ViewFilterResult(
-                        filterComponent.componentFilters,
-                        deviceData));
+                foreach (UIViewFilterComponent filterComponent in _filterComponents)
+                {
+                    filterComponent.gameObject.SetActive(
+                        UIViewFilterResolver.ViewFilterResult(
+                            filterComponent.componentFilters,
+                            deviceData));
+                }
             }
         }
 

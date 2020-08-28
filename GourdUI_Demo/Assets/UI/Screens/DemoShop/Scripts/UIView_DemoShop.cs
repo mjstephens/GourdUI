@@ -23,12 +23,14 @@ public class UIView_DemoShop : MonoUIView, IUIContract_DemoShop
     #endregion Variables
 
 
-    public TMP_Text CurrencyAmountText()
+    #region Contract
+
+    TMP_Text IUIContract_DemoShop.CurrencyAmountText()
     {
         return _currencyAmountText;
     }
 
-    public DemoShopItemDetailsPanel ItemDetailsPanel()
+    DemoShopItemDetailsPanel IUIContract_DemoShop.ItemDetailsPanel()
     {
         return _itemDetailsPanel;
     }
@@ -52,4 +54,6 @@ public class UIView_DemoShop : MonoUIView, IUIContract_DemoShop
     {
         return _category3SelectButton;
     }
+
+    #endregion Contract
 }

@@ -20,10 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0ff7ae49-a623-44e1-8de4-69eeedb19ed3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/IDemoShopViewContract.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/UIContract_DemoShop.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/IDemoShopViewContract.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/UIContract_DemoShop.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/UIScreen_DemoShop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/UIScreen_DemoShop.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Prefabs/UIView_DemoShopMobileLandscape.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Prefabs/UIView_DemoShopMobileLandscape.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Views/UIView_DemoShop_MobileLandscape.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Views/UIView_DemoShop_MobileLandscape.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GourdUI_Demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GourdUI_Demo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DemoScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DemoScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Prefabs/UIView_DemoShopMobilePortrait.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Prefabs/UIView_DemoShopMobilePortrait.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/UIView_DemoShop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/UIView_DemoShop.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/UIScreen_DemoShop_Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/UIScreen_DemoShop_Data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Views/UIView_DemoShop_MobilePortrait.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Views/UIView_DemoShop_MobilePortrait.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +48,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Triggers/IUIScreenTriggerable.cs" />
         <option value="$PROJECT_DIR$/../GourdUI/Runtime/Triggers/UIScreenTriggerCode.cs" />
         <option value="$PROJECT_DIR$/../GourdUI/Runtime/Triggers/UIScreenTriggerInputAction.cs" />
         <option value="$PROJECT_DIR$/../GourdUI/Runtime/Triggers/UIScreenTriggerResolver.cs" />
@@ -78,9 +83,7 @@
         <option value="$PROJECT_DIR$/../GourdUI/Runtime/ViewFilters/Data/UIViewFilterPlatformConfigDataTemplate.cs" />
         <option value="$PROJECT_DIR$/../GourdUI/Runtime/Views/Data/UIViewConfigData.cs" />
         <option value="$PROJECT_DIR$/../GourdUI/Runtime/Views/IUIView.cs" />
-        <option value="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/UIScreen_DemoShop.cs" />
         <option value="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/IDemoShopViewContract.cs" />
-        <option value="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/UIView_DemoShop.cs" />
         <option value="$PROJECT_DIR$/../GourdUI/Runtime/ViewFilters/UIViewFilterComponent.cs" />
         <option value="$PROJECT_DIR$/../GourdUI/Runtime/ViewFilters/Components/UIViewFilterComponent.cs" />
         <option value="$PROJECT_DIR$/../GourdUI/Runtime/Device/CoreDevice.cs" />
@@ -91,8 +94,11 @@
         <option value="$PROJECT_DIR$/../GourdUI/Runtime/Components/MonoUIView.cs" />
         <option value="$PROJECT_DIR$/../GourdUI/Runtime/Core/IGourdUI.cs" />
         <option value="$PROJECT_DIR$/../GourdUI/Runtime/Core/GourdUICore.cs" />
-        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Screens/UIScreen.cs" />
         <option value="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/UIContract_DemoShop.cs" />
+        <option value="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/IUIContract_DemoShop.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Screens/UIScreen.cs" />
+        <option value="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/UIScreen_DemoShop.cs" />
+        <option value="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/UIView_DemoShop.cs" />
       </list>
     </option>
   </component>
@@ -148,7 +154,7 @@
       <option name="presentableId" value="Default" />
       <updated>1598459187305</updated>
       <workItem from="1598459187947" duration="34037000" />
-      <workItem from="1598615951208" duration="1272000" />
+      <workItem from="1598615951208" duration="2087000" />
     </task>
     <servers />
   </component>
