@@ -1,7 +1,7 @@
 ﻿using GourdUI;
 using UI.Screens.MainMenu.Scripts;
 
-public class UIScreen_MainMenu : UIScreen
+public class UIScreen_MainMenu : UIScreen <IUIContract_MainMenu, UIState_MainMenu>
 {
     #region View Interface
 
@@ -10,37 +10,38 @@ public class UIScreen_MainMenu : UIScreen
     #endregion View Interface
     
     
-    #region State
-
-    // public class UIState_MainMenu 
-    // {
-    //     public int currentSelectedCategory;
-    //     public ShopItemInstanceData currentSelectedItem;
-    // }
-    //
-    // private readonly UIState_MainMenu _state = new UIState_MainMenu
-    // {
-    //     currentSelectedCategory = 1,
-    //     currentSelectedItem = null
-    // };
-
-    #endregion State
-    
-    
     #region Setup
     
-    protected override void SetupView<T>(T contract)
-    {
-        _viewContract = contract as IUIContract_MainMenu;
-        _viewContract.OpenDemoShopButton().onClick.AddListener(OnOpenDemoShopButtonSelected);
-    }
-
-    protected override void OnViewReady()
+    protected override void ApplyScreenStateToCurrentView()
     {
         
     }
+
+    
+
+    protected override void SetupView()
+    {
+        _currentContract.OpenDemoShopButton().onClick.AddListener(OnOpenDemoShopButtonSelected);
+    }
+
+    
     
     #endregion Setup
+
+
+    #region State
+    
+    protected override void CreateUIState()
+    {
+        _state = new UIState_MainMenu();
+    }
+
+    protected override void ResetScreenState()
+    {
+        
+    }
+
+    #endregion State
 
 
     #region UI Logic

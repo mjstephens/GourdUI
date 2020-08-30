@@ -2,7 +2,8 @@ using UnityEngine;
 
 namespace GourdUI
 {
-    public abstract class MonoUIView : MonoBehaviour, IUIViewContract
+    public abstract class MonoUIView<C> : MonoBehaviour, IUIViewContract
+        where C : IUIViewContract
     {
         #region Variables
 
@@ -20,7 +21,14 @@ namespace GourdUI
         }
 
         #endregion Initialization
-        
+
+
+        #region State
+
+        public abstract void OnStateDataUpdated<T>(T stateData) where T : UIState;
+
+        #endregion State
+
 
         #region Filter Components
         
@@ -47,7 +55,5 @@ namespace GourdUI
         }
 
         #endregion Filter Components
-
-        
     }
 }

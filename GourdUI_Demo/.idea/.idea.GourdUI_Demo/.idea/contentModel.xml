@@ -37,7 +37,12 @@
           <e p="UIScreenConfigDataTemplate.cs" t="Include" />
           <e p="UIScreenDataManifest.cs" t="Include" />
         </e>
+        <e p="IUIScreen.cs" t="Include" />
         <e p="UIScreen.cs" t="Include" />
+      </e>
+      <e p="State" t="Include">
+        <e p="IUIStateUpdateReceivable.cs" t="Include" />
+        <e p="UIState.cs" t="Include" />
       </e>
       <e p="Triggers" t="Include">
         <e p="Data" t="Include">
@@ -118,7 +123,9 @@
                 <e p="DemoShopItemDetailsPanel.cs" t="Include" />
                 <e p="DemoShopItemSelectionButtonInstance.cs" t="Include" />
                 <e p="IUIContract_DemoShop.cs" t="Include" />
+                <e p="UIDecorator_DemoShopPortrait.cs" t="Include" />
                 <e p="UIScreen_DemoShop.cs" t="Include" />
+                <e p="UIState_DemoShop.cs" t="Include" />
                 <e p="UIView_DemoShop.cs" t="Include" />
               </e>
             </e>
@@ -126,6 +133,7 @@
               <e p="Scripts" t="Include">
                 <e p="IUIContract_MainMenu.cs" t="Include" />
                 <e p="UIScreen_MainMenu.cs" t="Include" />
+                <e p="UIState_MainMenu.cs" t="Include" />
                 <e p="UIView_MainMenu.cs" t="Include" />
               </e>
             </e>

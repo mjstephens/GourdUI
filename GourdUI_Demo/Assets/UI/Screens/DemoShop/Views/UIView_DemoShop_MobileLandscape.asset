@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: UIView_DemoShop_MobileLandscape
   m_EditorClassIdentifier: 
   data:
-    prefab: {fileID: 3103452807218208760, guid: a92b965c54ab049f1bf918a995fc9157,
+    prefab: {fileID: 7406944849404681818, guid: b9ab6b718130649b19fe5b6cf673abf4,
       type: 3}
     filterData:
     - {fileID: 11400000, guid: 6cad1dfdd16904b699006ddbba5d8acb, type: 2}

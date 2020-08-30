@@ -4,16 +4,15 @@ using UnityEngine.InputSystem;
 
 namespace GourdUI
 {
-    public class GourdUICore : IGourdUI, IUIInputListener
+    public class GourdUICore: IGourdUI, IUIInputListener
     {
         #region Variables
 
         private static bool _locked;
         
         private readonly GourdUISystemData _systemData;
-        private readonly List<UIScreen> _currentUIScreens;
-        private readonly List<UIScreen> _screenStack;
-        //private readonly List<UIScreenTriggerBase> _triggers;
+        private readonly List<IUIScreen> _currentUIScreens;
+        private readonly List<IUIScreen> _screenStack;
         
         #endregion Variables
 
@@ -26,8 +25,8 @@ namespace GourdUI
             _systemData = data;
             
             // Create lists
-            _currentUIScreens = new List<UIScreen>();
-            _screenStack = new List<UIScreen>();
+            _currentUIScreens = new List<IUIScreen>();
+            _screenStack = new List<IUIScreen>();
             
             // Create input module
             //_inputTriggerListener = new UIInputTriggerListener(_systemData.uiTriggerInputAsset);
@@ -37,24 +36,14 @@ namespace GourdUI
         
         
         #region Registration
-
-        void IGourdUI.RegisterScreen(UIScreen screen)
+        
+        void IGourdUI.RegisterScreen(IUIScreen screen)
         {
             _currentUIScreens.Add(screen);
             screen.OnScreenInstantiated();
-
-// #if ENABLE_INPUT_SYSTEM
-//             foreach (var trigg in screen.configBaseData.data.triggerActions)
-//             {
-//                 _inputTriggerListener.SubscribeActionListener(this, trigg);
-//             }
-// #endif
-// #if ENABLE_LEGACY_INPUT_MANAGER
-//
-// #endif
         }
-        
-        void IGourdUI.UnregisterScreen(UIScreen screen)
+
+        void IGourdUI.UnregisterScreen(IUIScreen screen)
         {
             // Remove from stack first
             if (_screenStack.Contains(screen))
@@ -62,12 +51,6 @@ namespace GourdUI
                 RemoveScreenFromStack(screen);
             }
             _currentUIScreens.Remove(screen);
-            
-            // InputActionReference r = screen.configBaseData.data.triggerAction;
-            // if (r != null)
-            // {
-            //     _inputTriggerListener.UnubscribeActionListener(this, r);
-            // }
         }
 
         #endregion Registration
@@ -75,7 +58,7 @@ namespace GourdUI
         
         #region Stack
 
-        public void AddScreenToStack<T>(UIScreen screen, T data = default)
+        public void AddScreenToStack<T>(IUIScreen screen, T data = default)
         {
             // If we are waiting for input, we should not be able to add more UI
             if (_locked)
@@ -92,17 +75,20 @@ namespace GourdUI
             RefreshUIScreenStack();
             
             // If this new UI screen requires action to continue, flag it
-            if (screen.configBaseData.data.lockUIUntilDismissed)
+            if (screen.ScreenConfigData().lockUIUntilDismissed)
             {
                 _locked = true;
             }
         }
         
-        public void RemoveScreenFromStack(UIScreen screen)
+        public void RemoveScreenFromStack(IUIScreen screen)
         {
+            if (!_screenStack.Contains(screen))
+                return;
+            
             _screenStack.Remove(screen);
             screen.OnScreenDisabled();
-            if (screen.configBaseData.data.lockUIUntilDismissed)
+            if (screen.ScreenConfigData().lockUIUntilDismissed)
             {
                 _locked = false;
             }
@@ -117,7 +103,7 @@ namespace GourdUI
         /// <param name="screen"></param>
         /// <param name="data"></param>
         /// <typeparam name="T"></typeparam>
-        private void ToggleUIScreen<T>(UIScreen screen, T data = default)
+        private void ToggleUIScreen<T>(IUIScreen screen, T data = default)
         {
             if (!_screenStack.Contains(screen))
             {
@@ -136,12 +122,13 @@ namespace GourdUI
         {
             // Does the UI need control?
             bool uiIsActive = false;
-            UIScreen firstActiveScreen = null;
+            IUIScreen firstActiveScreen = null;
             for (int i = _screenStack.Count - 1; i >= 0; i--)
             {
-                UIScreen screen = _screenStack[i];
+                IUIScreen screen = _screenStack[i];
                 screen.OnScreenSetStackOrder(_systemData.canvasRenderDepthBase + i);
-                if (screen.configBaseData.data.screenType == UIScreenConfigData.ScreenType.Active && !uiIsActive)
+                if (screen.ScreenConfigData().screenType == 
+                    UIScreenConfigData.ScreenType.Active && !uiIsActive)
                 {
                     uiIsActive = true;
                     firstActiveScreen = screen;
@@ -156,7 +143,7 @@ namespace GourdUI
                 if (firstActiveScreen != null)
                 {
                     // Some active UI screens may freeze the simulation while they wait for input
-                    if (firstActiveScreen.configBaseData.data.freezeSimulation)
+                    if (firstActiveScreen.ScreenConfigData().freezeSimulation)
                     {
                         Time.timeScale = 0;
                     }
@@ -207,10 +194,10 @@ namespace GourdUI
         
         void IGourdUI.ToggleUIScreen(string screenTriggerCode)
         {
-            UIScreen s = null;
+            IUIScreen s = null;
             for (int i = _currentUIScreens.Count - 1; i >= 0; i--)
             {
-                if (_currentUIScreens[i].configBaseData.data.triggerCode == screenTriggerCode)
+                if (_currentUIScreens[i].ScreenConfigData().triggerCode == screenTriggerCode)
                 {
                     s = _currentUIScreens[i];
                     break;
@@ -230,7 +217,7 @@ namespace GourdUI
         /// <param name="action"></param>
         private void ToggleUIScreenFromInput(InputAction action)
         {
-            UIScreen s = null;
+            UIScreen<IUIViewContract, UIState> s = null;
             // for (int i = _currentUIScreens.Count - 1; i >= 0; i--)
             // {
             //     if (_currentUIScreens[i].configBaseData.data.triggerAction != null)

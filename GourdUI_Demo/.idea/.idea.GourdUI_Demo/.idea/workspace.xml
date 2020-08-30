@@ -20,215 +20,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0ff7ae49-a623-44e1-8de4-69eeedb19ed3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Basic.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Basic/UI_rounded_rect_blank.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Basic/UI_rounded_rect_blank.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Basic/circle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Basic/circle.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Basic/gradient.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Basic/gradient.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Basic/ring.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Basic/ring.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Basic/square.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Basic/square.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Basic/ui_arrow_back.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Basic/ui_arrow_back.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/JPG.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/JPG/BigPanel.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/JPG/BigPanel.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/JPG/MessageBox.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/JPG/MessageBox.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/JPG/MiniPanel01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/JPG/MiniPanel01.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/JPG/MiniPanel02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/JPG/MiniPanel02.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/JPG/MiniPanel03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/JPG/MiniPanel03.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/JPG/MiniPanel04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/JPG/MiniPanel04.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/JPG/MiniPanel05.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/JPG/MiniPanel05.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/JPG/MiniPanel06.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/JPG/MiniPanel06.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/Arrow01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/Arrow01.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/Button01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/Button01.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/Button02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/Button02.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/Cell01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/Cell01.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/Cells01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/Cells01.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/Icon01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/Icon01.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/Icon02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/Icon02.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/Icon03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/Icon03.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/Icon04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/Icon04.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/Icon05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/Icon05.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/Icon06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/Icon06.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/Icon07.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/Icon07.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/Icon08.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/Icon08.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/Icon09.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/Icon09.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/Icon10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/Icon10.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/Icon11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/Icon11.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/Icon12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/Icon12.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/Icon13.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/Icon13.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/Icon14.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/Icon14.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/Icon15.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/Icon15.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/Icon16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/Icon16.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/Icon17.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/Icon17.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/Icon18.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/Icon18.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/Icon19.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/Icon19.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/Icon20.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/Icon20.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/Icon21.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/Icon21.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/Icon22.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/Icon22.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/Icon23.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/Icon23.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon01.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon02.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon03.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon04.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon05.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon06.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon07.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon07.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon08.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon08.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon09.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon09.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon10.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon11.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon12.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon13.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon13.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon14.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon14.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon15.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon15.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon16.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon17.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon17.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon18.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon18.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon19.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon19.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon20.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon20.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon21.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon21.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon22.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon22.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon23.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon23.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon24.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon24.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon25.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon25.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon26.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon26.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon27.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon27.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon28.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon28.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon29.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon29.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon30.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon30.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon31.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon31.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon32.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon33.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon33.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon34.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon34.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon35.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon35.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon36.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon36.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon37.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon37.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon38.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon38.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon39.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon39.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon40.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon40.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon41.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon41.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon42.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon42.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon43.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon43.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon44.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon44.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon45.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon45.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon46.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/PNG/ResIcon46.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/UIDifferentFree03Wenrexa.psd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UIDifferentFree03Wenrexa/UIDifferentFree03Wenrexa.psd.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/kisspng-world-cricket-championship-2-icon-game-guess-the-gold-coin-icon-png-5ab068d1c03336.9358428615215106097873.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/kisspng-world-cricket-championship-2-icon-game-guess-the-gold-coin-icon-png-5ab068d1c03336.9358428615215106097873.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/MainMenu/Prefabs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/MainMenu/Prefabs/UIScreen_MainMenu.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/MainMenu/Prefabs/UIScreen_MainMenu.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/MainMenu/Scripts.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/MainMenu/Scripts/IUIContract_MainMenu.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/MainMenu/Scripts/IUIContract_MainMenu.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/MainMenu/Scripts/UIScreen_MainMenu.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/MainMenu/Scripts/UIScreen_MainMenu.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/MainMenu/Scripts/UIView_MainMenu.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/MainMenu/Scripts/UIView_MainMenu.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/MainMenu/UIScreen_MainMenu_Data.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/MainMenu/UIScreen_MainMenu_Data.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/MainMenu/Views.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Screens/IUIScreen.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Screens/IUIScreen.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/State.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/State/IUIStateUpdateReceivable.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/State/IUIStateUpdateReceivable.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/State/UIState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/State/UIState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/UIDecorator_DemoShopPortrait.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/UIDecorator_DemoShopPortrait.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/UIState_DemoShop.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/UIState_DemoShop.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/MainMenu/Scripts/UIState_MainMenu.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/MainMenu/Scripts/UIState_MainMenu.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GourdUI/Runtime/Components/MonoUIView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Components/MonoUIView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GourdUI/Runtime/Core/GourdUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Core/GourdUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GourdUI/Runtime/Core/GourdUICore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Core/GourdUICore.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GourdUI/Runtime/Core/IGourdUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Core/IGourdUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GourdUI/Runtime/Screens/Data/UIScreenConfigData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Screens/Data/UIScreenConfigData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GourdUI/Runtime/Screens/UIScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Screens/UIScreen.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GourdUI_Demo/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GourdUI_Demo/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GourdUI_Demo/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GourdUI_Demo/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GourdUI_Demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GourdUI_Demo/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/DemoScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DemoScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Data.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Prefabs/Button_ShopSelection.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Prefabs/Button_ShopSelection.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Prefabs/UIView_DemoShopMobileLandscape.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Prefabs/UIView_DemoShopMobileLandscape.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Prefabs/UIView_DemoShopMobileLandscape.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Prefabs/UIView_DemoShopMobileLandscape.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Prefabs/UIView_DemoShopMobilePortrait.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Prefabs/UIView_DemoShopMobilePortrait.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/DemoShopItemDetailsPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/DemoShopItemDetailsPanel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/IUIContract_DemoShop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/IUIContract_DemoShop.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/UIScreen_DemoShop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/UIScreen_DemoShop.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/UIView_DemoShop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/UIView_DemoShop.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Views/UIView_DemoShop_MobileLandscape.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Views/UIView_DemoShop_MobileLandscape.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/MainMenu/Scripts/UIScreen_MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/MainMenu/Scripts/UIScreen_MainMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/MainMenu/Scripts/UIView_MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/MainMenu/Scripts/UIView_MainMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.mstephens.gourdUI.csproj.DotSettings" beforeDir="false" afterPath="$PROJECT_DIR$/com.mstephens.gourdUI.csproj.DotSettings" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -244,24 +66,17 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Shop/ShopItemInstanceData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Shop/ShopCategoryData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/UI/Screens/MainMenu/Scripts/UIScreen_MainMenu.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/UIDecorator_DemoShopPortrait.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Triggers/UITriggerBaseConfigDataTemplate.cs" />
-        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Triggers/UITriggerCodeConfigData.cs" />
-        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Triggers/UITriggerCodeConfigDataTemplate.cs" />
-        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Triggers/UITriggerKeyCodeConfigData.cs" />
-        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Triggers/UITriggerManualCodeConfigData.cs" />
-        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Triggers/UITriggerManualCodeConfigDataTemplate.cs" />
         <option value="$PROJECT_DIR$/../GourdUI/Runtime/Triggers/UITriggerKeyCodeConfigDataTemplate.cs" />
         <option value="$PROJECT_DIR$/../GourdUI/Runtime/Views/Data/UIViewConfigDataTemplate.cs" />
-        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Screens/Data/UIScreenConfigData.cs" />
         <option value="$PROJECT_DIR$/../GourdUI/Runtime/Screens/Data/UIScreenDataManifest.cs" />
         <option value="$PROJECT_DIR$/../GourdUI/Runtime/Views/UIViewSpawnerHook.cs" />
         <option value="$PROJECT_DIR$/../GourdUI/Runtime/Screens/Data/UIScreenConfigDataTemplate.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UIViews/UIView_DemoShopMobilePortrait.cs" />
-        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Core/GourdUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UIScreens/UIScreen_DemoShop.cs" />
         <option value="$PROJECT_DIR$/../GourdUI/Runtime/ViewFilters/Data/UIViewFilterConfigData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Shop/ShopItemInstanceData.cs" />
@@ -285,20 +100,28 @@
         <option value="$PROJECT_DIR$/../GourdUI/Runtime/Device/AppDeviceData.cs" />
         <option value="$PROJECT_DIR$/../GourdUI/Runtime/Device/ICoreDevice.cs" />
         <option value="$PROJECT_DIR$/../GourdUI/Runtime/ViewFilters/UIViewFilterResolver.cs" />
-        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Core/IGourdUI.cs" />
-        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Core/GourdUICore.cs" />
         <option value="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/UIContract_DemoShop.cs" />
         <option value="$PROJECT_DIR$/../GourdUI/Runtime/Screens/State/UIState.cs" />
-        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Views/IUIViewContract.cs" />
-        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Components/MonoUIView.cs" />
         <option value="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/DemoShopItemDetailsPanel.cs" />
-        <option value="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/UIView_DemoShop.cs" />
-        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Screens/UIScreen.cs" />
-        <option value="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/UIScreen_DemoShop.cs" />
         <option value="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/IUIContract_DemoShop.cs" />
         <option value="$PROJECT_DIR$/Assets/UI/Screens/MainMenu/Scripts/IUIContract_MainMenu.cs" />
-        <option value="$PROJECT_DIR$/Assets/UI/Screens/MainMenu/Scripts/UIView_MainMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/UIDecorator_DemoShopPortrait.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Core/GourdUI.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Screens/Data/UIScreenConfigData.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Views/IUIViewContract.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Runtime/State/IUIStateUpdateReceivable.cs" />
+        <option value="$PROJECT_DIR$/Assets/UI/Screens/MainMenu/Scripts/UIState_MainMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/UIState_DemoShop.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Runtime/State/UIState.cs" />
+        <option value="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/UIView_DemoShop.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Components/MonoUIView.cs" />
         <option value="$PROJECT_DIR$/Assets/UI/Screens/MainMenu/Scripts/UIScreen_MainMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/UI/Screens/MainMenu/Scripts/UIView_MainMenu.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Core/IGourdUI.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Screens/IUIScreen.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Core/GourdUICore.cs" />
+        <option value="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/UIScreen_DemoShop.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Screens/UIScreen.cs" />
       </list>
     </option>
   </component>
@@ -354,7 +177,8 @@
       <option name="presentableId" value="Default" />
       <updated>1598459187305</updated>
       <workItem from="1598459187947" duration="34037000" />
-      <workItem from="1598615951208" duration="9896000" />
+      <workItem from="1598615951208" duration="15472000" />
+      <workItem from="1598785778768" duration="9871000" />
     </task>
     <servers />
   </component>
@@ -380,18 +204,18 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="278" y="-1000" key="RiderGenerateDialog" timestamp="1598656535028">
+    <state x="278" y="-1000" key="RiderGenerateDialog" timestamp="1598794490359">
       <screen x="-814" y="-1417" width="2560" height="1417" />
     </state>
-    <state x="278" y="-1000" key="RiderGenerateDialog/-814.-1417.2560.1417/0.23.1792.1097@-814.-1417.2560.1417" timestamp="1598656535028" />
+    <state x="278" y="-1000" key="RiderGenerateDialog/-814.-1417.2560.1417/0.23.1792.1097@-814.-1417.2560.1417" timestamp="1598794490359" />
     <state x="-33" y="-1070" key="SettingsEditor" timestamp="1598459867203">
       <screen x="-814" y="-1417" width="2560" height="1417" />
     </state>
     <state x="-33" y="-1070" key="SettingsEditor/-814.-1417.2560.1417/0.23.1792.1097@-814.-1417.2560.1417" timestamp="1598459867203" />
-    <state x="-714" y="-1317" width="2360" height="1217" key="VCS.FileHistoryDialog" timestamp="1598554500374">
+    <state x="-714" y="-1317" width="2360" height="1217" key="VCS.FileHistoryDialog" timestamp="1598793877403">
       <screen x="-814" y="-1417" width="2560" height="1417" />
     </state>
-    <state x="-714" y="-1317" width="2360" height="1217" key="VCS.FileHistoryDialog/-814.-1417.2560.1417/0.23.1792.1097@-814.-1417.2560.1417" timestamp="1598554500374" />
+    <state x="-714" y="-1317" width="2360" height="1217" key="VCS.FileHistoryDialog/-814.-1417.2560.1417/0.23.1792.1097@-814.-1417.2560.1417" timestamp="1598793877403" />
     <state x="129" y="-1094" width="672" height="678" key="search.everywhere.popup" timestamp="1598533925736">
       <screen x="-814" y="-1417" width="2560" height="1417" />
     </state>

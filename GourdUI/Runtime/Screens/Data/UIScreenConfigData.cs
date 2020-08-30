@@ -29,6 +29,10 @@ namespace GourdUI
         public bool lockUIUntilDismissed;
         public bool activeOnLoad;
 
+        [Header("State Behavior")] 
+        public bool resetStateBetweenViewChanges;
+        public bool preserveStateAfterScreenToggle;
+
         [Header("Views")] 
         public UIViewConfigDataTemplate[] views;
 

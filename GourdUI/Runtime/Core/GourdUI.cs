@@ -29,7 +29,7 @@ namespace GourdUI
         #endregion Variables
 
 
-        #region Constructor
+        #region Initialization
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         private static void Initialize()
@@ -47,6 +47,6 @@ namespace GourdUI
             Device = new CoreDevice();
         }
 
-        #endregion Constructor
+        #endregion Initialization
     }
 }

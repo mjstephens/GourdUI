@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIView_DemoShop : MonoUIView, IUIContract_DemoShop
+public class UIView_DemoShop : MonoUIView<IUIContract_DemoShop>, IUIContract_DemoShop
 {
     #region Variables
 
@@ -63,4 +63,19 @@ public class UIView_DemoShop : MonoUIView, IUIContract_DemoShop
     }
 
     #endregion Contract
+
+
+    #region State
+
+    public override void OnStateDataUpdated<T>(T stateData)
+    {
+        // Convert to specific state
+        //UIScreen_DemoShop.UIState_DemoShop s = stateData as UIScreen_DemoShop.UIState_DemoShop;
+        
+        // Any components in the view that implement IUIStateUpdateReceivable will be notified
+        // of the state change.
+        
+    }
+
+    #endregion State
 }

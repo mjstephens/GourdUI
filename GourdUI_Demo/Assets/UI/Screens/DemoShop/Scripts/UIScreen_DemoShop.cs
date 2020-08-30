@@ -2,15 +2,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIScreen_DemoShop : UIScreen
+public class UIScreen_DemoShop : UIScreen<IUIContract_DemoShop, UIState_DemoShop>
 {
-    #region View Interface
-
-    private IUIContract_DemoShop _viewContract;
-
-    #endregion View Interface
-
-
     #region Data
 
     [Header("References")]
@@ -21,45 +14,45 @@ public class UIScreen_DemoShop : UIScreen
 
     #endregion Data
 
-
-    #region State
-
-    public class UIState_DemoShop 
-    {
-        public int currentSelectedCategory;
-        public ShopItemInstanceData currentSelectedItem;
-    }
-
-    private readonly UIState_DemoShop _state = new UIState_DemoShop
-    {
-        currentSelectedCategory = 1,
-        currentSelectedItem = null
-    };
-
-    #endregion State
-    
     
     #region Setup
 
-    protected override void SetupView<T>(T contract)
+    protected override void CreateUIState()
     {
-        _viewContract = contract as IUIContract_DemoShop;
-        _viewContract.Category1SelectButton().onClick.AddListener(OnCategory1Selected);
-        _viewContract.Category2SelectButton().onClick.AddListener(OnCategory2Selected);
-        _viewContract.Category3SelectButton().onClick.AddListener(OnCategory3Selected);
-        _viewContract.ExitShopButton().onClick.AddListener(OnExitShopButtonPressed);
-        _viewContract.ItemDetailsPanel().purchaseItemButton.onClick.AddListener(
+        _state = new UIState_DemoShop();
+    }
+
+    protected override void SetupView()
+    {
+        // Setup listeners, events, hooks, etc. for new contract
+        _currentContract.Category1SelectButton().onClick.AddListener(OnCategory1Selected);
+        _currentContract.Category2SelectButton().onClick.AddListener(OnCategory2Selected);
+        _currentContract.Category3SelectButton().onClick.AddListener(OnCategory3Selected);
+        _currentContract.ExitShopButton().onClick.AddListener(OnExitShopButtonPressed);
+        _currentContract.ItemDetailsPanel().purchaseItemButton.onClick.AddListener(
             OnCurrentSelectedItemPurchased);
-        _viewContract.ItemDetailsPanel().closePanelButton.onClick.AddListener(
+        _currentContract.ItemDetailsPanel().closePanelButton.onClick.AddListener(
             OnCloseItemPanelButtonSelected);
         
         // Populate new items
         PopulateItemGrid(category1Data);
     }
+    
+    #endregion Setup
 
-    protected override void OnViewReady()
+
+    #region State
+
+    protected override void ResetScreenState()
     {
-        // Apply state
+        
+        _state.currentSelectedCategory = 1;
+        _state.currentSelectedItem = null;
+    }
+    
+    protected override void ApplyScreenStateToCurrentView()
+    {
+        // Apply state to new view
         switch (_state.currentSelectedCategory)
         {
             case 1:
@@ -82,11 +75,11 @@ public class UIScreen_DemoShop : UIScreen
         }
         else
         {
-            _viewContract.ItemDetailsPanel().gameObject.SetActive(false);
+            _currentContract.ItemDetailsPanel().gameObject.SetActive(false);
         }
     }
 
-    #endregion Setup
+    #endregion State
     
 
     #region UI Logic
@@ -132,7 +125,7 @@ public class UIScreen_DemoShop : UIScreen
 
     private void ClearItemGrid()
     {
-        foreach (Transform child in _viewContract.ItemGridParent())
+        foreach (Transform child in _currentContract.ItemGridParent())
         {
             Destroy(child.gameObject);
         }
@@ -142,7 +135,7 @@ public class UIScreen_DemoShop : UIScreen
     {
         foreach (ShopItemInstanceData item in data.categoryItems)
         {
-            Transform grid = _viewContract.ItemGridParent();
+            Transform grid = _currentContract.ItemGridParent();
             DemoShopItemSelectionButtonInstance button = Instantiate(itemButtonPrefab, grid);
             button.PopulateSelection(item);
             
@@ -155,14 +148,14 @@ public class UIScreen_DemoShop : UIScreen
     private void OnItemButtonSelected(ShopItemInstanceData data)
     {
         _state.currentSelectedItem = data;
-        _viewContract.ItemDetailsPanel().OnItemSelected(data);
-        _viewContract.ItemDetailsPanel().gameObject.SetActive(true);
+        _currentContract.ItemDetailsPanel().OnItemSelected(data);
+        _currentContract.ItemDetailsPanel().gameObject.SetActive(true);
     }
 
     private void OnCloseItemPanelButtonSelected()
     {
         _state.currentSelectedItem = null;
-        _viewContract.ItemDetailsPanel().gameObject.SetActive(false);
+        _currentContract.ItemDetailsPanel().gameObject.SetActive(false);
     }
 
     private void OnCurrentSelectedItemPurchased()
@@ -172,7 +165,7 @@ public class UIScreen_DemoShop : UIScreen
 
     private void OnExitShopButtonPressed()
     {
-        OnScreenDisabled();
+        GourdUI.GourdUI.Core.RemoveScreenFromStack(this);
     }
 
     #endregion  UI Logic

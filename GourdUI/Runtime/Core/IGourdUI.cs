@@ -6,13 +6,13 @@ namespace GourdUI
         /// Registers a UIScreen instance with the AppUI controller.
         /// </summary>
         /// <param name="screen">The UIScreen instance to register.</param>
-        void RegisterScreen(UIScreen screen);
+        void RegisterScreen(IUIScreen screen);
 
         /// <summary>
         /// Unregisters a UIScreen instance from the AppUI controller.
         /// </summary>
         /// <param name="screen">The UIScreen instance to unregister.</param>
-        void UnregisterScreen(UIScreen screen);
+        void UnregisterScreen(IUIScreen screen);
 
         /// <summary>
         /// Toggles a UIScreen on/off based on its current state.
@@ -26,13 +26,13 @@ namespace GourdUI
         /// <param name="screen">The UIScreen to be added to the stack.</param>
         /// <param name="data">Optional data passed into the UIScreen on activation.</param>
         /// <typeparam name="T">Optional data type.</typeparam>
-        void AddScreenToStack<T>(UIScreen screen, T data = default);
+        void AddScreenToStack<T>(IUIScreen screen, T data = default);
 
         /// <summary>
         /// Removes a UIScreen from the active screen stack.
         /// </summary>
         /// <param name="screen">The UIScreen to be removed from the stack.</param>
-        void RemoveScreenFromStack(UIScreen screen);
+        void RemoveScreenFromStack(IUIScreen screen);
 
         /// <summary>
         /// Responds to app device data updates.
