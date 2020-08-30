@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 namespace UI.Screens.MainMenu.Scripts
 {
-    public class UIView_MainMenu : MonoUIView<IUIContract_MainMenu>, IUIContract_MainMenu
+    public class UIView_MainMenu : UIView<IUIContract_MainMenu>, IUIContract_MainMenu
     {
         #region Variables
 
@@ -23,9 +23,14 @@ namespace UI.Screens.MainMenu.Scripts
 
         #endregion Contract
 
-        public override void OnStateDataUpdated<T>(T stateData)
+        public override void OnViewPreSetup()
         {
             
         }
+
+        // public override void OnStateDataUpdated<T>(T stateData)
+        // {
+        //     
+        // }
     }
 }

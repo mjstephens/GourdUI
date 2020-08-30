@@ -2,7 +2,7 @@ using GourdUI;
 using TMPro;
 using UnityEngine;
 
-public interface IUIContract_DemoShop : IUIViewContract
+public interface IUIContract_DemoShop : IUIContractScreen
 {
     TMP_Text CurrencyAmountText();
     DemoShopItemDetailsPanel ItemDetailsPanel();

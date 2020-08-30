@@ -3,8 +3,9 @@ using UnityEngine;
 
 namespace GourdUI
 {
-    public abstract class UIScreen<C,S>: MonoBehaviour, IUIScreen
-        where C : class, IUIViewContract
+    public abstract class UIScreen<C,V,S>: MonoBehaviour, IUIScreen, IUIContractScreen
+        where C : class, IUIContractScreen
+        where V : IUIContractView
         where S : UIState
     {
         #region Data
@@ -12,13 +13,8 @@ namespace GourdUI
         [Header("Screen Data")]
         public UIScreenConfigDataTemplate configBaseData;
 
-        protected C _currentContract;
+        protected V viewContract;
         protected S _state;
-        
-        /// <summary>
-        /// The current active UIView for this screen.
-        /// </summary>
-        private MonoUIView<C> _currentViewObject;
 
         /// <summary>
         /// 
@@ -32,10 +28,6 @@ namespace GourdUI
 
         private void Start()
         {
-            // Make sure the screen mono object is reset
-            transform.position = Vector3.zero;
-            transform.localEulerAngles = Vector3.zero;
-            
             // Register the screen
             GourdUI.Core.RegisterScreen(this);
         }
@@ -45,9 +37,22 @@ namespace GourdUI
         /// </summary>
         public virtual void OnScreenInstantiated()
         {
-            CreateUIState();
-            
+            // Create state class
+            CreateUIOverrideTypes();
+
+            // Find the correct UI view
             FindValidUIView(GourdUI.Device.DeviceData());
+            
+            // Make sure our state is reset for first initialization
+            ResetScreenState();
+            
+            // Apply reset state to view if applicable
+            if (viewContract != null)
+            {
+                ApplyScreenStateToCurrentView();
+            }
+            
+            // Activate view of needed
             if (configBaseData.data.activeOnLoad)
             {
                 GourdUI.Core.AddScreenToStack(this, 0);
@@ -58,7 +63,7 @@ namespace GourdUI
             }
         }
 
-        protected abstract void CreateUIState();
+        protected abstract void CreateUIOverrideTypes();
 
         /// <summary>
         /// Called every time the screen instance is enabled.
@@ -106,9 +111,9 @@ namespace GourdUI
             FindValidUIView(deviceData);
             
             // Update view filter components on active view
-            if (_currentViewObject != null)
+            if (viewContract != null)
             {
-                _currentContract.OnDeviceDataUpdate(deviceData);
+                //_view.OnDeviceDataUpdate(deviceData);
             }
         }
         
@@ -135,7 +140,7 @@ namespace GourdUI
             }
             else
             {
-                if (_currentViewObject != null)
+                if (viewContract != null)
                 {
                     DestroyCurrentView();
                 }
@@ -149,10 +154,11 @@ namespace GourdUI
         private void SetValidUIView(UIViewConfigData viewData)
         {
             // Make sure we're not setting the same UI view
-            if (_currentViewObject != null)
+            if (viewContract != null)
             {
                 if (_currentViewData.prefab != viewData.prefab)
                 {
+                    TeardownView();
                     DestroyCurrentView();
                 }
                 else
@@ -163,8 +169,12 @@ namespace GourdUI
 
             // Instantiate new view
             _currentViewData = viewData;
-            _currentViewObject = Instantiate(viewData.prefab, transform).GetComponent<MonoUIView<C>>();
-            _currentContract = _currentViewObject as C;
+            
+            //
+            GameObject vObj = Instantiate(viewData.prefab, transform);
+            viewContract = vObj.GetComponent<V>();
+            vObj.GetComponent<UIView<C>>().screenContract = this as C;
+            viewContract.OnViewPreSetup();
             
             // Setup view
             SetupView();
@@ -180,9 +190,12 @@ namespace GourdUI
         /// <summary>
         /// Called when a new view for this screen is triggered for display.
         /// </summary>
-        /// <param name="contract"></param>
-        /// <typeparam name="T"></typeparam>
         protected abstract void SetupView();
+
+        /// <summary>
+        /// Called when a view is to be disabled or deleted
+        /// </summary>
+        protected abstract void TeardownView();
 
         #endregion View
 
@@ -191,10 +204,7 @@ namespace GourdUI
         
         protected abstract void ResetScreenState();
 
-        protected virtual void ApplyScreenStateToCurrentView()
-        {
-            //_currentViewObject.OnStateDataUpdated();
-        }
+        protected abstract void ApplyScreenStateToCurrentView();
 
         #endregion State
         
@@ -223,7 +233,7 @@ namespace GourdUI
 
         private void DestroyCurrentView()
         {
-            Destroy(_currentViewObject.gameObject);
+            viewContract.OnDestroyView();
         }
         
         UIScreenConfigData IUIScreen.ScreenConfigData()

@@ -217,24 +217,24 @@ namespace GourdUI
         /// <param name="action"></param>
         private void ToggleUIScreenFromInput(InputAction action)
         {
-            UIScreen<IUIViewContract, UIState> s = null;
-            // for (int i = _currentUIScreens.Count - 1; i >= 0; i--)
+            // UIScreen<IScreenUpdateReceivable, UIState> s = null;
+            // // for (int i = _currentUIScreens.Count - 1; i >= 0; i--)
+            // // {
+            // //     if (_currentUIScreens[i].configBaseData.data.triggerAction != null)
+            // //     {
+            // //         if (_currentUIScreens[i].configBaseData.data.triggerAction.action == action)
+            // //         {
+            // //             s = _currentUIScreens[i];
+            // //             break;
+            // //         }
+            // //     }
+            // // }
+            //
+            // // If we found a screen for the action, toggle it
+            // if (s != null)
             // {
-            //     if (_currentUIScreens[i].configBaseData.data.triggerAction != null)
-            //     {
-            //         if (_currentUIScreens[i].configBaseData.data.triggerAction.action == action)
-            //         {
-            //             s = _currentUIScreens[i];
-            //             break;
-            //         }
-            //     }
+            //     ToggleUIScreen(s, 0);
             // }
-            
-            // If we found a screen for the action, toggle it
-            if (s != null)
-            {
-                ToggleUIScreen(s, 0);
-            }
         }
         
         #endregion Toggle

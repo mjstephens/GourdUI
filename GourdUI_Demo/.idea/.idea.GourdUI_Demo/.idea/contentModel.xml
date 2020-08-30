@@ -4,8 +4,8 @@
     <e p="$PROJECT_DIR$/../GourdUI/Runtime" t="Include">
       <e p="com.mstephens.gourdUI.asmdef" t="Include" />
       <e p="Components" t="Include">
-        <e p="MonoUIView.cs" t="Include" />
         <e p="SafeArea.cs" t="Include" />
+        <e p="UIView.cs" t="Include" />
       </e>
       <e p="Core" t="Include">
         <e p="Data" t="Include">
@@ -37,6 +37,8 @@
           <e p="UIScreenConfigDataTemplate.cs" t="Include" />
           <e p="UIScreenDataManifest.cs" t="Include" />
         </e>
+        <e p="IUIContractScreen.cs" t="Include" />
+        <e p="IUIContractView.cs" t="Include" />
         <e p="IUIScreen.cs" t="Include" />
         <e p="UIScreen.cs" t="Include" />
       </e>
@@ -73,7 +75,6 @@
           <e p="UIViewConfigData.cs" t="Include" />
           <e p="UIViewConfigDataTemplate.cs" t="Include" />
         </e>
-        <e p="IUIViewContract.cs" t="Include" />
       </e>
     </e>
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
@@ -135,6 +136,16 @@
                 <e p="UIScreen_MainMenu.cs" t="Include" />
                 <e p="UIState_MainMenu.cs" t="Include" />
                 <e p="UIView_MainMenu.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Playground" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="DataCollectionUIInstance.cs" t="Include" />
+                <e p="IUIContractScreen_Playground.cs" t="Include" />
+                <e p="IUIContractView_Playground.cs" t="Include" />
+                <e p="UIScreen_Playground.cs" t="Include" />
+                <e p="UIState_Playground.cs" t="Include" />
+                <e p="UIView_Playground_Mobile.cs" t="Include" />
               </e>
             </e>
           </e>
