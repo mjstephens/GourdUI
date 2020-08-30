@@ -6,7 +6,7 @@ namespace GourdUI
     public abstract class UIScreen<C,V,S>: MonoBehaviour, IUIScreen, IUIContractScreen
         where C : class, IUIContractScreen
         where V : IUIContractView
-        where S : UIState
+        where S : UIState, new()
     {
         #region Data
 
@@ -14,7 +14,7 @@ namespace GourdUI
         public UIScreenConfigDataTemplate configBaseData;
 
         protected V viewContract;
-        protected S _state;
+        protected S state;
 
         /// <summary>
         /// 
@@ -38,7 +38,7 @@ namespace GourdUI
         public virtual void OnScreenInstantiated()
         {
             // Create state class
-            CreateUIOverrideTypes();
+            state = new S();
 
             // Find the correct UI view
             FindValidUIView(GourdUI.Device.DeviceData());
@@ -62,8 +62,6 @@ namespace GourdUI
                 OnScreenDisabled();
             }
         }
-
-        protected abstract void CreateUIOverrideTypes();
 
         /// <summary>
         /// Called every time the screen instance is enabled.
@@ -158,7 +156,6 @@ namespace GourdUI
             {
                 if (_currentViewData.prefab != viewData.prefab)
                 {
-                    TeardownView();
                     DestroyCurrentView();
                 }
                 else
@@ -191,11 +188,6 @@ namespace GourdUI
         /// Called when a new view for this screen is triggered for display.
         /// </summary>
         protected abstract void SetupView();
-
-        /// <summary>
-        /// Called when a view is to be disabled or deleted
-        /// </summary>
-        protected abstract void TeardownView();
 
         #endregion View
 

@@ -105,6 +105,4 @@ public class UIView_Playground_Mobile : UIView<UIScreen_Playground>, IUIContract
     }
 
     #endregion Utility
-
-    
 }

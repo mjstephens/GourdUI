@@ -20,61 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0ff7ae49-a623-44e1-8de4-69eeedb19ed3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Components/UIView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Components/UIView.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Screens/IUIContractScreen.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Screens/IUIContractScreen.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Screens/IUIContractView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Screens/IUIContractView.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/Playground.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Prefabs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Prefabs/Item_CollectionGridEntry.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Prefabs/Item_CollectionGridEntry.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Prefabs/UIScreen_Playground.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Prefabs/UIScreen_Playground.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Prefabs/UIView_Playground_MobileLandscape.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Prefabs/UIView_Playground_MobileLandscape.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Prefabs/UIView_Playground_MobilePortrait.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Prefabs/UIView_Playground_MobilePortrait.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/DataCollectionUIInstance.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/DataCollectionUIInstance.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/IUIContractScreen_Playground.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/IUIContractScreen_Playground.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/IUIContractView_Playground.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/IUIContractView_Playground.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/UIScreen_Playground.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/UIScreen_Playground.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/UIState_Playground.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/UIState_Playground.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/UIView_Playground_Mobile.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/UIView_Playground_Mobile.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/Playground/UIScreen_Playground_Data.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/Playground/UIScreen_Playground_Data.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Views.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Views/UIView_Playground_MobileLandscape.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Views/UIView_Playground_MobileLandscape.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Views/UIView_Playground_MobilePortrait.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Views/UIView_Playground_MobilePortrait.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GourdUI/Runtime/Components/MonoUIView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GourdUI/Runtime/Components/MonoUIView.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GourdUI/Runtime/Core/GourdUICore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Core/GourdUICore.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GourdUI/Runtime/Screens/UIScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Screens/UIScreen.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GourdUI/Runtime/Views/IUIViewContract.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GourdUI/Runtime/Views/IUIViewContract.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GourdUI_Demo/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GourdUI_Demo/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GourdUI_Demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GourdUI_Demo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DemoScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DemoScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/IUIContract_DemoShop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/IUIContract_DemoShop.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/UIScreen_DemoShop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/UIScreen_DemoShop.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/UIView_DemoShop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/UIView_DemoShop.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/UIScreen_DemoShop_Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/UIScreen_DemoShop_Data.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/MainMenu/Prefabs/UIView_MainMenuDefault.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/MainMenu/Prefabs/UIView_MainMenuDefault.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/MainMenu/Scripts/IUIContract_MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/MainMenu/Scripts/IUIContract_MainMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/MainMenu/Scripts/UIScreen_MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/MainMenu/Scripts/UIScreen_MainMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/MainMenu/Scripts/UIState_MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/MainMenu/Scripts/UIState_MainMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/MainMenu/Scripts/UIView_MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/MainMenu/Scripts/UIView_MainMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/UIScreen_Playground.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/UIScreen_Playground.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/UIView_Playground_Mobile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/UIView_Playground_Mobile.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,9 +93,9 @@
         <option value="$PROJECT_DIR$/../GourdUI/Runtime/Screens/IUIContractScreen.cs" />
         <option value="$PROJECT_DIR$/../GourdUI/Runtime/Screens/IUIContractView.cs" />
         <option value="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/IUIContractScreen_Playground.cs" />
-        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Screens/UIScreen.cs" />
-        <option value="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/UIScreen_Playground.cs" />
         <option value="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/UIView_Playground_Mobile.cs" />
+        <option value="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/UIScreen_Playground.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Screens/UIScreen.cs" />
       </list>
     </option>
   </component>
@@ -203,7 +152,7 @@
       <updated>1598459187305</updated>
       <workItem from="1598459187947" duration="34037000" />
       <workItem from="1598615951208" duration="15472000" />
-      <workItem from="1598785778768" duration="25790000" />
+      <workItem from="1598785778768" duration="26356000" />
     </task>
     <servers />
   </component>

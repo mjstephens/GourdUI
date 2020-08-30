@@ -41,31 +41,21 @@ public class UIScreen_Playground :
         viewContract.UpdateCollection2Data(grid2Data);
     }
 
-    protected override void TeardownView()
-    {
-        
-    }
-
     #endregion Setup
 
 
     #region State
 
-    protected override void CreateUIOverrideTypes()
-    {
-        _state = new UIState_Playground();
-    }
-    
     protected override void ResetScreenState()
     {
-        _state.value1Value = 0;
-        _state.value2Value = 0;
+        state.value1Value = 0;
+        state.value2Value = 0;
     }
 
     protected override void ApplyScreenStateToCurrentView()
     {
-        viewContract.ReceiveValue1ValueUpdate(_state.value1Value);
-        viewContract.ReceiveValue2ValueUpdate(_state.value2Value);
+        viewContract.ReceiveValue1ValueUpdate(state.value1Value);
+        viewContract.ReceiveValue2ValueUpdate(state.value2Value);
     }
 
     #endregion State
@@ -80,13 +70,13 @@ public class UIScreen_Playground :
 
     public void OnValue1Changed(float value)
     {
-        _state.value1Value = value;
+        state.value1Value = value;
         viewContract.ReceiveValue1ValueUpdate(value);
     }
 
     public void OnValue2Changed(float value)
     {
-        _state.value2Value = value;
+        state.value2Value = value;
         viewContract.ReceiveValue2ValueUpdate(value);
     }
 
