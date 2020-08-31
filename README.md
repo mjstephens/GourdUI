@@ -19,6 +19,6 @@ Full documentation: https://www.notion.so/gourdui/GourdUI-Overview-c855e3ff981e4
 ---
 
 
-UI assets from:
+Demo UI assets from:
 - https://wenrexa.itch.io/ui-different03
 - https://www.cleanpng.com/png-world-cricket-championship-2-icon-game-guess-the-p-608084/download-png.html
