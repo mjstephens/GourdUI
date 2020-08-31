@@ -20,17 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0ff7ae49-a623-44e1-8de4-69eeedb19ed3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../GourdUI/Runtime/Components/UIView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Components/UIView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GourdUI/Runtime/Core/GourdUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Core/GourdUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GourdUI/Runtime/Core/GourdUICore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Core/GourdUICore.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GourdUI/Runtime/Core/IGourdUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Core/IGourdUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GourdUI/Runtime/Screens/UIScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Screens/UIScreen.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GourdUI_Demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GourdUI_Demo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Prefabs/UIScreen_Playground.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Prefabs/UIScreen_Playground.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Prefabs/UIView_Playground_MobileLandscape.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Prefabs/UIView_Playground_MobileLandscape.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Prefabs/UIView_Playground_MobilePortrait.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Prefabs/UIView_Playground_MobilePortrait.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/UIScreen_Playground.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/UIScreen_Playground.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/UIView_Playground_Mobile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/UIView_Playground_Mobile.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GourdUI/Editor/UIScreenWIzardEditorWindow.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +33,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/../GourdUI/Runtime/Screens/Data/UIScreenConfigDataTemplate.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/DataCollectionUIInstance.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../GourdUI/Editor/UIScreenWIzardEditorWindow.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../GourdUI/Runtime/Screens/Data/UIScreenConfigData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Shop/ShopItemInstanceData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Shop/ShopCategoryData.cs" root0="FORCE_HIGHLIGHTING" />
@@ -52,7 +43,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../GourdUI/Runtime/ViewFilters/Data/UIViewFilterBaseConfigDataTemplate.cs" />
         <option value="$PROJECT_DIR$/../GourdUI/Runtime/ViewFilters/Data/UIViewFilterInputConfigDataTemplate.cs" />
         <option value="$PROJECT_DIR$/../GourdUI/Runtime/ViewFilters/Data/UIViewFilterOrientationConfigData.cs" />
         <option value="$PROJECT_DIR$/../GourdUI/Runtime/ViewFilters/Data/UIViewFilterInputConfigData.cs" />
@@ -103,6 +93,7 @@
         <option value="$PROJECT_DIR$/../GourdUI/Runtime/Components/UIView.cs" />
         <option value="$PROJECT_DIR$/../GourdUI/Runtime/Core/IGourdUI.cs" />
         <option value="$PROJECT_DIR$/../GourdUI/Runtime/Screens/UIScreen.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Editor/UIScreenWIzardEditorWindow.cs" />
       </list>
     </option>
   </component>
@@ -159,7 +150,7 @@
       <updated>1598459187305</updated>
       <workItem from="1598459187947" duration="34037000" />
       <workItem from="1598615951208" duration="15472000" />
-      <workItem from="1598785778768" duration="30751000" />
+      <workItem from="1598785778768" duration="30903000" />
     </task>
     <servers />
   </component>
