@@ -9,9 +9,11 @@ An MVC-style UI framework for Unity3D. Facilitates the creation of *UIScreens* (
 
 Full documentation: 
 - www.notion.so/gourdui
+
 **This package is currently under construction - more to come**
 
-General Usage
+
+---
 
 
 UI assets from:
