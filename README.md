@@ -7,8 +7,10 @@ An MVC-style UI framework for Unity3D. Facilitates the creation of *UIScreens* (
 - Create *UIState* data for every screen to allow views to hot-swap, inheriting the current state so the UI position is maintained
 - Enforces modularity by ensuring screens and views only communicate through *UIContracts*, which define expected functionality
 
+
 Full documentation: 
-- www.notion.so/gourdui
+
+www.notion.so/gourdui
 
 **This package is currently under construction - more to come**
 
