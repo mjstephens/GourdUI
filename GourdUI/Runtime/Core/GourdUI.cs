@@ -34,7 +34,7 @@ namespace GourdUI
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         private static void Initialize()
         {
-            // CLoad core system data
+            // Load core system data
             GourdUISystemData systemData = Resources.Load<GourdUISystemData>(coreUIDataPath);
             if (systemData == null)
             {

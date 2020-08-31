@@ -1,4 +1,5 @@
-﻿using GourdUI;
+﻿using System.Collections.Generic;
+using GourdUI;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -82,7 +83,7 @@ public class UIView_Playground_Mobile : UIView<UIScreen_Playground>, IUIContract
         
     #region Utility
 
-    private void ClearItemGrid(RectTransform gridParent)
+    private static void ClearItemGrid(RectTransform gridParent)
     {
         foreach (Transform child in gridParent)
         {
@@ -91,7 +92,7 @@ public class UIView_Playground_Mobile : UIView<UIScreen_Playground>, IUIContract
     }
 
     private void PopulateCollectionGridData(RectTransform gridParent,
-        UIScreen_Playground.GridEntryDataExample[] data)
+        IEnumerable<UIScreen_Playground.GridEntryDataExample> data)
     {
         foreach (var item in data)
         {

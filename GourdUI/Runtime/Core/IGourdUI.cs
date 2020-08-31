@@ -1,15 +1,18 @@
 namespace GourdUI
 {
+    /// <summary>
+    /// Core interface class; defines expected functionality accessible to external classes.
+    /// </summary>
     public interface IGourdUI
     {
         /// <summary>
-        /// Registers a UIScreen instance with the AppUI controller.
+        /// Registers a UIScreen instance with the core.
         /// </summary>
         /// <param name="screen">The UIScreen instance to register.</param>
         void RegisterScreen(IUIScreen screen);
 
         /// <summary>
-        /// Unregisters a UIScreen instance from the AppUI controller.
+        /// Unregisters a UIScreen instance from the core.
         /// </summary>
         /// <param name="screen">The UIScreen instance to unregister.</param>
         void UnregisterScreen(IUIScreen screen);

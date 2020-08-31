@@ -1,8 +1,7 @@
 ﻿using GourdUI;
 using UnityEngine;
 
-public class UIScreen_Playground : 
-    UIScreen <UIScreen_Playground, IUIContractView_Playground, UIState_Playground>, 
+public class UIScreen_Playground : UIScreen <UIScreen_Playground, IUIContractView_Playground, UIState_Playground>, 
     IUIContractScreen_Playground
 {
     #region Data
@@ -91,5 +90,4 @@ public class UIScreen_Playground :
     }
 
     #endregion View Events
-    
 }

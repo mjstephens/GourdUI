@@ -525,7 +525,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f291972ace31043d0a81a68ad39cc943, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screenContract: {fileID: 0}
   collectionGridInstancePrefab: {fileID: 6877644992680143338, guid: 317f1eb7947f94d6880ae662317c9ea4,
     type: 3}
   disableScreenButton: {fileID: 3740764683106048288}
@@ -602,7 +601,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 736928af03dae4311ae226ee6c7b7a80, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c8f5c54e4e9ed443686e99ea2fa973c8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2675,7 +2674,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000061035156}
+  m_AnchoredPosition: {x: 0, y: 0.00012207031}
   m_SizeDelta: {x: 0, y: 312.5597}
   m_Pivot: {x: 0.5, y: 1.0000001}
 --- !u!222 &4976062909196646264

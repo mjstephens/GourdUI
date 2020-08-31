@@ -3,28 +3,48 @@ using UnityEngine;
 
 namespace GourdUI
 {
+    /// <summary>
+    /// Base class for all UIScreens. Holds reference to contracts and current view data.
+    /// See documentation for usage.
+    /// </summary>
+    /// <typeparam name="C">IUIContractScreen instance type</typeparam>
+    /// <typeparam name="V">IUIContractView instance type</typeparam>
+    /// <typeparam name="S">UIState instance type</typeparam>
     public abstract class UIScreen<C,V,S>: MonoBehaviour, IUIScreen, IUIContractScreen
         where C : class, IUIContractScreen
         where V : IUIContractView
         where S : UIState, new()
     {
-        #region Data
+        #region Fields
 
         [Header("Screen Data")]
-        public UIScreenConfigDataTemplate configBaseData;
-
-        protected V viewContract;
-        protected S state;
-
+        [SerializeField]
+        private UIScreenConfigDataTemplate _configBaseData;
+        
         /// <summary>
-        /// 
+        /// Cached view data 
         /// </summary>
         private UIViewConfigData _currentViewData;
         
-        #endregion Variables
+        #endregion Fields
+
+
+        #region Properties
+
+        /// <summary>
+        /// The active IUIContractView for this screen.
+        /// </summary>
+        protected V viewContract;
+        
+        /// <summary>
+        /// The active UIState for this screen.
+        /// </summary>
+        protected S state;
+
+        #endregion Properties
         
 
-        #region Initialization Methods
+        #region Initialization
 
         private void Start()
         {
@@ -52,8 +72,8 @@ namespace GourdUI
                 ApplyScreenStateToCurrentView();
             }
             
-            // Activate view of needed
-            if (configBaseData.data.activeOnLoad)
+            // Activate view if it should be active by default
+            if (_configBaseData.data.activeOnLoad)
             {
                 GourdUI.Core.AddScreenToStack(this, 0);
             }
@@ -63,6 +83,11 @@ namespace GourdUI
             }
         }
 
+        #endregion Initialization
+
+
+        #region Activation
+
         /// <summary>
         /// Called every time the screen instance is enabled.
         /// </summary>
@@ -70,15 +95,22 @@ namespace GourdUI
         public virtual void OnScreenEnabled<T>(T data = default)
         {
             gameObject.SetActive(true);
+            
+            // Make sure we update the view to match most recent state config.
             ApplyScreenStateToCurrentView();
         }
+
+        #endregion Activation
+
         
+        #region Deactivation
+
         /// <summary>
         /// Called every time the screen instance is to be disabled.
         /// </summary>
         public virtual void OnScreenDisabled()
         {
-            if (!configBaseData.data.preserveStateAfterScreenToggle)
+            if (!_configBaseData.data.preserveStateAfterScreenToggle)
             {
                 ResetScreenState();
             }
@@ -95,24 +127,14 @@ namespace GourdUI
             GourdUI.Core.UnregisterScreen(this);
         }
 
-        #endregion Initialization Methods
+        #endregion Deactivation
 
 
         #region View
         
-        /// <summary>
-        /// Responds to app device data updates.
-        /// </summary>
         void IUIScreen.OnAppDeviceDataUpdated(AppDeviceData deviceData)
         {
-            // Find valid UI views for the new device data
             FindValidUIView(deviceData);
-            
-            // Update view filter components on active view
-            if (viewContract != null)
-            {
-                //_view.OnDeviceDataUpdate(deviceData);
-            }
         }
         
         /// <summary>
@@ -123,15 +145,15 @@ namespace GourdUI
         {
             // Find based on filters
             List<UIViewConfigData> _validViews  = new List<UIViewConfigData>();
-            foreach (var view in configBaseData.data.views)
+            foreach (var view in _configBaseData.data.views)
             {
                 if (GourdUI.Core.UIViewIsValidForDevice(view.data, deviceData))
                 {
                     _validViews.Add(view.data);
                 }
             }
-            
-            // Do whatever with valid views
+
+            // TODO: implement some sort of priority/points system to resolve multiple passing views
             if (_validViews.Count > 0)
             {
                 SetValidUIView(_validViews[0]);
@@ -167,7 +189,7 @@ namespace GourdUI
             // Instantiate new view
             _currentViewData = viewData;
             
-            //
+            // Instantiate the view prefab
             GameObject vObj = Instantiate(viewData.prefab, transform);
             viewContract = vObj.GetComponent<V>();
             vObj.GetComponent<UIView<C>>().screenContract = this as C;
@@ -176,8 +198,8 @@ namespace GourdUI
             // Setup view
             SetupView();
             
-            //
-            if (configBaseData.data.resetStateBetweenViewChanges)
+            // We can optionally reset the state between view changes
+            if (_configBaseData.data.resetStateBetweenViewChanges)
             {
                 ResetScreenState();
             }
@@ -194,8 +216,14 @@ namespace GourdUI
 
         #region State
         
+        /// <summary>
+        /// Should reset the UI state to default values.
+        /// </summary>
         protected abstract void ResetScreenState();
 
+        /// <summary>
+        /// Should apply current state values to current viewContract.
+        /// </summary>
         protected abstract void ApplyScreenStateToCurrentView();
 
         #endregion State
@@ -213,7 +241,7 @@ namespace GourdUI
             // {
             //     controlCanvas.sortingOrder = index + configBaseData.data.canvasRenderOrderAddition;
             // }
-            //TODO
+            //TODO fix this
             
             // Set canvas of current active UIView
         }
@@ -230,7 +258,7 @@ namespace GourdUI
         
         UIScreenConfigData IUIScreen.ScreenConfigData()
         {
-            return configBaseData.data;
+            return _configBaseData.data;
         }
 
         #endregion Utility
