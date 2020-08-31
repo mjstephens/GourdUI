@@ -18,7 +18,9 @@ namespace GourdUI
         #region Fields
 
         [Header("Screen Data")]
-        public UIScreenConfigDataTemplate _configBaseData;
+        [SerializeField]
+        // We declare this as internal to enable reflection in the UIScreen Wizard
+        internal UIScreenConfigDataTemplate _configBaseData;
         
         /// <summary>
         /// Cached view data 

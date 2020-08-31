@@ -20,61 +20,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0ff7ae49-a623-44e1-8de4-69eeedb19ed3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/GourdUI/IUIContractScreenTemplate.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/GourdUI/IUIContractScreenTemplate.txt.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/GourdUI/IUIContractViewTemplate.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/GourdUI/UIScreenTemplate.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/GourdUI/UIStateTemplate.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/GourdUI/UIViewTemplate.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/UIScreenWIzard.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/UIScreenWizard.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/UIScreenWizardEditorWindow.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/UIScreenWizardEditorWindow.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Views/UIView_Playground_MobileLandscape_Data.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Views/UIView_Playground_MobileLandscape_Data.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Views/UIView_Playground_MobilePortrait_Data.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Views/UIView_Playground_MobilePortrait_Data.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/YoloSwaggins.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/YoloSwaggins/Prefabs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/YoloSwaggins/Prefabs/UIScreen_YoloSwaggins.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/YoloSwaggins/Prefabs/UIScreen_YoloSwaggins.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/YoloSwaggins/Prefabs/UIView_YoloSwaggins_Default.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/YoloSwaggins/Prefabs/UIView_YoloSwaggins_Default.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/YoloSwaggins/Scripts.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/YoloSwaggins/Scripts/IUIContractScreen_YoloSwaggins.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/YoloSwaggins/Scripts/IUIContractScreen_YoloSwaggins.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/YoloSwaggins/Scripts/IUIContractView_YoloSwaggins.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/YoloSwaggins/Scripts/IUIContractView_YoloSwaggins.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/YoloSwaggins/Scripts/UIScreen_YoloSwaggins.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/YoloSwaggins/Scripts/UIScreen_YoloSwaggins.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/YoloSwaggins/Scripts/UIState_YoloSwaggins.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/YoloSwaggins/Scripts/UIState_YoloSwaggins.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/YoloSwaggins/Scripts/UIView_YoloSwaggins_Default.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/YoloSwaggins/Scripts/UIView_YoloSwaggins_Default.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/YoloSwaggins/UIScreen_YoloSwaggins_Data.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/YoloSwaggins/UIScreen_YoloSwaggins_Data.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/YoloSwaggins/Views.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/YoloSwaggins/Views/UIView_YoloSwaggins_Default_Data.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/YoloSwaggins/Views/UIView_YoloSwaggins_Default_Data.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GourdUI/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GourdUI/Editor/UIScreenWIzardEditorWindow.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GourdUI/Editor/UIScreenWIzardEditorWindow.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GourdUI/Editor/com.mstephens.gourdui.editor.asmdef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GourdUI/Editor/com.mstephens.gourdui.editor.asmdef.meta" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/testScreen.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/testScreen/Prefabs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/testScreen/Prefabs/UIScreen_testScreen.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/testScreen/Prefabs/UIScreen_testScreen.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/testScreen/Prefabs/UIView_testScreen_Default.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/testScreen/Prefabs/UIView_testScreen_Default.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/testScreen/Scripts.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/testScreen/Scripts/IUIContractScreen_testScreen.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/testScreen/Scripts/IUIContractScreen_testScreen.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/testScreen/Scripts/IUIContractView_testScreen.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/testScreen/Scripts/IUIContractView_testScreen.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/testScreen/Scripts/UIScreen_testScreen.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/testScreen/Scripts/UIScreen_testScreen.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/testScreen/Scripts/UIState_testScreen.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/testScreen/Scripts/UIState_testScreen.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/testScreen/Scripts/UIView_testScreen_Default.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/testScreen/Scripts/UIView_testScreen_Default.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/testScreen/UIScreen_testScreen_Data.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/testScreen/UIScreen_testScreen_Data.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/testScreen/Views.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/testScreen/Views/UIView_testScreen_Default_Data.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/testScreen/Views/UIView_testScreen_Default_Data.asset.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GourdUI/Runtime/Screens/UIScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Screens/UIScreen.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GourdUI/Runtime/com.mstephens.gourdUI.asmdef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GourdUI/Runtime/com.mstephens.gourdUI.asmdef.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GourdUI_Demo/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GourdUI_Demo/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GourdUI_Demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GourdUI_Demo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DemoScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DemoScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/IUIContractScreen_Playground.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/IUIContractScreen_Playground.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/IUIContractView_Playground.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/IUIContractView_Playground.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/UIScreen_Playground.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/UIScreen_Playground.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/UIState_Playground.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/UIState_Playground.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Views/UIView_Playground_MobileLandscape.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Views/UIView_Playground_MobileLandscape.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Views/UIView_Playground_MobilePortrait.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Views/UIView_Playground_MobilePortrait.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/UIScreenWizard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/UIScreenWizard.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,8 +116,8 @@
         <option value="$PROJECT_DIR$/Assets/UI/Screens/YoloSwaggins/Scripts/UIScreen_YoloSwaggins.cs" />
         <option value="$PROJECT_DIR$/Assets/UI/Screens/YoloSwaggins/Scripts/IUIContractView_YoloSwaggins.cs" />
         <option value="$PROJECT_DIR$/Assets/UI/Screens/YoloSwaggins/Scripts/IUIContractScreen_YoloSwaggins.cs" />
-        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Screens/UIScreen.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Editor/UIScreenWizard.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Screens/UIScreen.cs" />
       </list>
     </option>
   </component>
@@ -205,7 +176,7 @@
       <workItem from="1598615951208" duration="15472000" />
       <workItem from="1598785778768" duration="30903000" />
       <workItem from="1598873611600" duration="708000" />
-      <workItem from="1598874429590" duration="13881000" />
+      <workItem from="1598874429590" duration="16881000" />
     </task>
     <servers />
   </component>

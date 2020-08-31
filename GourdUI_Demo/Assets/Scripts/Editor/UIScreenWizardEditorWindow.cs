@@ -63,7 +63,7 @@ public class UIScreenWizardEditorWindow : EditorWindow
         GUILayout.Space(10);
 
         GUILayout.Label("Contents preview:");
-        GUILayout.Label("Assets/UI/Screens/" + _screenTitle);
+        GUILayout.Label(UIScreenWizard.CONST_RootUIScreenPath + _screenTitle, EditorStyles.boldLabel);
 
         GUILayout.Space(15);
         Color currentCol = GUI.color;

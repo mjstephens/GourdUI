@@ -7,50 +7,97 @@ using UnityEditor;
 using UnityEditor.Compilation;
 using UnityEngine;
 using UnityEngine.UI;
-using Object = System.Object;
 
 namespace Editor
 {
+    /*
+     *    Process works as follows:
+     *     1) The directory tree for the new UI screen is created
+     *     2) The data objects (UIScreenConfigDataTemplate and UIViewConfigDataTemplate) are created
+     *     3) New classes are created from script templates, and are filled in with the correct class names
+     *         based on the "screenName" passed in from the user
+     *     4) The assets that have been created thus far are saved, and script compilation is triggered in
+     *         order to access the new class types we just created
+     *     5) After compilation, the final inter-connections are established (using the new types that were
+     *         just compiled) and the system is finished.
+     *
+     *     Result:
+     *     - A new directory structure under CONST_RootUIScreenPath
+     *     - 5 new files (3 classes, 2 interfaces)
+     *     - 2 new ScriptableObject assets (UIScreenConfigDataTemplate and UIViewConfigDataTemplate)
+     *     - 2 new prefab assets (1 UIScreen stub prefab, 1 started UIView)
+     */
+    
+    
+    /// <summary>
+    /// Automatically creates requisite scripts, data, and prefab objects for a new UIScreen.
+    /// </summary>
     public static class UIScreenWizard
     {
+        #region IDs
+
+        // Directory
+        public const string CONST_RootUIScreenPath = "Assets/UI/Screens/";
+
+        // Class generation
+        private const string CONST_ClassGenClassNameKey = "#CLASSNAME#";
+        private const string CONST_ClassGenContractScreenKey = "#CONTRACTSCREEN#";
+        private const string CONST_ClassGenContractViewKey = "#CONTRACTVIEW#";
+        private const string CONST_ClassGenStateKey = "#STATE#";
+        private const string CONST_ClassGenScreenKey = "#SCREEN#";
+        private const string CONST_ScreenPrefabDataTemplateFieldName = "_configBaseData";
+        
+        // Editor pref keys
+        private const string CONST_EditorPrefsScreenNameKey = "ScreenName";
+        private const string CONST_EditorPrefsScreenClassGenType = "ScreenClassType";
+        private const string CONST_EditorPrefsViewClassGenType = "ViewClassType";
+        
+        // Display
+        private const string CONST_EditorProgressBarTitle = "Creating UIScreen Structure...";
+
+        #endregion IDs
+
+
+        #region Entry
+        
         public static void OnCreateNewUIScreen(string screenName)
         {
-            EditorPrefs.SetString ("ScreenName", screenName);
+            // We need to save the screen name since we need it later for the post-compilation steps
+            EditorPrefs.SetString (CONST_EditorPrefsScreenNameKey, screenName);
             
             // Create project directory...
-            EditorUtility.DisplayProgressBar(
-                "Creating UIScreen Structure...", 
-                "Directories", 0.2f);
             Tuple<string,string,string,string> directoryPaths =
                 CreateScreenDirectoryStructure(screenName);
             
             // Create project data items...
-            EditorUtility.DisplayProgressBar(
-                "Creating UIScreen Structure...", 
-                "Data Assets", 0.4f);
             Tuple<UIScreenConfigDataTemplate,UIViewConfigDataTemplate> dataObjects = 
                 CreateScreenDataObjects(screenName);
             
             // Create scripts
-            EditorUtility.DisplayProgressBar(
-                "Creating UIScreen Structure...", 
-                "Compiling Scripts...", 0.6f);
-            Tuple<string, string> newtypes = 
-                CreateScreenScripts(directoryPaths.Item3, screenName);
-            EditorPrefs.SetString ("ScreenClassType", newtypes.Item1);
-            EditorPrefs.SetString ("ViewClassType", newtypes.Item2);
-
+            CreateScreenScripts(directoryPaths.Item3, screenName);
+            
             // Finished!
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
             CompilationPipeline.RequestScriptCompilation();
             
+            // Select our new UIScreenConfigDataTemplate asset
             Selection.activeObject = dataObjects.Item1;
         }
+        
+        #endregion Entry
+        
 
+        #region Directory
+        
         private static Tuple<string,string,string,string> 
             CreateScreenDirectoryStructure(string screenName)
         {
+            // Progress bar
+            EditorUtility.DisplayProgressBar(
+                CONST_EditorProgressBarTitle, 
+                "Directories", 0.2f);
+            
             // Standard data
             string appPath = Application.dataPath;
             string uiScreenRootPath = Path.Combine(appPath, "UI");
@@ -76,11 +123,21 @@ namespace Editor
                 screenScriptsPath.FullName,
                 screenViewsPath.FullName);
         }
+        
+        #endregion Directory
 
+        
+        #region ScriptableObject Data Assets
+        
         private static Tuple<UIScreenConfigDataTemplate,UIViewConfigDataTemplate> 
             CreateScreenDataObjects(string screenName)
         {
-            string pathHeader = "Assets/UI/Screens/" + screenName + "/";
+            // Progress bar
+            EditorUtility.DisplayProgressBar(
+                CONST_EditorProgressBarTitle, 
+                "Data Assets", 0.4f);
+            
+            string pathHeader = CONST_RootUIScreenPath + screenName + "/";
 
             // Create view object data
             UIViewConfigDataTemplate viewDataObj =
@@ -103,9 +160,19 @@ namespace Editor
             // Save the assets
             return new Tuple<UIScreenConfigDataTemplate, UIViewConfigDataTemplate>(screenDataObj, viewDataObj);
         }
+        
+        #endregion ScriptableObject Data Assets
+        
 
-        private static Tuple<string,string> CreateScreenScripts(string scriptsPath,string screenName)
+        #region Class Generation
+        
+        private static void CreateScreenScripts(string scriptsPath, string screenName)
         {
+            // Progress bar
+            EditorUtility.DisplayProgressBar(
+                CONST_EditorProgressBarTitle, 
+                "Compiling Scripts...", 0.6f);
+            
             // Screen contract
             string contractScreenClass = "IUIContractScreen_" + screenName;
             using (FileStream fs = File.Create(Path.Combine(scriptsPath, contractScreenClass + ".cs")))
@@ -156,13 +223,14 @@ namespace Editor
                 fs.Write(data, 0, data.Length);
             } 
             
-            return new Tuple<string, string>(screenClass, viewClass);
+            EditorPrefs.SetString (CONST_EditorPrefsScreenClassGenType, screenClass);
+            EditorPrefs.SetString (CONST_EditorPrefsViewClassGenType, viewClass);
         }
 
         private static byte[] GetScriptTemplateContents(string className, string templatePath)
         {
             string contents = Resources.Load<TextAsset>(templatePath).text;
-            contents = contents.Replace("#CLASSNAME#", className);
+            contents = contents.Replace(CONST_ClassGenClassNameKey, className);
             return new UTF8Encoding(true).GetBytes(contents);
         }
         
@@ -174,10 +242,10 @@ namespace Editor
             string stateClass)
         {
             string contents = Resources.Load<TextAsset>(templatePath).text;
-            contents = contents.Replace("#CLASSNAME#", className);
-            contents = contents.Replace("#CONTRACTSCREEN#", screenContractClass);
-            contents = contents.Replace("#CONTRACTVIEW#", viewContractClass);
-            contents = contents.Replace("#STATE#", stateClass);
+            contents = contents.Replace(CONST_ClassGenClassNameKey, className);
+            contents = contents.Replace(CONST_ClassGenContractScreenKey, screenContractClass);
+            contents = contents.Replace(CONST_ClassGenContractViewKey, viewContractClass);
+            contents = contents.Replace(CONST_ClassGenStateKey, stateClass);
 
             return new UTF8Encoding(true).GetBytes(contents);
         }
@@ -190,28 +258,58 @@ namespace Editor
             string screenClass)
         {
             string contents = Resources.Load<TextAsset>(templatePath).text;
-            contents = contents.Replace("#CLASSNAME#", className);
-            contents = contents.Replace("#CONTRACTSCREEN#", screenContractClass);
-            contents = contents.Replace("#CONTRACTVIEW#", viewContractClass);
-            contents = contents.Replace("#SCREEN#", screenClass);
+            contents = contents.Replace(CONST_ClassGenClassNameKey, className);
+            contents = contents.Replace(CONST_ClassGenContractScreenKey, screenContractClass);
+            contents = contents.Replace(CONST_ClassGenContractViewKey, viewContractClass);
+            contents = contents.Replace(CONST_ClassGenScreenKey, screenClass);
 
             return new UTF8Encoding(true).GetBytes(contents);
         }
+        
+        #endregion Class Generation
+        
+
+        #region Recompilation
+
+        [UnityEditor.Callbacks.DidReloadScripts]
+        private static void OnScriptRecompile()
+        {
+            if (EditorPrefs.HasKey(CONST_EditorPrefsScreenClassGenType))
+            {
+                EditorUtility.DisplayProgressBar(
+                    CONST_EditorProgressBarTitle, 
+                    "Creating Prefabs", 0.8f);
+                CreateScreenPrefabs();
+                
+                EditorPrefs.DeleteKey(CONST_EditorPrefsScreenNameKey);
+                EditorPrefs.DeleteKey(CONST_EditorPrefsScreenClassGenType);
+                EditorPrefs.DeleteKey(CONST_EditorPrefsViewClassGenType);
+                
+                EditorUtility.ClearProgressBar();
+                AssetDatabase.SaveAssets();
+                AssetDatabase.Refresh();
+            }
+        }
+
+        #endregion Recompilation
+
+
+        #region Prefab Objects
 
         private static void CreateScreenPrefabs()
         {
-            string n = EditorPrefs.GetString("ScreenName");
+            string _screenName = EditorPrefs.GetString(CONST_EditorPrefsScreenNameKey);
             
             // Create screen object prefab
-            GameObject screenPrefabObj = new GameObject {name = "UIScreen_" + n};
-            Type screenType = Type.GetType (EditorPrefs.GetString("ScreenClassType"),
+            GameObject screenPrefabObj = new GameObject {name = "UIScreen_" + _screenName};
+            Type screenType = Type.GetType (EditorPrefs.GetString(CONST_EditorPrefsScreenClassGenType),
                 true);
             screenPrefabObj.AddComponent(screenType);
             
             // Set data field
             UIScreenConfigDataTemplate screenData =
                 (UIScreenConfigDataTemplate) AssetDatabase.LoadAssetAtPath(
-                    "Assets/UI/Screens/" + n + "/UIScreen_" + n + "_Data.asset",
+                    CONST_RootUIScreenPath + _screenName + "/UIScreen_" + _screenName + "_Data.asset",
                     typeof(UIScreenConfigDataTemplate));
             
             Component[] components = screenPrefabObj.GetComponents<Component>();
@@ -223,13 +321,13 @@ namespace Editor
                     Type t = co.GetType();
                     if (t == screenType)
                     {
-                        System.Reflection.FieldInfo[] fieldInfo = t.GetFields();
+                        System.Reflection.FieldInfo[] fieldInfo = t.GetFields(
+                            BindingFlags.Instance | BindingFlags.NonPublic);
                         foreach (System.Reflection.FieldInfo info in fieldInfo)
                         {
-                            if (info.Name == "_configBaseData")
+                            if (info.Name == CONST_ScreenPrefabDataTemplateFieldName)
                             {
                                 info.SetValue(co, screenData);
-                                Debug.Log("FOUND");
                             }
                         }
                     }
@@ -237,14 +335,13 @@ namespace Editor
             }
             
             // Save prefab
-            string path = "Assets/UI/Screens/" + n + "/Prefabs/UIScreen_" + n + ".prefab";
+            string path = CONST_RootUIScreenPath + _screenName + "/Prefabs/UIScreen_" + _screenName + ".prefab";
             PrefabUtility.SaveAsPrefabAssetAndConnect(
                 screenPrefabObj, path, InteractionMode.UserAction);
             
-            
             // Create view object prefab
-            GameObject viewPrefabObj = new GameObject {name = "UIView_" + n + "_Default"};
-            Type viewType = Type.GetType (EditorPrefs.GetString("ViewClassType"),
+            GameObject viewPrefabObj = new GameObject {name = "UIView_" + _screenName + "_Default"};
+            Type viewType = Type.GetType (EditorPrefs.GetString(CONST_EditorPrefsViewClassGenType),
                 true);
             Canvas c = viewPrefabObj.AddComponent<Canvas>();
             c.renderMode = RenderMode.ScreenSpaceOverlay;
@@ -252,7 +349,7 @@ namespace Editor
             cs.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
             viewPrefabObj.AddComponent<GraphicRaycaster>();
             viewPrefabObj.AddComponent(viewType);
-            string viewPath = "Assets/UI/Screens/" + n + "/Prefabs/UIView_" + n + "_Default.prefab";
+            string viewPath = CONST_RootUIScreenPath + _screenName + "/Prefabs/UIView_" + _screenName + "_Default.prefab";
             GameObject viewPrefab = PrefabUtility.SaveAsPrefabAssetAndConnect(
                 viewPrefabObj, viewPath, InteractionMode.UserAction);
             UnityEditor.Editor.DestroyImmediate(viewPrefabObj);
@@ -260,49 +357,11 @@ namespace Editor
             // Assign view prefab to view data object
             UIViewConfigDataTemplate viewData =
                 (UIViewConfigDataTemplate) AssetDatabase.LoadAssetAtPath(
-                    "Assets/UI/Screens/" + n + "/Views/UIView_" + n + "_Default_Data.asset",
+                    CONST_RootUIScreenPath + _screenName + "/Views/UIView_" + _screenName + "_Default_Data.asset",
                     typeof(UIViewConfigDataTemplate));
             viewData.data.prefab = viewPrefab;
         }
 
-
-        #region Utility
-
-        public static object GetValue(this SerializedProperty property)
-        {
-            System.Type parentType = property.serializedObject.targetObject.GetType();
-            System.Reflection.FieldInfo fi = parentType.GetField(property.propertyPath);  
-            return fi.GetValue(property.serializedObject.targetObject);
-        }
-        
-        public static void SetValue(this SerializedProperty property, Type t, object value)
-        {
-            System.Reflection.PropertyInfo fi = t.GetProperty(property.propertyPath);//this FieldInfo contains the type.
-            Debug.Log(fi.Name);
-            fi.SetValue(property.serializedObject.targetObject, value);
-        }
-
-        #endregion Utility
-        
-        
-        [UnityEditor.Callbacks.DidReloadScripts]
-        private static void ScriptReloaded()
-        {
-            if (EditorPrefs.HasKey("ScreenClassType"))
-            {
-                EditorUtility.DisplayProgressBar(
-                    "Creating UIScreen Structure...", 
-                    "Creating Prefabs", 0.8f);
-                CreateScreenPrefabs();
-                
-                EditorPrefs.DeleteKey("ScreenClassType");
-                EditorPrefs.DeleteKey("ViewClassType");
-                EditorPrefs.DeleteKey("ScreenName");
-                
-                EditorUtility.ClearProgressBar();
-                AssetDatabase.SaveAssets();
-                AssetDatabase.Refresh();
-            }
-        }
+        #endregion Prefab Objects
     }
 }

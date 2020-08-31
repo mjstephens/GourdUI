@@ -161,13 +161,13 @@
                 <e p="UIView_Playground_Mobile.cs" t="Include" />
               </e>
             </e>
-            <e p="YoloSwaggins" t="Include">
+            <e p="testScreen" t="Include">
               <e p="Scripts" t="Include">
-                <e p="IUIContractScreen_YoloSwaggins.cs" t="Include" />
-                <e p="IUIContractView_YoloSwaggins.cs" t="Include" />
-                <e p="UIScreen_YoloSwaggins.cs" t="Include" />
-                <e p="UIState_YoloSwaggins.cs" t="Include" />
-                <e p="UIView_YoloSwaggins_Default.cs" t="Include" />
+                <e p="IUIContractScreen_testScreen.cs" t="Include" />
+                <e p="IUIContractView_testScreen.cs" t="Include" />
+                <e p="UIScreen_testScreen.cs" t="Include" />
+                <e p="UIState_testScreen.cs" t="Include" />
+                <e p="UIView_testScreen_Default.cs" t="Include" />
               </e>
             </e>
           </e>
