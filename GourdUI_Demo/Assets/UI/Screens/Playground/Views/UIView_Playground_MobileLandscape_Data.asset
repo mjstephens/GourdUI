@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a30235a75a4f44eca082bf75bcbcbd6d, type: 3}
-  m_Name: UIView_Playground_MobilePortrait
+  m_Name: UIView_Playground_MobileLandscape_Data
   m_EditorClassIdentifier: 
   data:
-    prefab: {fileID: 1485433507972431311, guid: 89d7d53583c874f01a94ce93f513bb69,
+    prefab: {fileID: 1792216561337375043, guid: ec6f66073008248eda3126978673a664,
       type: 3}
     filterData:
     - {fileID: 11400000, guid: 6cad1dfdd16904b699006ddbba5d8acb, type: 2}
-    - {fileID: 11400000, guid: 7790604432e314429808f3183418dc13, type: 2}
+    - {fileID: 11400000, guid: e3e0118e375474035a3ce11530fb54a1, type: 2}
     viewSpecificTriggers: []

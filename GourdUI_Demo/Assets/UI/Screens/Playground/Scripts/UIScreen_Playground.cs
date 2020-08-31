@@ -1,7 +1,11 @@
 ﻿using GourdUI;
 using UnityEngine;
 
-public class UIScreen_Playground : UIScreen <UIScreen_Playground, IUIContractView_Playground, UIState_Playground>, 
+/// <summary>
+/// UIScreen implementation.
+/// </summary>
+public class UIScreen_Playground : 
+    UIScreen <UIScreen_Playground, IUIContractView_Playground, UIState_Playground>, 
     IUIContractScreen_Playground
 {
     #region Data

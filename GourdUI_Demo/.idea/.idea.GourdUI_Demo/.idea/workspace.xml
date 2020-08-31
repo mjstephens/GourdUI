@@ -20,7 +20,61 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0ff7ae49-a623-44e1-8de4-69eeedb19ed3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../GourdUI/Editor/UIScreenWIzardEditorWindow.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/GourdUI/IUIContractScreenTemplate.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/GourdUI/IUIContractScreenTemplate.txt.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/GourdUI/IUIContractViewTemplate.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/GourdUI/UIScreenTemplate.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/GourdUI/UIStateTemplate.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/GourdUI/UIViewTemplate.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/UIScreenWIzard.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/UIScreenWizard.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/UIScreenWizardEditorWindow.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/UIScreenWizardEditorWindow.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Views/UIView_Playground_MobileLandscape_Data.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Views/UIView_Playground_MobileLandscape_Data.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Views/UIView_Playground_MobilePortrait_Data.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Views/UIView_Playground_MobilePortrait_Data.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/YoloSwaggins.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/YoloSwaggins/Prefabs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/YoloSwaggins/Prefabs/UIScreen_YoloSwaggins.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/YoloSwaggins/Prefabs/UIScreen_YoloSwaggins.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/YoloSwaggins/Prefabs/UIView_YoloSwaggins_Default.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/YoloSwaggins/Prefabs/UIView_YoloSwaggins_Default.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/YoloSwaggins/Scripts.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/YoloSwaggins/Scripts/IUIContractScreen_YoloSwaggins.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/YoloSwaggins/Scripts/IUIContractScreen_YoloSwaggins.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/YoloSwaggins/Scripts/IUIContractView_YoloSwaggins.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/YoloSwaggins/Scripts/IUIContractView_YoloSwaggins.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/YoloSwaggins/Scripts/UIScreen_YoloSwaggins.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/YoloSwaggins/Scripts/UIScreen_YoloSwaggins.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/YoloSwaggins/Scripts/UIState_YoloSwaggins.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/YoloSwaggins/Scripts/UIState_YoloSwaggins.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/YoloSwaggins/Scripts/UIView_YoloSwaggins_Default.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/YoloSwaggins/Scripts/UIView_YoloSwaggins_Default.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/YoloSwaggins/UIScreen_YoloSwaggins_Data.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/YoloSwaggins/UIScreen_YoloSwaggins_Data.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/YoloSwaggins/Views.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/YoloSwaggins/Views/UIView_YoloSwaggins_Default_Data.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/YoloSwaggins/Views/UIView_YoloSwaggins_Default_Data.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GourdUI/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GourdUI/Editor/UIScreenWIzardEditorWindow.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GourdUI/Editor/UIScreenWIzardEditorWindow.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GourdUI/Editor/com.mstephens.gourdui.editor.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GourdUI/Editor/com.mstephens.gourdui.editor.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GourdUI/Runtime/Screens/UIScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../GourdUI/Runtime/Screens/UIScreen.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GourdUI/Runtime/com.mstephens.gourdUI.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GourdUI/Runtime/com.mstephens.gourdUI.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GourdUI_Demo/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GourdUI_Demo/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GourdUI_Demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GourdUI_Demo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DemoScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DemoScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/IUIContractScreen_Playground.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/IUIContractScreen_Playground.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/IUIContractView_Playground.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/IUIContractView_Playground.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/UIScreen_Playground.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/UIScreen_Playground.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/UIState_Playground.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/UIState_Playground.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Views/UIView_Playground_MobileLandscape.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Views/UIView_Playground_MobileLandscape.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Views/UIView_Playground_MobilePortrait.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Views/UIView_Playground_MobilePortrait.asset.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +87,6 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/../GourdUI/Runtime/Screens/Data/UIScreenConfigDataTemplate.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/DataCollectionUIInstance.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../GourdUI/Editor/UIScreenWIzardEditorWindow.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../GourdUI/Runtime/Screens/Data/UIScreenConfigData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Shop/ShopItemInstanceData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Shop/ShopCategoryData.cs" root0="FORCE_HIGHLIGHTING" />
@@ -43,19 +96,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../GourdUI/Runtime/ViewFilters/Data/UIViewFilterInputConfigDataTemplate.cs" />
-        <option value="$PROJECT_DIR$/../GourdUI/Runtime/ViewFilters/Data/UIViewFilterOrientationConfigData.cs" />
-        <option value="$PROJECT_DIR$/../GourdUI/Runtime/ViewFilters/Data/UIViewFilterInputConfigData.cs" />
-        <option value="$PROJECT_DIR$/../GourdUI/Runtime/ViewFilters/Data/UIViewFilterOrientationConfigDataTemplate.cs" />
-        <option value="$PROJECT_DIR$/../GourdUI/Runtime/ViewFilters/Data/UIViewFilterPlatformConfigData.cs" />
-        <option value="$PROJECT_DIR$/../GourdUI/Runtime/ViewFilters/Data/UIViewFilterPlatformConfigDataTemplate.cs" />
-        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Views/Data/UIViewConfigData.cs" />
-        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Views/IUIView.cs" />
-        <option value="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/IDemoShopViewContract.cs" />
-        <option value="$PROJECT_DIR$/../GourdUI/Runtime/ViewFilters/UIViewFilterComponent.cs" />
-        <option value="$PROJECT_DIR$/../GourdUI/Runtime/ViewFilters/Components/UIViewFilterComponent.cs" />
-        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Device/CoreDevice.cs" />
-        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Device/AppDeviceData.cs" />
         <option value="$PROJECT_DIR$/../GourdUI/Runtime/Device/ICoreDevice.cs" />
         <option value="$PROJECT_DIR$/../GourdUI/Runtime/ViewFilters/UIViewFilterResolver.cs" />
         <option value="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/UIContract_DemoShop.cs" />
@@ -74,7 +114,6 @@
         <option value="$PROJECT_DIR$/../GourdUI/Runtime/Components/MonoUIViewContract.cs" />
         <option value="$PROJECT_DIR$/../GourdUI/Runtime/Views/IUIViewContract.cs" />
         <option value="$PROJECT_DIR$/../GourdUI/Runtime/Components/UIViewContract.cs" />
-        <option value="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/UIState_Playground.cs" />
         <option value="$PROJECT_DIR$/../GourdUI/Runtime/Components/MonoUIView.cs" />
         <option value="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/UIViewContract_Playground.cs" />
         <option value="$PROJECT_DIR$/Assets/UI/Screens/DemoShop/Scripts/UIView_DemoShop.cs" />
@@ -85,15 +124,29 @@
         <option value="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/IUIContract_Playground.cs" />
         <option value="$PROJECT_DIR$/../GourdUI/Runtime/Screens/IUIContractScreen.cs" />
         <option value="$PROJECT_DIR$/../GourdUI/Runtime/Screens/IUIContractView.cs" />
-        <option value="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/IUIContractScreen_Playground.cs" />
         <option value="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/UIView_Playground_Mobile.cs" />
-        <option value="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/UIScreen_Playground.cs" />
         <option value="$PROJECT_DIR$/../GourdUI/Runtime/Core/GourdUI.cs" />
         <option value="$PROJECT_DIR$/../GourdUI/Runtime/Core/GourdUICore.cs" />
         <option value="$PROJECT_DIR$/../GourdUI/Runtime/Components/UIView.cs" />
         <option value="$PROJECT_DIR$/../GourdUI/Runtime/Core/IGourdUI.cs" />
-        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Screens/UIScreen.cs" />
         <option value="$PROJECT_DIR$/../GourdUI/Editor/UIScreenWIzardEditorWindow.cs" />
+        <option value="$PROJECT_DIR$/Editor/UIScreenWizardEditorWindow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Editor/UIScreenWIzard.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Editor/UIScreenWizardEditorWindow.cs" />
+        <option value="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/IUIContractScreen_Playground.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/GourdUI/IUIContractScreenTemplate.txt" />
+        <option value="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/IUIContractView_Playground.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/GourdUI/IUIContractViewTemplate.txt" />
+        <option value="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/UIState_Playground.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/GourdUI/UIStateTemplate.txt" />
+        <option value="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/UIScreen_Playground.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/GourdUI/UIScreenTemplate.txt" />
+        <option value="$PROJECT_DIR$/Assets/Resources/GourdUI/UIViewTemplate.txt" />
+        <option value="$PROJECT_DIR$/Assets/UI/Screens/YoloSwaggins/Scripts/UIScreen_YoloSwaggins.cs" />
+        <option value="$PROJECT_DIR$/Assets/UI/Screens/YoloSwaggins/Scripts/IUIContractView_YoloSwaggins.cs" />
+        <option value="$PROJECT_DIR$/Assets/UI/Screens/YoloSwaggins/Scripts/IUIContractScreen_YoloSwaggins.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Runtime/Screens/UIScreen.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Editor/UIScreenWizard.cs" />
       </list>
     </option>
   </component>
@@ -151,6 +204,8 @@
       <workItem from="1598459187947" duration="34037000" />
       <workItem from="1598615951208" duration="15472000" />
       <workItem from="1598785778768" duration="30903000" />
+      <workItem from="1598873611600" duration="708000" />
+      <workItem from="1598874429590" duration="13881000" />
     </task>
     <servers />
   </component>
@@ -184,13 +239,13 @@
       <screen x="-814" y="-1417" width="2560" height="1417" />
     </state>
     <state x="-33" y="-1070" key="SettingsEditor/-814.-1417.2560.1417/0.23.1792.1097@-814.-1417.2560.1417" timestamp="1598459867203" />
-    <state x="-714" y="-1317" width="2360" height="1217" key="VCS.FileHistoryDialog" timestamp="1598816486951">
+    <state x="-714" y="-1317" width="2360" height="1217" key="VCS.FileHistoryDialog" timestamp="1598880459829">
       <screen x="-814" y="-1417" width="2560" height="1417" />
     </state>
-    <state x="-714" y="-1317" width="2360" height="1217" key="VCS.FileHistoryDialog/-814.-1417.2560.1417/0.23.1792.1097@-814.-1417.2560.1417" timestamp="1598816486951" />
-    <state x="129" y="-1094" width="672" height="678" key="search.everywhere.popup" timestamp="1598533925736">
+    <state x="-714" y="-1317" width="2360" height="1217" key="VCS.FileHistoryDialog/-814.-1417.2560.1417/0.23.1792.1097@-814.-1417.2560.1417" timestamp="1598880459829" />
+    <state x="129" y="-1094" width="672" height="678" key="search.everywhere.popup" timestamp="1598874597857">
       <screen x="-814" y="-1417" width="2560" height="1417" />
     </state>
-    <state x="129" y="-1094" width="672" height="678" key="search.everywhere.popup/-814.-1417.2560.1417/0.23.1792.1097@-814.-1417.2560.1417" timestamp="1598533925736" />
+    <state x="129" y="-1094" width="672" height="678" key="search.everywhere.popup/-814.-1417.2560.1417/0.23.1792.1097@-814.-1417.2560.1417" timestamp="1598874597857" />
   </component>
 </project>

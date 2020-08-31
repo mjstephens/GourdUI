@@ -1,0 +1,34 @@
+using GourdUI;
+using UnityEngine;
+
+/// <summary>
+/// UIScreen implementation.
+/// </summary>
+public class #CLASSNAME#: 
+    UIScreen <#CLASSNAME#, #CONTRACTVIEW#, #STATE#>, 
+    #CONTRACTSCREEN#
+{
+    #region Setup
+
+    protected override void SetupView()
+    {
+        // Use "viewContract" variable to access #CONTRACTVIEW#
+    }
+
+    #endregion Setup
+
+
+    #region State
+
+    protected override void ResetScreenState()
+    {
+        // Use "state" variable to access #STATE#
+    }
+
+    protected override void ApplyScreenStateToCurrentView()
+    {
+    
+    }
+
+    #endregion State
+}

@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="$PROJECT_DIR$/../GourdUI/Runtime" t="Include">
-      <e p="com.mstephens.gourdUI.asmdef" t="Include" />
       <e p="Components" t="Include">
         <e p="SafeArea.cs" t="Include" />
         <e p="UIView.cs" t="Include" />
@@ -31,6 +30,7 @@
         <e p="IUIInputListener.cs" t="Include" />
         <e p="UIInputTriggerListener.cs" t="Include" />
       </e>
+      <e p="MStephens.GourdUI.Runtime.asmdef" t="Include" />
       <e p="Screens" t="Include">
         <e p="Data" t="Include">
           <e p="UIScreenConfigData.cs" t="Include" />
@@ -80,7 +80,20 @@
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
       <e p="Assets" t="Include">
         <e p="com.mstephens.gourdUIDemo.asmdef" t="Include" />
+        <e p="Resources" t="Include">
+          <e p="GourdUI" t="Include">
+            <e p="IUIContractScreenTemplate.txt" t="Include" />
+            <e p="IUIContractViewTemplate.txt" t="Include" />
+            <e p="UIScreenTemplate.txt" t="Include" />
+            <e p="UIStateTemplate.txt" t="Include" />
+            <e p="UIViewTemplate.txt" t="Include" />
+          </e>
+        </e>
         <e p="Scripts" t="Include">
+          <e p="Editor" t="Include">
+            <e p="UIScreenWIzard.cs" t="Include" />
+            <e p="UIScreenWizardEditorWindow.cs" t="Include" />
+          </e>
           <e p="Shop" t="Include">
             <e p="ShopCategoryData.cs" t="Include" />
             <e p="ShopItemInstanceData.cs" t="Include" />
@@ -148,12 +161,21 @@
                 <e p="UIView_Playground_Mobile.cs" t="Include" />
               </e>
             </e>
+            <e p="YoloSwaggins" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="IUIContractScreen_YoloSwaggins.cs" t="Include" />
+                <e p="IUIContractView_YoloSwaggins.cs" t="Include" />
+                <e p="UIScreen_YoloSwaggins.cs" t="Include" />
+                <e p="UIState_YoloSwaggins.cs" t="Include" />
+                <e p="UIView_YoloSwaggins_Default.cs" t="Include" />
+              </e>
+            </e>
           </e>
         </e>
       </e>
-      <e p="com.mstephens.gourdUI.csproj" t="IncludeRecursive" />
       <e p="com.mstephens.gourdUIDemo.csproj" t="IncludeRecursive" />
       <e p="GourdUI_Demo.sln" t="IncludeFlat" />
+      <e p="MStephens.GourdUI.Runtime.csproj" t="IncludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
       <e p="Temp/bin" t="ExcludeRecursive" />

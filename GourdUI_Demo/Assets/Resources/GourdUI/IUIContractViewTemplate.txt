@@ -1,0 +1,7 @@
+/// <summary>
+/// Defines implementation requirements for views from the screen.
+/// </summary>
+public interface #CLASSNAME# : IUIContractView
+{
+
+}

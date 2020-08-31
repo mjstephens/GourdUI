@@ -18,8 +18,7 @@ namespace GourdUI
         #region Fields
 
         [Header("Screen Data")]
-        [SerializeField]
-        private UIScreenConfigDataTemplate _configBaseData;
+        public UIScreenConfigDataTemplate _configBaseData;
         
         /// <summary>
         /// Cached view data 

@@ -1,5 +1,6 @@
-﻿
-// EVents that the view can receive from the screen
+﻿/// <summary>
+/// Defines implementation requirements for views from the screen.
+/// </summary>
 public interface IUIContractView_Playground : IUIContractView
 {
     void ReceiveValue1ValueUpdate(float value);
@@ -7,6 +8,3 @@ public interface IUIContractView_Playground : IUIContractView
     void UpdateCollection1Data(UIScreen_Playground.GridEntryDataExample[] data);
     void UpdateCollection2Data(UIScreen_Playground.GridEntryDataExample[] data);
 }
-
-
-// Events that the screen can receive from the view

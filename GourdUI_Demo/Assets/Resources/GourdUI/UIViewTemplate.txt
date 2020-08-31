@@ -1,0 +1,29 @@
+using GourdUI;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class #CLASSNAME# : UIView<#SCREEN#>, #CONTRACTVIEW#
+{
+    #region Fields
+    
+    
+
+    #endregion Fields
+
+
+    #region Setup
+
+    public override void OnViewPreSetup()
+    {
+        // Use "screenContract" variable to access #CONTRACTSCREEN#
+    }
+    
+    #endregion Setup
+
+
+    #region Screen Updates
+
+    
+
+    #endregion Screen Updates
+}
