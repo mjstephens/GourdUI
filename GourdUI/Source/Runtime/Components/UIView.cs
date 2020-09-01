@@ -32,6 +32,9 @@ namespace GourdUI
             Destroy(gameObject);
         }
 
+        /// <summary>
+        /// Called directly before the view instance is destroyed.
+        /// </summary>
         protected abstract void OnViewPreDestroy();
 
         #endregion View Methods

@@ -8,4 +8,6 @@ public interface IUIContractScreen_SampleEventTester : IUIContractScreen
     
     void OnViewIncreaseCoins(int amount);
     void OnViewDecreaseCoins(int amount);
+
+    void OnHUDToggled();
 }

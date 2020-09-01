@@ -51,5 +51,10 @@ public class UIScreen_SampleEventTester:
         SampleGameController.Instance.OnCurrentCoinsUpdated(-amount);
     }
 
+    public void OnHUDToggled()
+    {
+        GourdUI.GourdUI.Core.ToggleUIScreen("samplehud");
+    }
+
     #endregion Contract
 }

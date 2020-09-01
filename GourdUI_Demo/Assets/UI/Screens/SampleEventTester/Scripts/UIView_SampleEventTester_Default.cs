@@ -61,6 +61,11 @@ public class UIView_SampleEventTester_Default : UIView<IUIContractScreen_SampleE
         screenContract.OnViewDecreaseCoins(5);
     }
 
+    public void OnHUDToggleSelected()
+    {
+        screenContract.OnHUDToggled();
+    }
+
     #endregion UI Events
 
 

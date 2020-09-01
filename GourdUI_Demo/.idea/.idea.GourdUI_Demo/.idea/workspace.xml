@@ -19,7 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ff7ae49-a623-44e1-8de4-69eeedb19ed3" name="Default Changelist" comment="" />
+    <list default="true" id="0ff7ae49-a623-44e1-8de4-69eeedb19ed3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../GourdUI/Source/Runtime/Components/UIView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../GourdUI/Source/Runtime/Components/UIView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GourdUI/Source/Runtime/Screens/IUIContractView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../GourdUI/Source/Runtime/Screens/IUIContractView.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -76,12 +79,8 @@
         <option value="$PROJECT_DIR$/Assets/UI/Screens/SampleHUD/Scripts/UIState_SampleHUD.cs" />
         <option value="$PROJECT_DIR$/Assets/UI/Screens/SampleHUD/Scripts/IUIContractView_SampleHUD.cs" />
         <option value="$PROJECT_DIR$/Assets/UI/Screens/SampleEventTester/Scripts/IUIContractView_SampleEventTester.cs" />
-        <option value="$PROJECT_DIR$/../GourdUI/Source/Runtime/Components/UIView.cs" />
-        <option value="$PROJECT_DIR$/../GourdUI/Source/Runtime/Screens/IUIContractView.cs" />
-        <option value="$PROJECT_DIR$/Assets/UI/Screens/SampleEventTester/Scripts/UIView_SampleEventTester_Default.cs" />
         <option value="$PROJECT_DIR$/Assets/UI/Screens/SampleHUD/Scripts/Components/UIHealthFlasher.cs" />
         <option value="$PROJECT_DIR$/../GourdUI/Source/Runtime/Screens/UIScreen.cs" />
-        <option value="$PROJECT_DIR$/../GourdUI/Data/Templates/UIViewTemplate.txt" />
         <option value="$PROJECT_DIR$/../GourdUI/Data/Templates/IUIContractViewTemplate.txt" />
         <option value="$PROJECT_DIR$/../GourdUI/Data/Templates/UIScreenTemplate.txt" />
         <option value="$PROJECT_DIR$/../GourdUI/Source/Editor/UIScreenWizard.cs" />
@@ -89,6 +88,10 @@
         <option value="$PROJECT_DIR$/Assets/UI/Screens/SampleEventTester/Scripts/UIScreen_SampleEventTester.cs" />
         <option value="$PROJECT_DIR$/Assets/UI/Screens/SampleHUD/Scripts/UIScreen_SampleHUD.cs" />
         <option value="$PROJECT_DIR$/Assets/UI/Screens/SampleHUD/Scripts/UIView_SampleHUD_Mobile.cs" />
+        <option value="$PROJECT_DIR$/Assets/UI/Screens/SampleEventTester/Scripts/UIView_SampleEventTester_Default.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Data/Templates/UIViewTemplate.txt" />
+        <option value="$PROJECT_DIR$/../GourdUI/Source/Runtime/Screens/IUIContractView.cs" />
+        <option value="$PROJECT_DIR$/../GourdUI/Source/Runtime/Components/UIView.cs" />
       </list>
     </option>
   </component>
@@ -147,7 +150,7 @@
       <workItem from="1598615951208" duration="15472000" />
       <workItem from="1598785778768" duration="30903000" />
       <workItem from="1598873611600" duration="708000" />
-      <workItem from="1598874429590" duration="35124000" />
+      <workItem from="1598874429590" duration="35470000" />
     </task>
     <servers />
   </component>
@@ -185,9 +188,9 @@
       <screen x="-814" y="-1417" width="2560" height="1417" />
     </state>
     <state x="-714" y="-1317" width="2360" height="1217" key="VCS.FileHistoryDialog/-814.-1417.2560.1417/0.23.1792.1097@-814.-1417.2560.1417" timestamp="1598925353584" />
-    <state x="129" y="-1094" width="672" height="678" key="search.everywhere.popup" timestamp="1598874597857">
+    <state x="129" y="-1094" width="672" height="678" key="search.everywhere.popup" timestamp="1598974750357">
       <screen x="-814" y="-1417" width="2560" height="1417" />
     </state>
-    <state x="129" y="-1094" width="672" height="678" key="search.everywhere.popup/-814.-1417.2560.1417/0.23.1792.1097@-814.-1417.2560.1417" timestamp="1598874597857" />
+    <state x="129" y="-1094" width="672" height="678" key="search.everywhere.popup/-814.-1417.2560.1417/0.23.1792.1097@-814.-1417.2560.1417" timestamp="1598974750357" />
   </component>
 </project>
