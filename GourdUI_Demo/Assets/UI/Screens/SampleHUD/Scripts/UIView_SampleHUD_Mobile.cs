@@ -22,7 +22,7 @@ public class UIView_SampleHUD_Mobile : UIView<IUIContractScreen_SampleHUD, UISta
 
     public override void OnViewInstantiated()
     {
-        // Optionally do things here after the screen is instantiated
+        // Optionally do things here after the view is instantiated
         
         // Use "screenContract" variable to access IUIContractScreen_SampleHUD
     }

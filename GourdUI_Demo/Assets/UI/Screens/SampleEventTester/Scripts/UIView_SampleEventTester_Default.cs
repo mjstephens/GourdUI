@@ -16,7 +16,7 @@ public class UIView_SampleEventTester_Default : UIView<IUIContractScreen_SampleE
 
     public override void OnViewInstantiated()
     {
-        // Optionally do things here after the screen is instantiated
+        // Optionally do things here after the view is instantiated
         
         // Use "screenContract" variable to access IUIContractScreen_SampleEventTester
     }

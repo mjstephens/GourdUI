@@ -19,92 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ff7ae49-a623-44e1-8de4-69eeedb19ed3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/SampleGameController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/SampleGameController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/SampleEventTester/Prefabs/UIScreen_SampleEventTester.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/SampleEventTester/Prefabs/UIView_SampleEventTester_Default.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/SampleEventTester/Scripts/IUIContractScreen_SampleEventTester.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/SampleEventTester/Scripts/IUIContractView_SampleEventTester.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/SampleEventTester/Scripts/UIScreen_SampleEventTester.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/SampleEventTester/Scripts/UIState_SampleEventTester.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/SampleEventTester/Scripts/UIView_SampleEventTester_Default.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/SampleEventTester/Scripts/UIView_SampleEventTester_Default.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/SampleHUD/Prefabs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/SampleHUD/Prefabs/UIView_SampleHUD_Landscape.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/SampleHUD/Prefabs/UIView_SampleHUD_Portrait.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/SampleHUD/Prefabs/UIView_SampleHUD_Portrait.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/SampleHUD/Scripts.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/SampleHUD/Scripts/Components/UIHealthFlasher.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/SampleHUD/Scripts/Components/UIHealthFlasher.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/SampleHUD/Scripts/IUIContractScreen_SampleHUD.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/SampleHUD/Scripts/IUIContractScreen_SampleHUD.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/SampleHUD/Scripts/IUIContractView_SampleHUD.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/SampleHUD/Scripts/IUIContractView_SampleHUD.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/SampleHUD/Scripts/UIScreen_SampleHUD.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/SampleHUD/Scripts/UIScreen_SampleHUD.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/SampleHUD/Scripts/UIState_SampleHUD.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/SampleHUD/Scripts/UIState_SampleHUD.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/SampleHUD/Scripts/UIView_SampleHUD_Mobile.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/SampleHUD/Scripts/UIView_SampleHUD_Mobile.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/SampleHUD/UIScreen_SampleHUD_Data.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/SampleHUD/Views.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/SampleHUD/Views/UIView_SampleHUD_Landscape_Data.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/SampleHUD/Views/UIView_SampleHUD_Portrait_Data.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/Screens/SampleHUD/Views/UIView_SampleHUD_Portrait_Data.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GourdUI/Data/Templates/IUIContractViewTemplate.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../GourdUI/Data/Templates/IUIContractViewTemplate.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GourdUI/Data/Templates/UIScreenTemplate.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../GourdUI/Data/Templates/UIScreenTemplate.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GourdUI/Data/Templates/UIViewTemplate.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../GourdUI/Data/Templates/UIViewTemplate.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GourdUI/Source/Editor/UIScreenWizard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../GourdUI/Source/Editor/UIScreenWizard.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GourdUI/Source/Runtime/Components/UIView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../GourdUI/Source/Runtime/Components/UIView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GourdUI/Source/Runtime/Core/GourdUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../GourdUI/Source/Runtime/Core/GourdUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GourdUI/Source/Runtime/Core/GourdUICore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../GourdUI/Source/Runtime/Core/GourdUICore.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GourdUI/Source/Runtime/Screens/IUIContractView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../GourdUI/Source/Runtime/Screens/IUIContractView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GourdUI/Source/Runtime/Screens/UIScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../GourdUI/Source/Runtime/Screens/UIScreen.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GourdUI_Demo/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GourdUI_Demo/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GourdUI_Demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GourdUI_Demo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Basic/gradient.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Basic/gradient.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/GourdUI.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/GourdUI/Core System Data.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/GourdUI/Core System Data.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DemoScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DemoScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shop/ShopItemInstanceData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shop/ShopItemInstanceData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/Playground.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/SampleHUD.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Prefabs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/SampleEventTester/Prefabs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Prefabs/Item_CollectionGridEntry.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Prefabs/Item_CollectionGridEntry.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/SampleHUD/Prefabs/UIView_SampleHUD_Landscape.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Prefabs/UIScreen_Playground.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/SampleHUD/Prefabs/UIScreen_SampleHUD.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Prefabs/UIScreen_Playground.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/SampleHUD/Prefabs/UIScreen_SampleHUD.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Prefabs/UIView_Playground_MobileLandscape.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Prefabs/UIView_Playground_MobileLandscape.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/SampleEventTester/Prefabs/UIScreen_SampleEventTester.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Prefabs/UIView_Playground_MobilePortrait.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Prefabs/UIView_Playground_MobilePortrait.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/SampleEventTester/Prefabs/UIView_SampleEventTester_Default.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/SampleEventTester/Scripts.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/DataCollectionUIInstance.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/DataCollectionUIInstance.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/SampleEventTester/Scripts/IUIContractScreen_SampleEventTester.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/IUIContractScreen_Playground.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/IUIContractScreen_Playground.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/IUIContractView_Playground.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/IUIContractView_Playground.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/SampleEventTester/Scripts/IUIContractView_SampleEventTester.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/UIScreen_Playground.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/UIScreen_Playground.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/SampleEventTester/Scripts/UIScreen_SampleEventTester.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/UIState_Playground.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/UIState_Playground.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/SampleEventTester/Scripts/UIState_SampleEventTester.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/UIView_Playground_Mobile.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/UIView_Playground_Mobile.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/Playground/UIScreen_Playground_Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/SampleEventTester/UIScreen_SampleEventTester_Data.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/Playground/UIScreen_Playground_Data.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/SampleEventTester/UIScreen_SampleEventTester_Data.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Views.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/SampleEventTester/Views.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Views/UIView_Playground_MobileLandscape_Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/SampleHUD/Views/UIView_SampleHUD_Landscape_Data.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Views/UIView_Playground_MobileLandscape_Data.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/SampleEventTester/Views/UIView_SampleEventTester_Default_Data.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Views/UIView_Playground_MobilePortrait_Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/SampleEventTester/Views/UIView_SampleEventTester_Default_Data.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screens/Playground/Views/UIView_Playground_MobilePortrait_Data.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Screens/SampleHUD/UIScreen_SampleHUD_Data.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-    </list>
+    <list default="true" id="0ff7ae49-a623-44e1-8de4-69eeedb19ed3" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -159,21 +74,21 @@
         <option value="$PROJECT_DIR$/Assets/UI/Screens/Playground/Scripts/UIScreen_Playground.cs" />
         <option value="$PROJECT_DIR$/Assets/UI/Screens/SampleHUD/Scripts/UIView_SampleHUD_Portrait.cs" />
         <option value="$PROJECT_DIR$/Assets/UI/Screens/SampleHUD/Scripts/UIState_SampleHUD.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/SampleGameController.cs" />
         <option value="$PROJECT_DIR$/Assets/UI/Screens/SampleHUD/Scripts/IUIContractView_SampleHUD.cs" />
         <option value="$PROJECT_DIR$/Assets/UI/Screens/SampleEventTester/Scripts/IUIContractView_SampleEventTester.cs" />
-        <option value="$PROJECT_DIR$/Assets/UI/Screens/SampleEventTester/Scripts/UIScreen_SampleEventTester.cs" />
         <option value="$PROJECT_DIR$/../GourdUI/Source/Runtime/Components/UIView.cs" />
         <option value="$PROJECT_DIR$/../GourdUI/Source/Runtime/Screens/IUIContractView.cs" />
         <option value="$PROJECT_DIR$/Assets/UI/Screens/SampleEventTester/Scripts/UIView_SampleEventTester_Default.cs" />
         <option value="$PROJECT_DIR$/Assets/UI/Screens/SampleHUD/Scripts/Components/UIHealthFlasher.cs" />
-        <option value="$PROJECT_DIR$/Assets/UI/Screens/SampleHUD/Scripts/UIScreen_SampleHUD.cs" />
         <option value="$PROJECT_DIR$/../GourdUI/Source/Runtime/Screens/UIScreen.cs" />
-        <option value="$PROJECT_DIR$/Assets/UI/Screens/SampleHUD/Scripts/UIView_SampleHUD_Mobile.cs" />
         <option value="$PROJECT_DIR$/../GourdUI/Data/Templates/UIViewTemplate.txt" />
         <option value="$PROJECT_DIR$/../GourdUI/Data/Templates/IUIContractViewTemplate.txt" />
         <option value="$PROJECT_DIR$/../GourdUI/Data/Templates/UIScreenTemplate.txt" />
         <option value="$PROJECT_DIR$/../GourdUI/Source/Editor/UIScreenWizard.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/SampleGameController.cs" />
+        <option value="$PROJECT_DIR$/Assets/UI/Screens/SampleEventTester/Scripts/UIScreen_SampleEventTester.cs" />
+        <option value="$PROJECT_DIR$/Assets/UI/Screens/SampleHUD/Scripts/UIScreen_SampleHUD.cs" />
+        <option value="$PROJECT_DIR$/Assets/UI/Screens/SampleHUD/Scripts/UIView_SampleHUD_Mobile.cs" />
       </list>
     </option>
   </component>
@@ -232,7 +147,7 @@
       <workItem from="1598615951208" duration="15472000" />
       <workItem from="1598785778768" duration="30903000" />
       <workItem from="1598873611600" duration="708000" />
-      <workItem from="1598874429590" duration="34744000" />
+      <workItem from="1598874429590" duration="35124000" />
     </task>
     <servers />
   </component>
