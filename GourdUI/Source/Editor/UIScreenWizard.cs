@@ -25,8 +25,7 @@ namespace GourdUI.Editor
      *     - 2 new ScriptableObject assets (UIScreenConfigDataTemplate and UIViewConfigDataTemplate)
      *     - 2 new prefab assets (1 UIScreen stub prefab, 1 started UIView)
      */
-    
-    
+
     /// <summary>
     /// Automatically creates requisite scripts, data, and prefab objects for a new UIScreen.
     /// </summary>
@@ -44,6 +43,7 @@ namespace GourdUI.Editor
         private const string CONST_ClassGenContractViewKey = "#CONTRACTVIEW#";
         private const string CONST_ClassGenStateKey = "#STATE#";
         private const string CONST_ClassGenScreenKey = "#SCREEN#";
+        private const string CONST_ClassGenViewKey = "#VIEW#";
         private const string CONST_ScreenPrefabDataTemplateFieldName = "_configBaseData";
         
         // Editor pref keys
@@ -59,6 +59,7 @@ namespace GourdUI.Editor
 
         #region Entry
         
+        // Receives command to begin construction from the editor window (UIScreenWizardEditorWindow)
         public static void OnCreateNewUIScreen(string screenName)
         {
             // We need to save the screen name since we need it later for the post-compilation steps
@@ -75,7 +76,8 @@ namespace GourdUI.Editor
             // Create scripts
             CreateScreenScripts(directoryPaths.Item3, screenName);
             
-            // Finished!
+            // Recompile scripts to access generated classes (step 4 above)
+            // OnScriptRecompile() will be called automatically
             AssetDatabase.Refresh();
             CompilationPipeline.RequestScriptCompilation();
             
@@ -170,74 +172,95 @@ namespace GourdUI.Editor
                 CONST_EditorProgressBarTitle, 
                 "Compiling Scripts...", 0.6f);
             
-            // Screen contract
+            // Class names
             string contractScreenClass = "IUIContractScreen_" + screenName;
+            string contractViewClass = "IUIContractView_" + screenName;
+            string stateClass = "UIState_" + screenName;
+            string screenClass = "UIScreen_" + screenName;
+            string viewClass = "UIView_" + screenName + "_Default";
+
+            // Screen contract
             using (FileStream fs = File.Create(Path.Combine(scriptsPath, contractScreenClass + ".cs")))
             {
-                byte[] data = GetScriptTemplateContents(contractScreenClass, "IUIContractScreenTemplate.txt");
+                byte[] data = GetScriptTemplateContents(
+                    contractScreenClass, 
+                    "IUIContractScreenTemplate.txt",
+                    contractScreenClass,
+                    contractViewClass,
+                    stateClass,
+                    screenClass,
+                    viewClass);
                 fs.Write(data, 0, data.Length);
             } 
             
             // View contract
-            string contractViewClass = "IUIContractView_" + screenName;
             using (FileStream fs = File.Create(Path.Combine(scriptsPath, contractViewClass + ".cs")))
             {
-                byte[] data = GetScriptTemplateContents(contractViewClass, "IUIContractViewTemplate.txt");
+                byte[] data = GetScriptTemplateContents(
+                    contractViewClass, 
+                    "IUIContractViewTemplate.txt",
+                    contractScreenClass,
+                    contractViewClass,
+                    stateClass,
+                    screenClass,
+                    viewClass);
                 fs.Write(data, 0, data.Length);
             } 
             
             // UI state
-            string stateClass = "UIState_" + screenName;
             using (FileStream fs = File.Create(Path.Combine(scriptsPath, stateClass + ".cs")))
             {
-                byte[] data = GetScriptTemplateContents(stateClass, "UIStateTemplate.txt");
+                byte[] data = GetScriptTemplateContents(
+                    stateClass, 
+                    "UIStateTemplate.txt",
+                    contractScreenClass,
+                    contractViewClass,
+                    stateClass,
+                    screenClass,
+                    viewClass);
                 fs.Write(data, 0, data.Length);
             } 
             
             // UI screen
-            string screenClass = "UIScreen_" + screenName;
             using (FileStream fs = File.Create(Path.Combine(scriptsPath, screenClass + ".cs")))
             {
-                byte[] data = GetScreenScriptTemplateContents(
+                byte[] data = GetScriptTemplateContents(
                     screenClass, 
                     "UIScreenTemplate.txt",
                     contractScreenClass,
                     contractViewClass,
-                    stateClass);
+                    stateClass,
+                    screenClass,
+                    viewClass);
                 fs.Write(data, 0, data.Length);
             } 
 
             // UI view
-            string viewClass = "UIView_" + screenName + "_Default";
             using (FileStream fs = File.Create(Path.Combine(scriptsPath, viewClass + ".cs")))
             {
-                byte[] data = GetViewScriptTemplateContents(
+                byte[] data = GetScriptTemplateContents(
                     viewClass, 
                     "UIViewTemplate.txt",
                     contractScreenClass,
                     contractViewClass,
-                    screenClass);
+                    stateClass,
+                    screenClass,
+                    viewClass);
                 fs.Write(data, 0, data.Length);
             } 
             
             EditorPrefs.SetString (CONST_EditorPrefsScreenClassGenType, screenClass);
             EditorPrefs.SetString (CONST_EditorPrefsViewClassGenType, viewClass);
         }
-
-        private static byte[] GetScriptTemplateContents(string className, string templatePath)
-        {
-            string contents = AssetDatabase.LoadAssetAtPath<TextAsset>(
-                CONST_ClassTemplatesDirectory + templatePath).text;
-            contents = contents.Replace(CONST_ClassGenClassNameKey, className);
-            return new UTF8Encoding(true).GetBytes(contents);
-        }
         
-        private static byte[] GetScreenScriptTemplateContents(
+        private static byte[] GetScriptTemplateContents(
             string className, 
             string templatePath,
             string screenContractClass,
             string viewContractClass,
-            string stateClass)
+            string stateClass,
+            string screenClass,
+            string viewClass)
         {
             string contents = AssetDatabase.LoadAssetAtPath<TextAsset>(
                 CONST_ClassTemplatesDirectory + templatePath).text;
@@ -245,23 +268,8 @@ namespace GourdUI.Editor
             contents = contents.Replace(CONST_ClassGenContractScreenKey, screenContractClass);
             contents = contents.Replace(CONST_ClassGenContractViewKey, viewContractClass);
             contents = contents.Replace(CONST_ClassGenStateKey, stateClass);
-
-            return new UTF8Encoding(true).GetBytes(contents);
-        }
-        
-        private static byte[] GetViewScriptTemplateContents(
-            string className, 
-            string templatePath,
-            string screenContractClass,
-            string viewContractClass,
-            string screenClass)
-        {
-            string contents = AssetDatabase.LoadAssetAtPath<TextAsset>(
-                CONST_ClassTemplatesDirectory + templatePath).text;
-            contents = contents.Replace(CONST_ClassGenClassNameKey, className);
-            contents = contents.Replace(CONST_ClassGenContractScreenKey, screenContractClass);
-            contents = contents.Replace(CONST_ClassGenContractViewKey, viewContractClass);
             contents = contents.Replace(CONST_ClassGenScreenKey, screenClass);
+            contents = contents.Replace(CONST_ClassGenViewKey, viewClass);
 
             return new UTF8Encoding(true).GetBytes(contents);
         }

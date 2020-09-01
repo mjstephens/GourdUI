@@ -16,7 +16,7 @@ namespace GourdUI
         /// Generic system data
         /// Located at: GourdUI.coreUIDataPath (resources folder)
         /// </summary>
-        private readonly GourdUISystemData _systemData;
+       // private readonly GourdUISystemData _systemData;
         
         /// <summary>
         /// The list of all UIScreens that are currently known to the core
@@ -39,10 +39,10 @@ namespace GourdUI
 
         #region Constructor
 
-        public GourdUICore(GourdUISystemData data)
+        public GourdUICore()
         {
             // Cache system data
-            _systemData = data;
+            //_systemData = data;
             
             // Create lists
             _currentUIScreens = new List<IUIScreen>();
@@ -146,7 +146,7 @@ namespace GourdUI
             for (int i = _screenStack.Count - 1; i >= 0; i--)
             {
                 IUIScreen screen = _screenStack[i];
-                screen.OnScreenSetStackOrder(_systemData.canvasRenderDepthBase + i);
+                screen.OnScreenSetStackOrder(i);
                 if (screen.ScreenConfigData().screenType == 
                     UIScreenConfigData.ScreenType.Active && !uiIsActive)
                 {

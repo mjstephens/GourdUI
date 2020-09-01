@@ -1,11 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 [CreateAssetMenu]
 public class ShopItemInstanceData : ScriptableObject
 {
-    public string name;
+    public string itemName;
     public Sprite icon;
     public int price;
 }

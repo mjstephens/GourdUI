@@ -5,13 +5,15 @@ using UnityEngine;
 /// UIScreen implementation.
 /// </summary>
 public class #CLASSNAME#: 
-    UIScreen <#CLASSNAME#, #CONTRACTVIEW#, #STATE#>, 
+    UIScreen <#CONTRACTSCREEN#, #CONTRACTVIEW#, #STATE#>, 
     #CONTRACTSCREEN#
 {
     #region Setup
 
     protected override void SetupView()
     {
+        // Optionally implement setup for specific views
+    
         // Use "viewContract" variable to access #CONTRACTVIEW#
     }
 
@@ -23,11 +25,6 @@ public class #CLASSNAME#:
     protected override void ResetScreenState()
     {
         // Use "state" variable to access #STATE#
-    }
-
-    protected override void ApplyScreenStateToCurrentView()
-    {
-    
     }
 
     #endregion State

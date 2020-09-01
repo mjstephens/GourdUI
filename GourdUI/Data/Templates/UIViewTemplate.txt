@@ -2,7 +2,8 @@ using GourdUI;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class #CLASSNAME# : UIView<#SCREEN#>, #CONTRACTVIEW#
+public class #CLASSNAME# : UIView<#CONTRACTSCREEN#, #STATE#>, 
+    #CONTRACTVIEW#
 {
     #region Fields
     
@@ -13,12 +14,29 @@ public class #CLASSNAME# : UIView<#SCREEN#>, #CONTRACTVIEW#
 
     #region Setup
 
-    public override void OnViewPreSetup()
+    public override void OnViewInstantiated()
     {
-        // Use "screenContract" variable to access #CONTRACTSCREEN#
+        // Optionally do things here after the screen is instantiated
+        
+        // Use "screenContract" variable to access IUIContractScreen_SampleHUD
+    }
+
+    public override void ApplyScreenStateToView(#STATE# state)
+    {
+        
     }
     
     #endregion Setup
+    
+    
+    #region Teardown
+
+    protected override void OnViewPreDestroy()
+    {
+        // Optionally do things here before the view is destroyed
+    }
+
+    #endregion Teardown
 
 
     #region Screen Updates

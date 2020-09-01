@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e064ba0ef794307bd205d5c56347dd, type: 3}
+  m_Name: UIScreen_SampleHUD_Data
+  m_EditorClassIdentifier: 
+  data:
+    screenType: 1
+    freezeSimulation: 0
+    lockUIUntilDismissed: 0
+    activeOnLoad: 1
+    resetStateBetweenViewChanges: 0
+    preserveStateAfterScreenToggle: 0
+    views:
+    - {fileID: 11400000, guid: 89668323508074eb3be1cb768bde64c3, type: 2}
+    - {fileID: 11400000, guid: 4744216cd73574e84a096776b071407c, type: 2}
+    triggers: []
+    triggerCode: samplehud

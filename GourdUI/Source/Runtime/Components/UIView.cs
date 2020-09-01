@@ -6,9 +6,9 @@ namespace GourdUI
     /// Base class for all UIViews. Holds reference to associated screen contract.
     /// See documentation for usage.
     /// </summary>
-    /// <typeparam name="C"></typeparam>
-    public abstract class UIView<C> : MonoBehaviour, IUIContractView
+    public abstract class UIView<C,S> : MonoBehaviour, IUIContractView<S>
         where C : class, IUIContractScreen
+        where S : UIState
     {
         #region Properties
 
@@ -20,18 +20,20 @@ namespace GourdUI
         #endregion Properties
         
         
-        #region Initialization
+        #region View Methods
 
-        /// <summary>
-        /// Called when the view has been selected
-        /// </summary>
-        public abstract void OnViewPreSetup();
+        public abstract void OnViewInstantiated();
+
+        public abstract void ApplyScreenStateToView(S state);
         
-        public void OnDestroyView()
+        void IUIContractView<S>.OnDestroyView()
         {
+            OnViewPreDestroy();
             Destroy(gameObject);
         }
 
-        #endregion Initialization
+        protected abstract void OnViewPreDestroy();
+
+        #endregion View Methods
     }
 }

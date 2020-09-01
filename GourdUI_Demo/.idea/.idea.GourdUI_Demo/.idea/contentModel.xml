@@ -89,6 +89,9 @@
       <e p="Assets" t="Include">
         <e p="MStephens.GourdUIDemo.asmdef" t="Include" />
         <e p="Scripts" t="Include">
+          <e p="Game" t="Include">
+            <e p="SampleGameController.cs" t="Include" />
+          </e>
           <e p="Shop" t="Include">
             <e p="ShopCategoryData.cs" t="Include" />
             <e p="ShopItemInstanceData.cs" t="Include" />
@@ -127,14 +130,25 @@
         </e>
         <e p="UI" t="Include">
           <e p="Screens" t="Include">
-            <e p="Playground" t="Include">
+            <e p="SampleEventTester" t="Include">
               <e p="Scripts" t="Include">
-                <e p="DataCollectionUIInstance.cs" t="Include" />
-                <e p="IUIContractScreen_Playground.cs" t="Include" />
-                <e p="IUIContractView_Playground.cs" t="Include" />
-                <e p="UIScreen_Playground.cs" t="Include" />
-                <e p="UIState_Playground.cs" t="Include" />
-                <e p="UIView_Playground_Mobile.cs" t="Include" />
+                <e p="IUIContractScreen_SampleEventTester.cs" t="Include" />
+                <e p="IUIContractView_SampleEventTester.cs" t="Include" />
+                <e p="UIScreen_SampleEventTester.cs" t="Include" />
+                <e p="UIState_SampleEventTester.cs" t="Include" />
+                <e p="UIView_SampleEventTester_Default.cs" t="Include" />
+              </e>
+            </e>
+            <e p="SampleHUD" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="Components" t="Include">
+                  <e p="UIHealthFlasher.cs" t="Include" />
+                </e>
+                <e p="IUIContractScreen_SampleHUD.cs" t="Include" />
+                <e p="IUIContractView_SampleHUD.cs" t="Include" />
+                <e p="UIScreen_SampleHUD.cs" t="Include" />
+                <e p="UIState_SampleHUD.cs" t="Include" />
+                <e p="UIView_SampleHUD_Mobile.cs" t="Include" />
               </e>
             </e>
           </e>

@@ -7,21 +7,18 @@ namespace GourdUI
     /// Base class for all UIScreens. Holds reference to contracts and current view data.
     /// See documentation for usage.
     /// </summary>
-    /// <typeparam name="C">IUIContractScreen instance type</typeparam>
-    /// <typeparam name="V">IUIContractView instance type</typeparam>
-    /// <typeparam name="S">UIState instance type</typeparam>
     public abstract class UIScreen<C,V,S>: MonoBehaviour, IUIScreen, IUIContractScreen
         where C : class, IUIContractScreen
-        where V : IUIContractView
+        where V : IUIContractView<S>
         where S : UIState, new()
     {
         #region Fields
 
         [Header("Screen Data")]
         [SerializeField]
-        // We declare this as internal to enable reflection in the UIScreen Wizard
+        // We declare this as internal to enable reflection access in the UIScreen Wizard
         internal UIScreenConfigDataTemplate _configBaseData;
-        
+
         /// <summary>
         /// Cached view data 
         /// </summary>
@@ -67,10 +64,10 @@ namespace GourdUI
             // Make sure our state is reset for first initialization
             ResetScreenState();
             
-            // Apply reset state to view if applicable
+            // Apply reset state to view
             if (viewContract != null)
             {
-                ApplyScreenStateToCurrentView();
+                viewContract.ApplyScreenStateToView(state);
             }
             
             // Activate view if it should be active by default
@@ -98,7 +95,7 @@ namespace GourdUI
             gameObject.SetActive(true);
             
             // Make sure we update the view to match most recent state config.
-            ApplyScreenStateToCurrentView();
+            viewContract.ApplyScreenStateToView(state);
         }
 
         #endregion Activation
@@ -190,11 +187,11 @@ namespace GourdUI
             // Instantiate new view
             _currentViewData = viewData;
             
-            // Instantiate the view prefab
+            // Instantiate the view prefab, hook up contract
             GameObject vObj = Instantiate(viewData.prefab, transform);
             viewContract = vObj.GetComponent<V>();
-            vObj.GetComponent<UIView<C>>().screenContract = this as C;
-            viewContract.OnViewPreSetup();
+            vObj.GetComponent<UIView<C, S>>().screenContract = this as C;
+            viewContract.OnViewInstantiated();
             
             // Setup view
             SetupView();
@@ -204,7 +201,8 @@ namespace GourdUI
             {
                 ResetScreenState();
             }
-            ApplyScreenStateToCurrentView();
+            
+            viewContract.ApplyScreenStateToView(state);
         }
 
         /// <summary>
@@ -221,11 +219,6 @@ namespace GourdUI
         /// Should reset the UI state to default values.
         /// </summary>
         protected abstract void ResetScreenState();
-
-        /// <summary>
-        /// Should apply current state values to current viewContract.
-        /// </summary>
-        protected abstract void ApplyScreenStateToCurrentView();
 
         #endregion State
         
