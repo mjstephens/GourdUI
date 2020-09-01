@@ -11,8 +11,6 @@ An MVC-style UI framework for Unity3D. Facilitates the creation of *UIScreens* (
 - *Coming soon:* Expanded filter options allow for inverse (not-if) view filtering
 
 
-Full documentation: https://www.notion.so/gourdui/GourdUI-Overview-c855e3ff981e43fbb481955a01622893
-
 **This package is currently under construction - more to come**
 
 
