@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="$PROJECT_DIR$/../GourdUI/Runtime" t="Include">
+    <e p="$PROJECT_DIR$/../GourdUI/Source/Editor" t="Include">
+      <e p="MStephens.GourdUI.Editor.asmdef" t="Include" />
+      <e p="UIScreenWIzard.cs" t="Include" />
+      <e p="UIScreenWizardEditorWindow.cs" t="Include" />
+    </e>
+    <e p="$PROJECT_DIR$/../GourdUI/Source/Runtime" t="Include">
       <e p="Components" t="Include">
         <e p="SafeArea.cs" t="Include" />
         <e p="UIView.cs" t="Include" />
@@ -55,6 +60,9 @@
           <e p="UITriggerManualCodeConfigDataTemplate.cs" t="Include" />
         </e>
       </e>
+      <e p="Utility" t="Include">
+        <e p="ReflectionHelpers.cs" t="Include" />
+      </e>
       <e p="ViewFilters" t="Include">
         <e p="Components" t="Include">
           <e p="UIViewFilterComponent.cs" t="Include" />
@@ -79,21 +87,8 @@
     </e>
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
       <e p="Assets" t="Include">
-        <e p="com.mstephens.gourdUIDemo.asmdef" t="Include" />
-        <e p="Resources" t="Include">
-          <e p="GourdUI" t="Include">
-            <e p="IUIContractScreenTemplate.txt" t="Include" />
-            <e p="IUIContractViewTemplate.txt" t="Include" />
-            <e p="UIScreenTemplate.txt" t="Include" />
-            <e p="UIStateTemplate.txt" t="Include" />
-            <e p="UIViewTemplate.txt" t="Include" />
-          </e>
-        </e>
+        <e p="MStephens.GourdUIDemo.asmdef" t="Include" />
         <e p="Scripts" t="Include">
-          <e p="Editor" t="Include">
-            <e p="UIScreenWIzard.cs" t="Include" />
-            <e p="UIScreenWizardEditorWindow.cs" t="Include" />
-          </e>
           <e p="Shop" t="Include">
             <e p="ShopCategoryData.cs" t="Include" />
             <e p="ShopItemInstanceData.cs" t="Include" />
@@ -132,25 +127,6 @@
         </e>
         <e p="UI" t="Include">
           <e p="Screens" t="Include">
-            <e p="DemoShop" t="Include">
-              <e p="Scripts" t="Include">
-                <e p="DemoShopItemDetailsPanel.cs" t="Include" />
-                <e p="DemoShopItemSelectionButtonInstance.cs" t="Include" />
-                <e p="IUIContract_DemoShop.cs" t="Include" />
-                <e p="UIDecorator_DemoShopPortrait.cs" t="Include" />
-                <e p="UIScreen_DemoShop.cs" t="Include" />
-                <e p="UIState_DemoShop.cs" t="Include" />
-                <e p="UIView_DemoShop.cs" t="Include" />
-              </e>
-            </e>
-            <e p="MainMenu" t="Include">
-              <e p="Scripts" t="Include">
-                <e p="IUIContract_MainMenu.cs" t="Include" />
-                <e p="UIScreen_MainMenu.cs" t="Include" />
-                <e p="UIState_MainMenu.cs" t="Include" />
-                <e p="UIView_MainMenu.cs" t="Include" />
-              </e>
-            </e>
             <e p="Playground" t="Include">
               <e p="Scripts" t="Include">
                 <e p="DataCollectionUIInstance.cs" t="Include" />
@@ -161,21 +137,13 @@
                 <e p="UIView_Playground_Mobile.cs" t="Include" />
               </e>
             </e>
-            <e p="testScreen" t="Include">
-              <e p="Scripts" t="Include">
-                <e p="IUIContractScreen_testScreen.cs" t="Include" />
-                <e p="IUIContractView_testScreen.cs" t="Include" />
-                <e p="UIScreen_testScreen.cs" t="Include" />
-                <e p="UIState_testScreen.cs" t="Include" />
-                <e p="UIView_testScreen_Default.cs" t="Include" />
-              </e>
-            </e>
           </e>
         </e>
       </e>
-      <e p="com.mstephens.gourdUIDemo.csproj" t="IncludeRecursive" />
       <e p="GourdUI_Demo.sln" t="IncludeFlat" />
+      <e p="MStephens.GourdUI.Editor.csproj" t="IncludeRecursive" />
       <e p="MStephens.GourdUI.Runtime.csproj" t="IncludeRecursive" />
+      <e p="MStephens.GourdUIDemo.csproj" t="IncludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
       <e p="Temp/bin" t="ExcludeRecursive" />

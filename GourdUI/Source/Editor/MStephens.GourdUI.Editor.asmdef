@@ -1,0 +1,17 @@
+{
+    "name": "MStephens.GourdUI.Editor",
+    "references": [
+        "GUID:2b2d3bedaa5f84dd68615dd4ef47c9c7"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
