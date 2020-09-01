@@ -59,3 +59,4 @@ sysinfo.txt
 crashlytics-build.properties
 
 .DS_Store
+/GourdUI_Demo/.idea/.idea.GourdUI_Demo/.idea/workspace.xml
