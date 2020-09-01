@@ -16,6 +16,5 @@ MonoBehaviour:
     prefab: {fileID: 7405430248843083321, guid: db62083bb6d7a4863bf992830e64a1f2,
       type: 3}
     filterData:
-    - {fileID: 11400000, guid: 6cad1dfdd16904b699006ddbba5d8acb, type: 2}
     - {fileID: 11400000, guid: 7790604432e314429808f3183418dc13, type: 2}
     viewSpecificTriggers: []
