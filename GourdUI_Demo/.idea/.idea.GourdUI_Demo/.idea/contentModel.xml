@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="$PROJECT_DIR$/../GourdUI/Source/Editor" t="Include">
+      <e p="EditorUtilities.cs" t="Include" />
       <e p="MStephens.GourdUI.Editor.asmdef" t="Include" />
       <e p="UIScreenWIzard.cs" t="Include" />
       <e p="UIScreenWizardEditorWindow.cs" t="Include" />
+      <e p="UIViewConfigDataTemplateInspector.cs" t="Include" />
+      <e p="UIViewFilterComponentInspector.cs" t="Include" />
+      <e p="UIViewFilterConfigurationModuleInspector.cs" t="Include" />
     </e>
     <e p="$PROJECT_DIR$/../GourdUI/Source/Runtime" t="Include">
       <e p="Components" t="Include">
@@ -69,6 +73,7 @@
         </e>
         <e p="Data" t="Include">
           <e p="UIViewFilterBaseConfigDataTemplate.cs" t="Include" />
+          <e p="UIViewFilterConfigurationModule.cs" t="Include" />
           <e p="UIViewFilterInputConfigData.cs" t="Include" />
           <e p="UIViewFilterInputConfigDataTemplate.cs" t="Include" />
           <e p="UIViewFilterOrientationConfigData.cs" t="Include" />

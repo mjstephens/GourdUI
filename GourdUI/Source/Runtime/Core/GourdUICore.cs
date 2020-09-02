@@ -188,7 +188,10 @@ namespace GourdUI
 
         bool IGourdUI.UIViewIsValidForDevice(UIViewConfigData viewData, AppDeviceData deviceData)
         {
-            return UIViewFilterResolver.ViewFilterResult(viewData.filterData, deviceData);
+            return UIViewFilterResolver.ViewFilterResult(
+                viewData.filterData.positiveFilters.ToArray(),
+                viewData.filterData.negativeFilters.ToArray(),
+                deviceData);
         }
 
         #endregion View

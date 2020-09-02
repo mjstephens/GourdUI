@@ -7,40 +7,65 @@ namespace GourdUI
         #region Filter
 
         /// <summary>
-        /// Compares a filter collection  against the current device data.
+        /// Compares a filter collection against the current device data.
         /// </summary>
-        /// <param name="filters"></param>
+        /// <param name="positiveFilters"></param>
+        /// <param name="negativeFilters"></param>
         /// <param name="deviceData"></param>
         public static bool ViewFilterResult(
-            UIViewFilterBaseConfigDataTemplate[] filters, 
+            UIViewFilterBaseConfigDataTemplate[] positiveFilters, 
+            UIViewFilterBaseConfigDataTemplate[] negativeFilters, 
             AppDeviceData deviceData)
         {
-            bool valid = true;
-            if (filters == null || filters.Length == 0)
-                return true;
-            
-            foreach (var filter in filters)
+            bool positiveValid = true;
+            if (positiveFilters != null && positiveFilters.Length > 0)
             {
-                if (!valid)
-                    break;
-                    
-                switch (filter)
+                foreach (var filter in positiveFilters)
                 {
-                    case UIViewFilterPlatformConfigDataTemplate f:
-                        valid = ViewPlatformFilterIsValid(f, deviceData);
+                    if (!positiveValid)
                         break;
-                    case UIViewFilterOrientationConfigDataTemplate f:
-                        valid = ViewOrientationFilterIsValid(f, deviceData);
-                        break;
-                    case UIViewFilterInputConfigDataTemplate f:
-                        valid = ViewInputFilterIsValid(f, deviceData);
-                        break;
+                    
+                    switch (filter)
+                    {
+                        case UIViewFilterPlatformConfigDataTemplate f:
+                            positiveValid = ViewPlatformFilterIsValid(f, deviceData);
+                            break;
+                        case UIViewFilterOrientationConfigDataTemplate f:
+                            positiveValid = ViewOrientationFilterIsValid(f, deviceData);
+                            break;
+                        case UIViewFilterInputConfigDataTemplate f:
+                            positiveValid = ViewInputFilterIsValid(f, deviceData);
+                            break;
+                    }
                 }
-            } 
-            return valid;
+            }
+
+            bool negativeValid = true;
+            if (negativeFilters != null && negativeFilters.Length > 0)
+            {
+                foreach (var filter in negativeFilters)
+                {
+                    if (!negativeValid)
+                        break;
+                    
+                    switch (filter)
+                    {
+                        case UIViewFilterPlatformConfigDataTemplate f:
+                            negativeValid = !ViewPlatformFilterIsValid(f, deviceData);
+                            break;
+                        case UIViewFilterOrientationConfigDataTemplate f:
+                            negativeValid = !ViewOrientationFilterIsValid(f, deviceData);
+                            break;
+                        case UIViewFilterInputConfigDataTemplate f:
+                            negativeValid = !ViewInputFilterIsValid(f, deviceData);
+                            break;
+                    }
+                } 
+            }
+
+            return positiveValid && negativeValid;
         }
         
-
         /// <summary>
         /// Filters view based on platform.
         /// </summary>
@@ -69,8 +94,7 @@ namespace GourdUI
             }
             return valid;
         }
-        
-        
+
         /// <summary>
         /// Filters view based on orientation.
         /// </summary>
@@ -96,7 +120,6 @@ namespace GourdUI
             }
             return valid;
         }
-        
         
         /// <summary>
         /// Filters view based on input device.

@@ -6,8 +6,7 @@ namespace GourdUI
     {
         #region Variables
 
-        [Tooltip("Filters that must pass validation for this object to be active.")]
-        public UIViewFilterBaseConfigDataTemplate[] componentFilters;
+        public UIViewFilterConfigurationModule filterData;
 
         #endregion Variables
     }

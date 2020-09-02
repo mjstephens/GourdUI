@@ -168,7 +168,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0.0014038086, y: 125.57}
+  m_AnchoredPosition: {x: 0.0014648438, y: 125.57}
   m_SizeDelta: {x: 0.0028076172, y: 196.22058}
   m_Pivot: {x: 0.5, y: 0.9999995}
 --- !u!222 &3150680107386809736
@@ -235,6 +235,7 @@ GameObject:
   - component: {fileID: 837408812283475044}
   - component: {fileID: 8019339245417827565}
   - component: {fileID: 4828298673929641728}
+  - component: {fileID: 3529414913303762078}
   m_Layer: 0
   m_Name: Image_Gradient
   m_TagString: Untagged
@@ -258,7 +259,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -0.0014038086, y: -0.007369995}
+  m_AnchoredPosition: {x: -0.0014648438, y: -0.007369995}
   m_SizeDelta: {x: 0.0028076172, y: 222.47485}
   m_Pivot: {x: 0.5, y: 0.9999995}
 --- !u!222 &8019339245417827565
@@ -298,6 +299,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3529414913303762078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3427363304095347726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a812e66259b4a21aa21d51beb131b1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filterData:
+    positiveFilters: []
+    negativeFilters: []
 --- !u!1 &4865641769206967485
 GameObject:
   m_ObjectHideFlags: 0

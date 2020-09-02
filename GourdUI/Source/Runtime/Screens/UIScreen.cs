@@ -95,7 +95,10 @@ namespace GourdUI
             gameObject.SetActive(true);
             
             // Make sure we update the view to match most recent state config.
-            viewContract.ApplyScreenStateToView(state);
+            if (viewContract != null)
+            {
+                viewContract.ApplyScreenStateToView(state);
+            }
         }
 
         #endregion Activation
@@ -158,10 +161,7 @@ namespace GourdUI
             }
             else
             {
-                if (viewContract != null)
-                {
-                    DestroyCurrentView();
-                }
+                DestroyCurrentView();
             }
         }
         
@@ -247,7 +247,8 @@ namespace GourdUI
 
         private void DestroyCurrentView()
         {
-            viewContract.OnDestroyView();
+            viewContract?.OnDestroyView();
+            viewContract = default;
         }
         
         UIScreenConfigData IUIScreen.ScreenConfigData()

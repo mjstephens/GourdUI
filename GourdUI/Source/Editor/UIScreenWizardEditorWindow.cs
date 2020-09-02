@@ -59,7 +59,7 @@ namespace GourdUI.Editor
         private void DrawPackageContentsPreview()
         {
             GUILayout.Space(30);
-            DrawGUILine(Color.gray);
+            EditorUtilities.DrawGUILine(Color.gray);
             GUILayout.Space(10);
 
             GUILayout.Label("Contents preview:");
@@ -90,16 +90,6 @@ namespace GourdUI.Editor
             GUILayout.Label("UIView_" + _screenTitle + "_Default.prefab", EditorStyles.boldLabel);
 
             GUI.color = currentCol;
-        }
-    
-        public static void DrawGUILine(Color color, int thickness = 2, int padding = 10)
-        {
-            Rect r = EditorGUILayout.GetControlRect(GUILayout.Height(padding+thickness));
-            r.height = thickness;
-            r.y+=padding/2;
-            r.x-=2;
-            r.width +=6;
-            EditorGUI.DrawRect(r, color);
         }
 
         #endregion Draw

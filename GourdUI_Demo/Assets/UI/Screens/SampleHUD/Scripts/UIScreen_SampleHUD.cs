@@ -37,13 +37,13 @@ public class UIScreen_SampleHUD:
 
     public void OnHealthUpdated(float oldValue, float newValue)
     {
-        viewContract.OnReceiveNewHealthValue(oldValue, newValue);
+        viewContract?.OnReceiveNewHealthValue(oldValue, newValue);
         state.healthValue = newValue;
     }
     
     public void OnCoinsUpdated(int oldValue, int newValue)
     {
-        viewContract.OnReceiveNewCoinsValue(oldValue, newValue);
+        viewContract?.OnReceiveNewCoinsValue(oldValue, newValue);
         state.coinsValue = newValue;
     }
 
