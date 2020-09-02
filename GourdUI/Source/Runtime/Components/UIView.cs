@@ -17,12 +17,24 @@ namespace GourdUI
         /// </summary>
         public C screenContract { get; set; }
 
+        private UIViewFilterComponent[] _filterComponents;
+
         #endregion Properties
         
         
         #region View Methods
 
-        public abstract void OnViewInstantiated();
+        public virtual void OnViewInstantiated(AppDeviceData deviceData)
+        {
+            // Gather filter components in hierarchy
+            _filterComponents = GetComponentsInChildren<UIViewFilterComponent>();
+            FilterComponents(deviceData);
+        }
+
+        void IUIContractView<S>.OnAppDeviceDataUpdated(AppDeviceData deviceData)
+        {
+            FilterComponents(deviceData);
+        }
 
         public abstract void ApplyScreenStateToView(S state);
         
@@ -38,5 +50,26 @@ namespace GourdUI
         protected abstract void OnViewPreDestroy();
 
         #endregion View Methods
+
+
+        #region Filter Components
+
+        /// <summary>
+        /// Cycles through filter components in this view and evaluates
+        /// </summary>
+        /// <param name="deviceData"></param>
+        private void FilterComponents(AppDeviceData deviceData)
+        {
+            foreach (var c in _filterComponents)
+            {
+                c.gameObject.SetActive(
+                    UIViewFilterResolver.ViewFilterResult(
+                        c.filterData.positiveFilters.ToArray(),
+                        c.filterData.negativeFilters.ToArray(),
+                        deviceData));
+            }
+        }
+
+        #endregion Filter Components
     }
 }

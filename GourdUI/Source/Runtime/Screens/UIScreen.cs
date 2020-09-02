@@ -157,7 +157,7 @@ namespace GourdUI
             // TODO: implement some sort of priority/points system to resolve multiple passing views
             if (_validViews.Count > 0)
             {
-                SetValidUIView(_validViews[0]);
+                SetValidUIView(deviceData, _validViews[0]);
             }
             else
             {
@@ -168,8 +168,9 @@ namespace GourdUI
         /// <summary>
         /// Sets the valid UIView as active once it's been found.
         /// </summary>
+        /// <param name="deviceData"></param>
         /// <param name="viewData"></param>
-        private void SetValidUIView(UIViewConfigData viewData)
+        private void SetValidUIView(AppDeviceData deviceData, UIViewConfigData viewData)
         {
             // Make sure we're not setting the same UI view
             if (viewContract != null)
@@ -180,6 +181,7 @@ namespace GourdUI
                 }
                 else
                 {
+                    viewContract.OnAppDeviceDataUpdated(deviceData);
                     return;
                 }
             }
@@ -191,7 +193,7 @@ namespace GourdUI
             GameObject vObj = Instantiate(viewData.prefab, transform);
             viewContract = vObj.GetComponent<V>();
             vObj.GetComponent<UIView<C, S>>().screenContract = this as C;
-            viewContract.OnViewInstantiated();
+            viewContract.OnViewInstantiated(deviceData);
             
             // Setup view
             SetupView();

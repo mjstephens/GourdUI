@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.malee.reorderablelist": "https://github.com/cfoulston/Unity-Reorderable-List.git",
     "com.mstephens.gourd_ui": "file:/Users/michaelstephens/Development/Projects/GourdUI/GourdUI",
     "com.unity.collab-proxy": "1.2.16",
     "com.unity.ide.rider": "1.1.4",

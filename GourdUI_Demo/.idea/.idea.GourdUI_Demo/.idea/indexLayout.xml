@@ -4,6 +4,7 @@
     <attachedFolders />
     <explicitIncludes>
       <Path>../GourdUI</Path>
+      <Path>Library/PackageCache/com.malee.reorderablelist@ac1f508240</Path>
       <Path>Library/PackageCache/com.unity.collab-proxy@1.2.16</Path>
       <Path>Library/PackageCache/com.unity.ext.nunit@1.0.0</Path>
       <Path>Library/PackageCache/com.unity.ide.rider@1.1.4</Path>

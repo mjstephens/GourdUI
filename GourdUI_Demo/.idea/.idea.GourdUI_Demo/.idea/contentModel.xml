@@ -8,6 +8,7 @@
       <e p="UIScreenWizardEditorWindow.cs" t="Include" />
       <e p="UIViewConfigDataTemplateInspector.cs" t="Include" />
       <e p="UIViewFilterComponentInspector.cs" t="Include" />
+      <e p="UIViewFilterConfigurationModuleDrawer.cs" t="Include" />
       <e p="UIViewFilterConfigurationModuleInspector.cs" t="Include" />
     </e>
     <e p="$PROJECT_DIR$/../GourdUI/Source/Runtime" t="Include">

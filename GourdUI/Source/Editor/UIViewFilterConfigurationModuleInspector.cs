@@ -1,12 +1,22 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using UnityEditorInternal;
 
 namespace GourdUI.Editor
 {
     public class UIViewFilterConfigurationModuleInspector : UnityEditor.Editor
     {
+        private ReorderableList posList;
+        private ReorderableList negList;
+        
         #region GUI
+
+        private void OnEnable()
+        {
+            
+        }
 
         public static void DrawViewFilters(ref UIViewFilterConfigurationModule filterData)
         {
