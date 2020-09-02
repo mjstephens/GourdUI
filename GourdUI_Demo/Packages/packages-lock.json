@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "com.mstephens.gourd_ui": {
-      "version": "file:/Users/michaelstephens/Development/Projects/GourdUI/GourdUI",
+      "version": "file:/Users/michaelstephens/Development/Packages/GourdUI/GourdUI",
       "depth": 0,
       "source": "local",
       "dependencies": {}
