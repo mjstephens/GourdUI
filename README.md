@@ -1,7 +1,10 @@
 # GourdUI
 
-Demo Project: https://github.com/mjstephens/GourdUI_Demo
+Demo Project: https://github.com/mjstephens/GourdUI_Demo   
 
+*To use the demo project, you'll need to import this project from the package manager via git URL or as a locally embedded package.*
+
+---
 
 An MVC-style UI framework for Unity3D. Facilitates the creation of *UIScreens* (logical units of UI) with *UIViews* (visual implementations of UIScreens).
 
