@@ -14,13 +14,6 @@ public class #CLASSNAME# : UIView<#CONTRACTSCREEN#, #STATE#>,
 
     #region Setup
 
-    public override void OnViewInstantiated()
-    {
-        // Optionally do things here after the view is instantiated
-        
-        // Use "screenContract" variable to access IUIContractScreen_SampleHUD
-    }
-
     public override void ApplyScreenStateToView(#STATE# state)
     {
         

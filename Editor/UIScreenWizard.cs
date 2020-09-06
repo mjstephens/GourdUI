@@ -288,14 +288,8 @@ namespace GourdUI.Editor
                     CONST_EditorProgressBarTitle, 
                     "Creating Prefabs", 0.8f);
                 CreateScreenPrefabs();
-                
-                EditorPrefs.DeleteKey(CONST_EditorPrefsScreenNameKey);
-                EditorPrefs.DeleteKey(CONST_EditorPrefsScreenClassGenType);
-                EditorPrefs.DeleteKey(CONST_EditorPrefsViewClassGenType);
-                
-                AssetDatabase.Refresh();
-                AssetDatabase.SaveAssets();
-                EditorUtility.ClearProgressBar();
+
+                OnWizardFinished();
             }
         }
 
@@ -351,5 +345,24 @@ namespace GourdUI.Editor
         }
 
         #endregion Prefab Objects
+
+
+        #region Finish
+
+        /// <summary>
+        /// Wraps up wizard stuff
+        /// </summary>
+        private static void OnWizardFinished()
+        {
+            EditorPrefs.DeleteKey(CONST_EditorPrefsScreenNameKey);
+            EditorPrefs.DeleteKey(CONST_EditorPrefsScreenClassGenType);
+            EditorPrefs.DeleteKey(CONST_EditorPrefsViewClassGenType);
+                
+            AssetDatabase.Refresh();
+            AssetDatabase.SaveAssets();
+            EditorUtility.ClearProgressBar();
+        }
+
+        #endregion Finish
     }
 }
