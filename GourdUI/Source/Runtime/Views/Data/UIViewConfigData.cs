@@ -8,6 +8,6 @@ namespace GourdUI
     {
         public GameObject prefab;
         public UIViewFilterConfigurationModule filterData;
-        public UITriggerBaseConfigDataTemplate[] viewSpecificTriggers;
+        //public UITriggerBaseConfigDataTemplate[] viewSpecificTriggers;
     }
 }
