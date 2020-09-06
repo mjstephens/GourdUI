@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 namespace GourdUI
 {
@@ -203,14 +202,14 @@ namespace GourdUI
         // TODO: Reintroduce input/toggle system
         //
         
-        void IUIInputListener.OnUIInputAction(InputAction.CallbackContext ctx)
-        {
-            // Only trigger UI on "performed" action phase
-            if (ctx.action.phase == InputActionPhase.Performed)
-            {
-                //ToggleUIScreenFromInput(ctx.action);
-            }            
-        }
+        // void IUIInputListener.OnUIInputAction(InputAction.CallbackContext ctx)
+        // {
+        //     // Only trigger UI on "performed" action phase
+        //     if (ctx.action.phase == InputActionPhase.Performed)
+        //     {
+        //         //ToggleUIScreenFromInput(ctx.action);
+        //     }            
+        // }
         
         void IGourdUI.ToggleUIScreen(string screenTriggerCode)
         {

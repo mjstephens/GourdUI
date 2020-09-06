@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 namespace GourdUI
 {
@@ -10,6 +9,6 @@ namespace GourdUI
     public class GourdUISystemData : ScriptableObject
     {
         public int canvasRenderDepthBase;
-        public InputActionAsset uiTriggerInputAsset;
+        //public InputActionAsset uiTriggerInputAsset;
     }
 }

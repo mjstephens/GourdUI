@@ -1,5 +1,3 @@
-using UnityEngine.InputSystem;
-
 namespace GourdUI
 {
     /// <summary>
@@ -7,6 +5,6 @@ namespace GourdUI
     /// </summary>
     public interface IUIInputListener
     {
-        void OnUIInputAction(InputAction.CallbackContext ctx);
+       // void OnUIInputAction(InputAction.CallbackContext ctx);
     }
 }
