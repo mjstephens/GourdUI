@@ -139,8 +139,6 @@ namespace GourdUI
         /// </summary>
         private void RefreshUIScreenStack()
         {
-            SetScreenStackCanvasRenderOrders(_screenStack);
-            
             // Does the UI need control?
             bool uiIsActive = false;
             IUIScreen firstActiveScreen = null;
@@ -171,19 +169,6 @@ namespace GourdUI
                         Time.timeScale = 0;
                     }
                 }
-            }
-        }
-
-        /// <summary>
-        /// Receives screen stack - highest screens at end of list
-        /// </summary>
-        /// <param name="stackOrderedScreens"></param>
-        private void SetScreenStackCanvasRenderOrders(List<IUIScreen> stackOrderedScreens)
-        {
-            // Iterate backwards to get highest screens first
-            for (int i = _screenStack.Count - 1; i >= 0; i--)
-            {
-                IUIScreen screen = _screenStack[i];
             }
         }
 

@@ -177,7 +177,7 @@ namespace GourdUI.Editor
             string contractViewClass = "IUIContractView_" + screenName;
             string stateClass = "UIState_" + screenName;
             string screenClass = "UIScreen_" + screenName;
-            string viewClass = "UIView_" + screenName + "_Default";
+            string viewClass = "UIView_" + screenName;
 
             // Screen contract
             using (FileStream fs = File.Create(Path.Combine(scriptsPath, contractScreenClass + ".cs")))

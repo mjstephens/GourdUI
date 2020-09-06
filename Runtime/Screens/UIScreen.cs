@@ -24,6 +24,8 @@ namespace GourdUI
         /// </summary>
         private UIViewConfigData _currentViewData;
 
+        private bool _screenHasBeenInstantiated;
+
         #endregion Fields
 
 
@@ -79,6 +81,14 @@ namespace GourdUI
             {
                 OnScreenDisabled();
             }
+            
+            // Persist screen if needed
+            if (_configBaseData.persistent)
+            {
+                DontDestroyOnLoad(gameObject);
+            }
+
+            _screenHasBeenInstantiated = true;
         }
 
         #endregion Initialization
@@ -123,7 +133,7 @@ namespace GourdUI
             GourdUI.Core.RemoveScreenFromStack(this);
         }
         
-        private void OnDestroy()
+        protected virtual void OnDestroy()
         {
             GourdUI.Core.UnregisterScreen(this);
         }
@@ -193,11 +203,8 @@ namespace GourdUI
             GameObject vObj = Instantiate(viewData.prefab, transform);
             viewContract = vObj.GetComponent<V>();
             vObj.GetComponent<UIView<C, S>>().screenContract = this as C;
-            viewContract.OnViewInstantiated(deviceData);
-            
-            // Setup view
-            SetupView();
-            
+            viewContract.OnViewInstantiated(deviceData, !_screenHasBeenInstantiated);
+
             // We can optionally reset the state between view changes
             if (_configBaseData.resetStateBetweenViewChanges)
             {
@@ -206,11 +213,6 @@ namespace GourdUI
             
             viewContract.ApplyScreenStateToView(state);
         }
-
-        /// <summary>
-        /// Called when a new view for this screen is triggered for display.
-        /// </summary>
-        protected abstract void SetupView();
 
         #endregion View
 

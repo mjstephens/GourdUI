@@ -17,7 +17,8 @@ public interface IUIContractView<in S> where S : UIState
     /// Called directly after the view instance has been instantiated
     /// </summary>
     /// <param name="deviceData"></param>
-    void OnViewInstantiated(AppDeviceData deviceData);
+    /// <param name="isScreenInstantiation"></param>
+    void OnViewInstantiated(AppDeviceData deviceData, bool isScreenInstantiation);
 
     /// <summary>
     /// Called when the device data is updated.

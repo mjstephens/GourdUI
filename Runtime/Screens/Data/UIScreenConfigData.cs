@@ -1,6 +1,5 @@
 using UIGourd;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 namespace GourdUI
 {
@@ -34,8 +33,7 @@ namespace GourdUI
         public bool freezeSimulation;
         public bool lockUIUntilDismissed;
         public bool activeOnLoad;
-        [Tooltip(CONST_orderGroupTooltip)]
-        public int screenOrderGroup;
+        public bool persistent;
 
         [Header("State Behavior")] 
         public bool resetStateBetweenViewChanges;

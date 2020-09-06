@@ -10,11 +10,11 @@ public class #CLASSNAME#:
 {
     #region Setup
 
-    protected override void SetupView()
+    public override void OnScreenInstantiated()
     {
-        // Optionally implement setup for specific views
-    
-        // Use "viewContract" variable to access #CONTRACTVIEW#
+        base.OnScreenInstantiated();
+        
+        // Opportunity to establish state from external sources before view is updated
     }
 
     #endregion Setup

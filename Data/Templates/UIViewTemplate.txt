@@ -13,6 +13,15 @@ public class #CLASSNAME# : UIView<#CONTRACTSCREEN#, #STATE#>,
 
 
     #region Setup
+    
+    protected override void OnScreenInstantiated()
+    {
+        // Called when the view is instantiated along with the screen.
+        // You can use this to call setup animations, fx, etc
+        
+        // Is NOT called when a view is being instantiated because of a device/filter change - only when
+        // a screen is being instantiated for the first time.
+    }
 
     public override void ApplyScreenStateToView(#STATE# state)
     {

@@ -31,9 +31,8 @@ namespace GourdUI
         
         
         #region View Methods
-
-
-        public virtual void OnViewInstantiated(AppDeviceData deviceData)
+        
+        public virtual void OnViewInstantiated(AppDeviceData deviceData, bool isScreenInstantiation)
         {
             // Gather view canvas
             viewCanvas = GetComponent<Canvas>();
@@ -41,7 +40,15 @@ namespace GourdUI
             // Gather filter components in hierarchy
             _filterComponents = GetComponentsInChildren<UIViewFilterComponent>();
             FilterComponents(deviceData);
+            
+            //
+            if (isScreenInstantiation)
+            {
+                OnScreenInstantiated();
+            }
         }
+
+        protected abstract void OnScreenInstantiated();
 
         void IUIContractView<S>.OnAppDeviceDataUpdated(AppDeviceData deviceData)
         {
