@@ -13,8 +13,8 @@ namespace GourdUI
         /// <param name="negativeFilters"></param>
         /// <param name="deviceData"></param>
         public static bool ViewFilterResult(
-            UIViewFilterBaseConfigDataTemplate[] positiveFilters, 
-            UIViewFilterBaseConfigDataTemplate[] negativeFilters, 
+            UIViewFilterBaseConfigData[] positiveFilters, 
+            UIViewFilterBaseConfigData[] negativeFilters, 
             AppDeviceData deviceData)
         {
             bool positiveValid = true;
@@ -27,13 +27,13 @@ namespace GourdUI
                     
                     switch (filter)
                     {
-                        case UIViewFilterPlatformConfigDataTemplate f:
+                        case UIViewFilterPlatformConfigData f:
                             positiveValid = ViewPlatformFilterIsValid(f, deviceData);
                             break;
-                        case UIViewFilterOrientationConfigDataTemplate f:
+                        case UIViewFilterOrientationConfigData f:
                             positiveValid = ViewOrientationFilterIsValid(f, deviceData);
                             break;
-                        case UIViewFilterInputConfigDataTemplate f:
+                        case UIViewFilterInputConfigData f:
                             positiveValid = ViewInputFilterIsValid(f, deviceData);
                             break;
                     }
@@ -50,13 +50,13 @@ namespace GourdUI
                     
                     switch (filter)
                     {
-                        case UIViewFilterPlatformConfigDataTemplate f:
+                        case UIViewFilterPlatformConfigData f:
                             negativeValid = !ViewPlatformFilterIsValid(f, deviceData);
                             break;
-                        case UIViewFilterOrientationConfigDataTemplate f:
+                        case UIViewFilterOrientationConfigData f:
                             negativeValid = !ViewOrientationFilterIsValid(f, deviceData);
                             break;
-                        case UIViewFilterInputConfigDataTemplate f:
+                        case UIViewFilterInputConfigData f:
                             negativeValid = !ViewInputFilterIsValid(f, deviceData);
                             break;
                     }
@@ -74,20 +74,20 @@ namespace GourdUI
         /// <returns>Returns true if view passes validation for platform.</returns>
         /// <exception cref="ArgumentOutOfRangeException">Thrown in event of invalid switch.</exception>
         private static bool ViewPlatformFilterIsValid(
-            UIViewFilterPlatformConfigDataTemplate filter, 
+            UIViewFilterPlatformConfigData filter, 
             AppDeviceData data)
         {
             bool valid;
             switch (data.platform)
             {
                 case CoreDevice.DevicePlatform.Desktop:
-                    valid = filter.data.desktop;
+                    valid = filter.desktop;
                     break;
                 case CoreDevice.DevicePlatform.Console:
-                    valid = filter.data.console;
+                    valid = filter.console;
                     break;
                 case CoreDevice.DevicePlatform.Mobile:
-                    valid = filter.data.mobile;
+                    valid = filter.mobile;
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
@@ -103,17 +103,17 @@ namespace GourdUI
         /// <returns>Returns true if view passes validation for orientation.</returns>
         /// <exception cref="ArgumentOutOfRangeException">Thrown in event of invalid switch.</exception>
         private static bool ViewOrientationFilterIsValid(
-            UIViewFilterOrientationConfigDataTemplate filter, 
+            UIViewFilterOrientationConfigData filter, 
             AppDeviceData data)
         {
             bool valid;
             switch (data.orientation)
             {
                 case CoreDevice.DeviceOrientation.Landscape:
-                    valid = filter.data.landscape;
+                    valid = filter.landscape;
                     break;
                 case CoreDevice.DeviceOrientation.Portrait:
-                    valid = filter.data.portrait;
+                    valid = filter.portrait;
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
@@ -129,20 +129,20 @@ namespace GourdUI
         /// <returns>Returns true if view passes validation for input.</returns>
         /// <exception cref="ArgumentOutOfRangeException">Thrown in event of invalid switch.</exception>
         private static bool ViewInputFilterIsValid(
-            UIViewFilterInputConfigDataTemplate filter,
+            UIViewFilterInputConfigData filter,
             AppDeviceData data)
         {
             bool valid;
             switch (data.input)
             {
                 case CoreDevice.DeviceInput.MouseKB:
-                    valid = filter.data.mouseKB;
+                    valid = filter.mouseKB;
                     break;
                 case CoreDevice.DeviceInput.Controller:
-                    valid = filter.data.controller;
+                    valid = filter.controller;
                     break;
                 case CoreDevice.DeviceInput.Touchscreen:
-                    valid = filter.data.touchscreen;
+                    valid = filter.touchscreen;
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();

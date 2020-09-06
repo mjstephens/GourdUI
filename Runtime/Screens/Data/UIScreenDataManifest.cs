@@ -8,6 +8,6 @@ namespace GourdUI
         menuName = "GourdUI/Manifests/UIScreen Manifest")]
     public class UIScreenDataManifest : ScriptableObject
     {
-        public List<UIScreenConfigDataTemplate> screens;
+        public List<UIScreenConfigData> screens;
     }
 }

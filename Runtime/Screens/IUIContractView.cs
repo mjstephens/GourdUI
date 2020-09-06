@@ -1,7 +1,18 @@
 using GourdUI;
+using UnityEngine;
 
 public interface IUIContractView<in S> where S : UIState
 {
+    #region Properties
+
+    /// <summary>
+    /// The canvas for this view
+    /// </summary>
+    Canvas viewCanvas { get; }
+
+    #endregion Properties
+    
+    
     /// <summary>
     /// Called directly after the view instance has been instantiated
     /// </summary>

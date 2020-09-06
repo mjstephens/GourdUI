@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f619aa1a8e994555bb07861e056c35e8, type: 3}
+  m_Script: {fileID: 11500000, guid: 7efbb925d8ce4e049ef064bf37f05a1b, type: 3}
   m_Name: UIViewFilter_Orientation_Portrait
   m_EditorClassIdentifier: 
-  data:
-    portrait: 1
-    landscape: 0
+  portrait: 1
+  landscape: 0

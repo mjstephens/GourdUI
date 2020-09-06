@@ -1,7 +1,11 @@
+using UnityEngine;
+
 namespace GourdUI
 {
-    [System.Serializable]
-    public struct UIViewFilterInputConfigData
+    [CreateAssetMenu(
+        fileName = "Input View Filter", 
+        menuName = "GourdUI/Filters/Input Filter")]
+    public class UIViewFilterInputConfigData : UIViewFilterBaseConfigData
     {
         public bool mouseKB;
         public bool controller;

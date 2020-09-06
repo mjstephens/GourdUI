@@ -17,13 +17,13 @@ namespace GourdUI
         [Header("Screen Data")]
         [SerializeField]
         // We declare this as internal to enable reflection access in the UIScreen Wizard
-        internal UIScreenConfigDataTemplate _configBaseData;
-
+        internal UIScreenConfigData _configBaseData;
+        
         /// <summary>
         /// Cached view data 
         /// </summary>
         private UIViewConfigData _currentViewData;
-        
+
         #endregion Fields
 
 
@@ -49,7 +49,7 @@ namespace GourdUI
             // Register the screen
             GourdUI.Core.RegisterScreen(this);
         }
-
+        
         /// <summary>
         /// Called once when the screen is first instantiated.
         /// </summary>
@@ -71,7 +71,7 @@ namespace GourdUI
             }
             
             // Activate view if it should be active by default
-            if (_configBaseData.data.activeOnLoad)
+            if (_configBaseData.activeOnLoad)
             {
                 GourdUI.Core.AddScreenToStack(this, 0);
             }
@@ -111,7 +111,7 @@ namespace GourdUI
         /// </summary>
         public virtual void OnScreenDisabled()
         {
-            if (!_configBaseData.data.preserveStateAfterScreenToggle)
+            if (!_configBaseData.preserveStateAfterScreenToggle)
             {
                 ResetScreenState();
             }
@@ -146,11 +146,11 @@ namespace GourdUI
         {
             // Find based on filters
             List<UIViewConfigData> _validViews  = new List<UIViewConfigData>();
-            foreach (var view in _configBaseData.data.views)
+            foreach (var view in _configBaseData.views)
             {
-                if (GourdUI.Core.UIViewIsValidForDevice(view.data, deviceData))
+                if (GourdUI.Core.UIViewIsValidForDevice(view, deviceData))
                 {
-                    _validViews.Add(view.data);
+                    _validViews.Add(view);
                 }
             }
 
@@ -199,7 +199,7 @@ namespace GourdUI
             SetupView();
             
             // We can optionally reset the state between view changes
-            if (_configBaseData.data.resetStateBetweenViewChanges)
+            if (_configBaseData.resetStateBetweenViewChanges)
             {
                 ResetScreenState();
             }
@@ -233,13 +233,8 @@ namespace GourdUI
         /// <param name="index"></param>
         void IUIScreen.OnScreenSetStackOrder(int index)
         {
-            // if (controlCanvas != null)
-            // {
-            //     controlCanvas.sortingOrder = index + configBaseData.data.canvasRenderOrderAddition;
-            // }
-            //TODO fix this
-            
             // Set canvas of current active UIView
+            viewContract.viewCanvas.sortingOrder = index;// + (_configBaseData.data.screenOrderGroup * 100);
         }
         
         #endregion Implementation Methods
@@ -255,7 +250,7 @@ namespace GourdUI
         
         UIScreenConfigData IUIScreen.ScreenConfigData()
         {
-            return _configBaseData.data;
+            return _configBaseData;
         }
 
         #endregion Utility

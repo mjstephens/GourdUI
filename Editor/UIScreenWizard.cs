@@ -70,7 +70,7 @@ namespace GourdUI.Editor
                 CreateScreenDirectoryStructure(screenName);
             
             // Create project data items...
-            Tuple<UIScreenConfigDataTemplate,UIViewConfigDataTemplate> dataObjects = 
+            Tuple<UIScreenConfigData,UIViewConfigData> dataObjects = 
                 CreateScreenDataObjects(screenName);
             
             // Create scripts
@@ -128,7 +128,7 @@ namespace GourdUI.Editor
         
         #region ScriptableObject Data Assets
         
-        private static Tuple<UIScreenConfigDataTemplate,UIViewConfigDataTemplate> 
+        private static Tuple<UIScreenConfigData,UIViewConfigData> 
             CreateScreenDataObjects(string screenName)
         {
             // Progress bar
@@ -139,25 +139,25 @@ namespace GourdUI.Editor
             string pathHeader = CONST_RootUIScreenPath + screenName + "/";
 
             // Create view object data
-            UIViewConfigDataTemplate viewDataObj =
-                ScriptableObject.CreateInstance<UIViewConfigDataTemplate>();
+            UIViewConfigData viewDataObj =
+                ScriptableObject.CreateInstance<UIViewConfigData>();
             AssetDatabase.CreateAsset(
                 viewDataObj, 
                 pathHeader + "Views/UIView_" + screenName + "_Default_Data.asset");
             
             // Create screen object data
-            UIScreenConfigDataTemplate screenDataObj =
-                ScriptableObject.CreateInstance<UIScreenConfigDataTemplate>();
+            UIScreenConfigData screenDataObj =
+                ScriptableObject.CreateInstance<UIScreenConfigData>();
             
             // Assign view to screen
-            screenDataObj.data.views = new[] {viewDataObj};
-            screenDataObj.data.triggerCode = screenName.ToLower();
+            screenDataObj.views = new[] {viewDataObj};
+            screenDataObj.triggerCode = screenName.ToLower();
             AssetDatabase.CreateAsset(
                 screenDataObj, 
                 pathHeader + "UIScreen_" + screenName + "_Data.asset");
             
             // Save the assets
-            return new Tuple<UIScreenConfigDataTemplate, UIViewConfigDataTemplate>(screenDataObj, viewDataObj);
+            return new Tuple<UIScreenConfigData, UIViewConfigData>(screenDataObj, viewDataObj);
         }
         
         #endregion ScriptableObject Data Assets
@@ -309,10 +309,10 @@ namespace GourdUI.Editor
             screenPrefabObj.AddComponent(screenType);
             
             // Set data field
-            UIScreenConfigDataTemplate screenData =
-                (UIScreenConfigDataTemplate) AssetDatabase.LoadAssetAtPath(
+            UIScreenConfigData screenData =
+                (UIScreenConfigData) AssetDatabase.LoadAssetAtPath(
                     CONST_RootUIScreenPath + _screenName + "/UIScreen_" + _screenName + "_Data.asset",
-                    typeof(UIScreenConfigDataTemplate));
+                    typeof(UIScreenConfigData));
             ReflectionHelpers.SetTypeFieldValue(
                 screenPrefabObj, screenType, CONST_ScreenPrefabDataTemplateFieldName, screenData);
             
@@ -337,11 +337,11 @@ namespace GourdUI.Editor
             UnityEditor.Editor.DestroyImmediate(viewPrefabObj);
             
             // Assign view prefab to view data object
-            UIViewConfigDataTemplate viewData =
-                (UIViewConfigDataTemplate) AssetDatabase.LoadAssetAtPath(
+            UIViewConfigData viewData =
+                (UIViewConfigData) AssetDatabase.LoadAssetAtPath(
                     CONST_RootUIScreenPath + _screenName + "/Views/UIView_" + _screenName + "_Default_Data.asset",
-                    typeof(UIViewConfigDataTemplate));
-            viewData.data.prefab = viewPrefab;
+                    typeof(UIViewConfigData));
+            viewData.prefab = viewPrefab;
         }
 
         #endregion Prefab Objects

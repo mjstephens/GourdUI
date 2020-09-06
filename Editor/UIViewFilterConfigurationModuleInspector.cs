@@ -26,7 +26,7 @@ namespace GourdUI.Editor
             DrawFilterList("Excludes:", filterData.negativeFilters);
         }
         
-        private static void DrawFilterList(string label, List<UIViewFilterBaseConfigDataTemplate> targetList)
+        private static void DrawFilterList(string label, List<UIViewFilterBaseConfigData> targetList)
         {
             // Label
             EditorGUILayout.Space();
@@ -45,9 +45,9 @@ namespace GourdUI.Editor
                 }
                 GUI.backgroundColor = defaultColor;
                 
-                targetList[i] = (UIViewFilterBaseConfigDataTemplate)
+                targetList[i] = (UIViewFilterBaseConfigData)
                     EditorGUILayout.ObjectField(targetList[i], 
-                        typeof(UIViewFilterBaseConfigDataTemplate), false);
+                        typeof(UIViewFilterBaseConfigData), false);
                 
                 EditorGUILayout.EndHorizontal();
             }

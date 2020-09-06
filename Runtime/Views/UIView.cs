@@ -6,6 +6,7 @@ namespace GourdUI
     /// Base class for all UIViews. Holds reference to associated screen contract.
     /// See documentation for usage.
     /// </summary>
+    [RequireComponent(typeof(Canvas))]
     public abstract class UIView<C,S> : MonoBehaviour, IUIContractView<S>
         where C : class, IUIContractScreen
         where S : UIState
@@ -16,16 +17,27 @@ namespace GourdUI
         /// The screen contract associated with this view
         /// </summary>
         public C screenContract { get; set; }
+        
+        public Canvas viewCanvas { get; private set;  }
 
+
+        /// <summary>
+        /// 
+        /// </summary>
         private UIViewFilterComponent[] _filterComponents;
+
 
         #endregion Properties
         
         
         #region View Methods
 
+
         public virtual void OnViewInstantiated(AppDeviceData deviceData)
         {
+            // Gather view canvas
+            viewCanvas = GetComponent<Canvas>();
+            
             // Gather filter components in hierarchy
             _filterComponents = GetComponentsInChildren<UIViewFilterComponent>();
             FilterComponents(deviceData);

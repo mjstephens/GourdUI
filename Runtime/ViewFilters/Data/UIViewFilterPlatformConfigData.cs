@@ -1,7 +1,11 @@
+using UnityEngine;
+
 namespace GourdUI
 {
-    [System.Serializable]
-    public struct UIViewFilterPlatformConfigData
+    [CreateAssetMenu(
+        fileName = "Runtime Platform Filter", 
+        menuName = "GourdUI/Filters/Runtime Platform Filter")]
+    public class UIViewFilterPlatformConfigData : UIViewFilterBaseConfigData
     {
         public bool desktop;
         public bool mobile;
