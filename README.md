@@ -32,13 +32,9 @@ GourdUI includes several modular UI components to expand or improve default func
 
 ![](Demo/gourui_drag.gif)
 
-- Container Element: Use this component to enable the containment of RectTranforms within separate "container" RectTransforms. Combine with drag components to create nested "drag stacks":
+- Container Element: Use this component to enable the containment of RectTranforms within separate "container" RectTransforms. Combine with drag components to create nested "drag stacks" (left); optionally un-parent from container and add to a Container Group to enable fluid drag hierarchies (right):
 
-![](Demo/gourdui_nestedDrag.gif)
-
-Use Container Groups to create fluid interactable drag hierarchies:
-
-![](Demo/gourUI_nestedFluid.gif)
+![](Demo/gourdui_nestedDrag.gif) ![](Demo/gourUI_nestedFluid.gif)
 
 
 ---
