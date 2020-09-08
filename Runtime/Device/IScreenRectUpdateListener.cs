@@ -2,12 +2,12 @@ using UnityEngine;
 
 namespace GourdUI
 {
-    public interface ISafeArea
+    public interface IScreenRectUpdateListener
     {
         /// <summary>
-        /// Updates the safe area of the current device screen.
+        /// Updates the screen rect of the current device screen.
         /// </summary>
         /// <param name="rect">The new screen Rect.</param>
-        void OnUISafeAreaUpdated(Rect rect);
+        void OnScreenRectUpdated(Rect rect);
     }
 }

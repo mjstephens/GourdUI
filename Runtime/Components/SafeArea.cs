@@ -9,7 +9,7 @@ namespace GourdUI
     /// Updates the attached rect transform to anchor to the screen safe area
     /// </summary>
     [RequireComponent(typeof(RectTransform))]
-    public class SafeArea : MonoBehaviour, ISafeArea
+    public class SafeArea : MonoBehaviour, IScreenRectUpdateListener
     {
         #region Variables
 
@@ -26,17 +26,17 @@ namespace GourdUI
         private void Start ()
         {
             _panel = GetComponent<RectTransform> ();
-            OnUISafeAreaUpdated(CoreDevice.UISafeArea());
+            OnScreenRectUpdated(CoreDevice.UISafeArea());
         }
 
         private void OnEnable()
         {
-            GourdUI.Device.RegisterSafeAreaComponent(this);
+            GourdUI.Device.RegisterScreenUpdateListener(this);
         }
 
         private void OnDisable()
         {
-            GourdUI.Device.UnegisterSafeAreaComponent(this);
+            GourdUI.Device.UnregisterScreenUpdateListener(this);
         }
 
         #endregion Initialization
@@ -44,7 +44,7 @@ namespace GourdUI
 
         #region Safe Area
 
-        public void OnUISafeAreaUpdated(Rect rect)
+        public void OnScreenRectUpdated(Rect rect)
         {
             // Convert safe area rectangle from absolute pixels to normalised anchor coordinates
             Vector2 anchorMin = rect.position;

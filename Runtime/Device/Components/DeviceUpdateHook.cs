@@ -18,6 +18,7 @@ namespace GourdUI
             if (Instance == null)
             {
                 Instance = this;
+                Application.targetFrameRate = 60;
                 DontDestroyOnLoad(gameObject);
             }
             else

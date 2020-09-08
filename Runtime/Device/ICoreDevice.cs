@@ -14,15 +14,15 @@ namespace GourdUI
         AppDeviceData DeviceData();
 
         /// <summary>
-        /// Registers a UI safe area to respond to safe area changes.
+        /// Registers a screen update listener to respond to safe area changes.
         /// </summary>
-        /// <param name="safeArea">The SafeArea component to be registered.</param>
-        void RegisterSafeAreaComponent(ISafeArea safeArea);
+        /// <param name="screenRectUpdateListener">The IScreenRectUpdateListener component to be registered.</param>
+        void RegisterScreenUpdateListener(IScreenRectUpdateListener screenRectUpdateListener);
 
         /// <summary>
-        /// Unregisters a UI safe area.
+        /// Unregisters a UI screen update listener.
         /// </summary>
-        /// <param name="safeArea">The SafeArea component to be unregistered.</param>
-        void UnegisterSafeAreaComponent(ISafeArea safeArea);
+        /// <param name="screenRectUpdateListener">The IScreenRectUpdateListener component to be unregistered.</param>
+        void UnregisterScreenUpdateListener(IScreenRectUpdateListener screenRectUpdateListener);
     }
 }

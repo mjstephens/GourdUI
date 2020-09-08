@@ -73,7 +73,7 @@ namespace GourdUI
         /// <summary>
         /// 
         /// </summary>
-        private readonly List<ISafeArea> _safeAreas = new List<ISafeArea>();
+        private readonly List<IScreenRectUpdateListener> _screenListeners = new List<IScreenRectUpdateListener>();
 
         #endregion Variables
         
@@ -111,9 +111,9 @@ namespace GourdUI
             if (safeArea != _lastSafeArea)
             {
                 _lastSafeArea = safeArea;
-                foreach (var s in _safeAreas)
+                foreach (var s in _screenListeners)
                 {
-                    s.OnUISafeAreaUpdated(safeArea);
+                    s.OnScreenRectUpdated(safeArea);
                 }
             }
         }
@@ -257,14 +257,14 @@ namespace GourdUI
 
         #region Registration
 
-        void ICoreDevice.RegisterSafeAreaComponent(ISafeArea safeArea)
+        void ICoreDevice.RegisterScreenUpdateListener(IScreenRectUpdateListener screenRectUpdateListener)
         {
-            _safeAreas.Add(safeArea);
+            _screenListeners.Add(screenRectUpdateListener);
         }
 
-        void ICoreDevice.UnegisterSafeAreaComponent(ISafeArea safeArea)
+        void ICoreDevice.UnregisterScreenUpdateListener(IScreenRectUpdateListener screenRectUpdateListener)
         {
-            _safeAreas.Remove(safeArea);
+            _screenListeners.Remove(screenRectUpdateListener);
         }
 
         #endregion Registration
