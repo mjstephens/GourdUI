@@ -1,6 +1,6 @@
 # GourdUI
 
-Demo Project: https://github.com/mjstephens/GourdUI_Demo   
+This repository contains the UPM package only. The Unity demo project with examples can be found here: https://github.com/mjstephens/GourdUI_Demo   
 
 ---
 
