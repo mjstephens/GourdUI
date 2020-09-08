@@ -1,10 +1,17 @@
 # GourdUI
 
+GourdUI is a utility package + framework designed to make working with complex UI in Unity easier and, most significantly, more maintainable.
+
+**This package is currently under construction - more to come**
+
 This repository contains the UPM package only. The Unity demo project with examples can be found here: https://github.com/mjstephens/GourdUI_Demo   
 
 ---
+**Screens + Views**
 
-An MVC-style UI framework for Unity3D. Facilitates the creation of *UIScreens* (logical units of UI) with *UIViews* (visual implementations of UIScreens).
+
+An MVC-style UI framework for Unity3D. Facilitates the creation of *UIScreens* (logical units of UI) with *UIViews* (visual implementations of UIScreens):
+
 
 - Separates UI logic from working displays
 - Allows for multiple view options per screen (only one view will be active at a time)
@@ -15,8 +22,15 @@ An MVC-style UI framework for Unity3D. Facilitates the creation of *UIScreens* (
 - *Coming soon:* Assign *UITriggers* to screens and/or views to quickly setup fast input-based toggling of screens
 - *Coming soon:* Expanded filter options allow for inverse (not-if) view filtering
 
+---
 
-**This package is currently under construction - more to come**
+**Components**
+
+GourdUI includes several modular UI components to expand or improve default functionality:
+
+- Drag Source: Simple component allowing RectTransforms to be smoothly dragged, including momentum after drag release
+- Container Element: Use this component to enable the containment of RectTranforms within separate "container" RectTransforms. Combine with drag components to create nested "drag stacks"
+- Container Group: Container Elements can define groups; elements in the same group will avoid overlapping with each other
 
 
 ---
