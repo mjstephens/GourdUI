@@ -29,7 +29,9 @@ An MVC-style UI framework for Unity3D. Facilitates the creation of *UIScreens* (
 GourdUI includes several modular UI components to expand or improve default functionality:
 
 - Drag Source: Simple component allowing RectTransforms to be smoothly dragged, including momentum after drag release:
+
 ![](Demo/gourui_drag.gif)
+
 - Container Element: Use this component to enable the containment of RectTranforms within separate "container" RectTransforms. Combine with drag components to create nested "drag stacks":
 
 ![](Demo/gourdui_nestedDrag.gif)
