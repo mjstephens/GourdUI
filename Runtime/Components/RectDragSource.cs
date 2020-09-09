@@ -24,7 +24,6 @@ namespace GourdUI
         private Vector2 _draggerPrevPos;
         private Vector2 _releaseMomentum;
 
-        // 0 = no boundary reached, - 1 = ;eft bondary reached, 1 = right boundary reached
         private bool _xAxisBoundaryReached;
         private bool _yAxisBoundaryReached; 
 
@@ -141,16 +140,10 @@ namespace GourdUI
             if (filter != null)
             {
                 Vector2 adjustment = filter.FilterPositionAdjustment();
+                dynamicTransform.position = (Vector2) dynamicTransform.position - adjustment;
 
                 _xAxisBoundaryReached = adjustment.x != 0;
                 _yAxisBoundaryReached = adjustment.y != 0;
-            
-                dynamicTransform.position = new Vector2(
-                    dynamicTransform.position.x - adjustment.x,
-                    dynamicTransform.position.y);
-                dynamicTransform.position = new Vector2(
-                    dynamicTransform.position.x,
-                    dynamicTransform.position.y - adjustment.y);
             }
         }
 

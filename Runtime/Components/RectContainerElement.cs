@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace GourdUI
@@ -35,11 +36,15 @@ namespace GourdUI
         /// The world-space corners of our object
         /// </summary>
         public RectSpace sourceSpace { get; private set; }
+
         
+        private RectSpace _positionEvaluationSpace;
+
         /// <summary>
-        /// The world-space corners of our container
+        /// List of free spaces within which this element is currently completely contained
+        /// Element 0 is the "root" container (@container)
         /// </summary>
-        private RectSpace _currentContainerSpace;
+        private List<RectSpace> _currentElementFreeSpaces = new List<RectSpace>();
         
         public RectContainerGroup group;
 
@@ -52,7 +57,6 @@ namespace GourdUI
 
         private void Start()
         {
-            // Find element
             source = GetComponent<IUIDynamicRect>();
             if (source == null)
             {
@@ -67,6 +71,11 @@ namespace GourdUI
             {
                 _containerRect = container.GetComponent<IUIDynamicRect>();
                 _containerRect.SubscribeDynamicRectListener(this);
+                _currentElementFreeSpaces.Add(new RectSpace(_containerRect.dynamicTransform));
+            }
+            else
+            {
+                _currentElementFreeSpaces.Add(new RectSpace(RectBoundariesUtility.GetScreenCorners()));
             }
             
             RefreshContainerBoundary();
@@ -121,21 +130,22 @@ namespace GourdUI
             if (group != null && source.activeControl && _hasInitialized)
             {
                 // Get container from group
-                _currentContainerSpace = group.GetGroupEvaluationContainer(
-                    this, 
-                    _currentContainerSpace,
-                    container);
+                _positionEvaluationSpace = group.GetGroupedElementEvaluationBoundary(
+                    this,
+                    sourceSpace, 
+                    new RectSpace(container),
+                    _currentElementFreeSpaces,
+                    out _currentElementFreeSpaces);
             }
             else
             {
                 if (!_hasExplicitContainer)
                 {
-                    _currentContainerSpace = RectBoundariesUtility.CreateRectSpace(
-                        RectBoundariesUtility.GetScreenCorners());
+                    _positionEvaluationSpace = new RectSpace(RectBoundariesUtility.GetScreenCorners());
                 }
                 else
                 {
-                    _currentContainerSpace = RectBoundariesUtility.CreateRectSpace(container);
+                    _positionEvaluationSpace = new RectSpace(container);
                 }
             }
             
@@ -154,16 +164,16 @@ namespace GourdUI
         Vector2 IUIDynamicRectFilter.FilterPositionAdjustment()
         {
             // Update our source's space
-            sourceSpace = RectBoundariesUtility.CreateRectSpace(source.dynamicTransform);
+            sourceSpace = new RectSpace(source.dynamicTransform);
             if (source.activeControl)
             {
                 RefreshContainerBoundary(false);
             }
             
             // Find any overlap outside of our object's container
-            Vector2 boundaryOverlap = 
-                RectBoundariesUtility.GetRectSpaceOverlap(sourceSpace, _currentContainerSpace);
-
+            Vector2 boundaryOverlap =
+                RectBoundariesUtility.GetRectSpaceOverlap(sourceSpace, _positionEvaluationSpace);
+             
             return boundaryOverlap;
         }
 
