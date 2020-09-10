@@ -1,10 +1,11 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 namespace GourdUI
 {
-    public class RectDragSource : UIDynamicRect
+    public partial class RectDragSource : UIDynamicRect
     {
         #region Variables
 
@@ -61,6 +62,17 @@ namespace GourdUI
 
         private void Awake()
         {
+            Load();
+        }
+
+        protected override void Load()
+        {
+            // Make sure we only load once
+            if (_hasLoaded)
+            {
+                return;
+            }
+            
             if (_dragObject == null)
             {
                 _dragObject = transform.GetComponent<RectTransform>();
@@ -72,11 +84,16 @@ namespace GourdUI
             draggerObj.transform.SetParent(dynamicTransform.parent);
             _dragger = draggerObj.AddComponent<RectTransform>();
             _dragger.position = dynamicTransform.position;
+            
+            base.Load();
         }
 
-        private void OnEnable()
+        private void OnDestroy()
         {
-            _dragger.position = dynamicTransform.position;
+            if (_dragger != null)
+            {
+                Destroy(_dragger.gameObject);
+            }
         }
 
         #endregion Initialization

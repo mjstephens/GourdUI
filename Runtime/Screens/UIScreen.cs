@@ -24,7 +24,7 @@ namespace GourdUI
         /// </summary>
         private UIViewConfigData _currentViewData;
 
-        private bool _screenHasBeenInstantiated;
+        protected bool _screenHasBeenInstantiated;
 
         #endregion Fields
 
@@ -59,19 +59,13 @@ namespace GourdUI
         {
             // Create state class
             state = new S();
-
-            // Find the correct UI view
-            FindValidUIView(GourdUI.Device.DeviceData());
             
             // Make sure our state is reset for first initialization
             ResetScreenState();
-            
-            // Apply reset state to view
-            if (viewContract != null)
-            {
-                viewContract.ApplyScreenStateToView(state);
-            }
-            
+
+            // Find the correct UI view
+            FindValidUIView(GourdUI.Device.DeviceData());
+
             // Activate view if it should be active by default
             if (_configBaseData.activeOnLoad)
             {
@@ -87,8 +81,6 @@ namespace GourdUI
             {
                 DontDestroyOnLoad(gameObject);
             }
-
-            _screenHasBeenInstantiated = true;
         }
 
         #endregion Initialization
@@ -105,10 +97,12 @@ namespace GourdUI
             gameObject.SetActive(true);
             
             // Make sure we update the view to match most recent state config.
-            if (viewContract != null)
+            if (viewContract != null && _screenHasBeenInstantiated)
             {
-                viewContract.ApplyScreenStateToView(state);
+                viewContract.ApplyScreenStateToView(state, false);
             }
+            
+            _screenHasBeenInstantiated = true;
         }
 
         #endregion Activation
@@ -211,7 +205,7 @@ namespace GourdUI
                 ResetScreenState();
             }
             
-            viewContract.ApplyScreenStateToView(state);
+            viewContract.ApplyScreenStateToView(state, !_screenHasBeenInstantiated);
         }
 
         #endregion View
@@ -223,7 +217,9 @@ namespace GourdUI
         /// Should reset the UI state to default values.
         /// </summary>
         protected abstract void ResetScreenState();
-
+        
+        protected virtual void OnViewPreDestroy() {}
+        
         #endregion State
         
         
@@ -246,6 +242,7 @@ namespace GourdUI
 
         private void DestroyCurrentView()
         {
+            OnViewPreDestroy();
             viewContract?.OnDestroyView();
             viewContract = default;
         }

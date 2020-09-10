@@ -26,6 +26,12 @@ public class #CLASSNAME#:
     {
         // Use "state" variable to access #STATE#
     }
+    
+    protected override void OnViewPreDestroy()
+    {
+        // This is called just before a view is destroyed to be swapped with a new view.
+        // You can grab any values from the view you may need for state data (position, scale, etc)
+    }
 
     #endregion State
 }

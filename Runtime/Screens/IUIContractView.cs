@@ -25,12 +25,14 @@ public interface IUIContractView<in S> where S : UIState
     /// </summary>
     /// <param name="deviceData"></param>
     void OnAppDeviceDataUpdated(AppDeviceData deviceData);
-    
+
     /// <summary>
     /// Should immediately apply screen state to view
     /// </summary>
     /// <param name="state"></param>
-    void ApplyScreenStateToView(S state);
+    /// <param name="isScreenInstantiation"></param>
+    /// <param name="isFirstInstantiate"></param>
+    void ApplyScreenStateToView(S state, bool isScreenInstantiation);
     
     /// <summary>
     /// Cleans up and destroys the view instance

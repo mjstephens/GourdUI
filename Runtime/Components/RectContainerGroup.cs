@@ -44,7 +44,7 @@ namespace GourdUI
                 containerSpace);
             
             // Is our element fully contained within any space?
-            List<RectSpace> fs = CalculateEnclosingFreeSpacesForGroupedElement(activeSpace, freespaces);
+            List<RectSpace> fs = CalculateEnclosingFreeSpacesForGroupedElement(activeElement, activeSpace, freespaces);
 
             // If we didn't find a space, that means our element is overlapping
             // We want to apply the correction temporarily, re-check to find the correct space,
@@ -59,7 +59,7 @@ namespace GourdUI
                         RectBoundariesUtility.GetRectSpaceOverlap(
                             activeSpace, 
                             previousFreeSpaces[i],
-                            RectContainerElement.ElementBoundaryMode.Edge);
+                            activeElement.boundaryMode);
                 }
                 
                 // Which overlap distance was closest? That's the one we want!
@@ -79,7 +79,7 @@ namespace GourdUI
                 // Now we can re-evaluate current spaces for transformed element
                 RectSpace corrected = new RectSpace(activeSpace).TransformWithOffset(evalDistance);
                 List<RectSpace> postCorrectionFS = 
-                    CalculateEnclosingFreeSpacesForGroupedElement(corrected, freespaces);
+                    CalculateEnclosingFreeSpacesForGroupedElement(activeElement, corrected, freespaces);
                 newFreeSpaces = postCorrectionFS.Count > 0 ? postCorrectionFS : new List<RectSpace> {containerSpace};
                 
                 //
@@ -146,6 +146,7 @@ namespace GourdUI
         /// completely contained (not overlapping any edges).
         /// </summary>
         private static List<RectSpace> CalculateEnclosingFreeSpacesForGroupedElement(
+            RectContainerElement activeElement,
             RectSpace element, 
             RectSpace[] freespaces)
         {
@@ -155,7 +156,7 @@ namespace GourdUI
                 if (RectBoundariesUtility.GetRectSpaceOverlap(
                     element, 
                     space,
-                    RectContainerElement.ElementBoundaryMode.Edge) 
+                    activeElement.boundaryMode) 
                     == Vector2.zero)
                 {
                     containingSpaces.Add(space);

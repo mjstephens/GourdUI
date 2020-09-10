@@ -55,7 +55,7 @@ namespace GourdUI
             FilterComponents(deviceData);
         }
 
-        public abstract void ApplyScreenStateToView(S state);
+        public abstract void ApplyScreenStateToView(S state, bool isScreenInstantiation);
         
         void IUIContractView<S>.OnDestroyView()
         {

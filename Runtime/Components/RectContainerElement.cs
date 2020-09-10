@@ -66,7 +66,7 @@ namespace GourdUI
 
         #region Initialization
 
-        private void Start()
+        private void Awake()
         {
             source = GetComponent<IUIDynamicRect>();
             if (source == null)
@@ -178,7 +178,7 @@ namespace GourdUI
             // Optionally update the dynamic rect
             if (updateElementPosition)
             {
-                source.ForceUpdate();
+                source?.ForceUpdate();
             }
         }
 

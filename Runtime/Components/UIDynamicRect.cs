@@ -13,7 +13,9 @@ namespace GourdUI
 
         public RectTransform dynamicTransform { get; protected set; }
         
-        public bool activeControl { get; private set; }
+        public bool activeControl { get; protected set; }
+        
+        public Vector2 defaultPosition { get; private set; }
 
         #endregion Properties
 
@@ -33,8 +35,10 @@ namespace GourdUI
         /// <summary>
         /// True if we are currently interacting with this dynamic rect
         /// </summary>
-        private bool _interacting;
-        
+        protected bool _interacting;
+
+        protected bool _hasLoaded;
+
         protected bool _xAxisBoundaryReached;
         protected bool _yAxisBoundaryReached; 
 
@@ -43,6 +47,12 @@ namespace GourdUI
 
         #region Initialization
 
+        protected virtual void Load()
+        {
+            defaultPosition = dynamicTransform.position;
+            _hasLoaded = true;
+        }
+        
         protected virtual void OnDisable()
         {
             if (_interacting)
@@ -60,6 +70,9 @@ namespace GourdUI
 
         void IUIDynamicRect.SubscribeDynamicRectListener(IUIDynamicRectListener l)
         {
+            // Listeners may get to us before we've loaded - make sure we're g2g
+            Load();
+            
             if (!_listeners.Contains(l))
             {
                 _listeners.Add(l);
@@ -99,7 +112,7 @@ namespace GourdUI
             }
         }
         
-        private IEnumerator DynamicRectInteractionTick()
+        protected IEnumerator DynamicRectInteractionTick()
         {
             while (_interacting)
             {
