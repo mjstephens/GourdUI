@@ -10,12 +10,7 @@ namespace GourdUI
         /// The rect transform being dynamically altered.
         /// </summary>
         RectTransform dynamicTransform { get; }
-        
-        /// <summary>
-        /// 
-        /// </summary>
-        IUIDynamicRectFilter filter { set;  }
-        
+
         /// <summary>
         /// 
         /// </summary>

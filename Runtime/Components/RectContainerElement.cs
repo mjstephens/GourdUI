@@ -5,13 +5,15 @@ using UnityEngine;
 namespace GourdUI
 {
     [RequireComponent(typeof(RectTransform))]
-    public class RectContainerElement : MonoBehaviour, IUIDynamicRectFilter, IScreenRectUpdateListener
+    public class RectContainerElement : MonoBehaviour, IUIDynamicRectPositionFilter, IScreenRectUpdateListener
     {
         #region Properties
 
         [Header("References")]
         public RectTransform container;
-        
+
+        public bool debug;
+
         #endregion Properties
         
         
@@ -21,7 +23,7 @@ namespace GourdUI
         /// The dynamic rect of the element being contained.
         /// </summary>
         public IUIDynamicRect source { get; private set; }
-        
+
         /// <summary>
         /// The container rect itself may also be a dynamic rect.
         /// </summary>
@@ -32,17 +34,10 @@ namespace GourdUI
         /// </summary>
         private bool _hasExplicitContainer;
 
-        /// <summary>
-        /// The world-space corners of our object
-        /// </summary>
-        public RectSpace sourceSpace { get; private set; }
-
-        
         private RectSpace _positionEvaluationSpace;
 
         /// <summary>
         /// List of free spaces within which this element is currently completely contained
-        /// Element 0 is the "root" container (@container)
         /// </summary>
         private List<RectSpace> _currentElementFreeSpaces = new List<RectSpace>();
         
@@ -63,13 +58,15 @@ namespace GourdUI
                 throw new NullReferenceException(
                     "RectContainerElement requires an IUIDynamicRect component!");
             }
-            source.filter = this;
+            source.SubscribeDynamicRectListener(this);
 
             // Find container
             _hasExplicitContainer = container != null;
             if (_hasExplicitContainer && container.GetComponent<IUIDynamicRect>() != null)
             {
                 _containerRect = container.GetComponent<IUIDynamicRect>();
+                
+                // Tell our containe to update this element whenever it moves
                 _containerRect.SubscribeDynamicRectListener(this);
                 _currentElementFreeSpaces.Add(new RectSpace(_containerRect.dynamicTransform));
             }
@@ -84,10 +81,14 @@ namespace GourdUI
 
         private void OnEnable()
         {
+            // Listen for changes in the device/screen
             GourdUI.Device.RegisterScreenUpdateListener(this);
-            _containerRect?.SubscribeDynamicRectListener(this);
             
-            // Group
+            // We need callbacks when this element moves, and when the container moves
+            _containerRect?.SubscribeDynamicRectListener(this);
+            source?.SubscribeDynamicRectListener(this);
+            
+            // If this is part of a group, we need to subscribe
             if (group != null)
             {
                 group.RegisterContainerElement(this);
@@ -97,7 +98,8 @@ namespace GourdUI
         private void OnDisable()
         {
             GourdUI.Device.UnregisterScreenUpdateListener(this);
-            _containerRect?.UnsubscribeDynamicRectListener(this);
+           _containerRect?.UnsubscribeDynamicRectListener(this);
+            source?.UnsubscribeDynamicRectListener(this);
             
             // Group
             if (group != null)
@@ -107,37 +109,45 @@ namespace GourdUI
         }
 
         #endregion Initialization
+
+
+        #region Interaction
+
+        public void OnDynamicRectInteractionStart(IUIDynamicRect d)
+        {
+            OnContainerSpaceUpdated();
+        }
+
+        public void OnDynamicRectInteractionEnd(IUIDynamicRect d)
+        {
+            
+        }
+
+        #endregion Interaction
         
 
         #region Container
         
         void IUIDynamicRectListener.OnDynamicRectUpdate(IUIDynamicRect d)
         {
-            RefreshContainerBoundary();
+            if (d != source)
+            {
+                OnContainerSpaceUpdated();
+            }
         }
 
         void IScreenRectUpdateListener.OnScreenRectUpdated(Rect rect)
         {
-            RefreshContainerBoundary();
+            RefreshContainerBoundary(true);
         }
 
         /// <summary>
         /// Refreshes the container space in which this object is contained
         /// </summary>
-        private void RefreshContainerBoundary(bool forceUpdate = true)
+        private void RefreshContainerBoundary(bool updateElementPosition = false)
         {
             // If we're part of a group, we need to get the refined group container space
-            if (group != null && source.activeControl && _hasInitialized)
-            {
-                // Get container from group
-                _positionEvaluationSpace = group.GetGroupedElementEvaluationBoundary(
-                    this,
-                    sourceSpace, 
-                    new RectSpace(container),
-                    _currentElementFreeSpaces,
-                    out _currentElementFreeSpaces);
-            }
-            else
+            if (!RefreshGroupFreeSpaces())
             {
                 if (!_hasExplicitContainer)
                 {
@@ -150,10 +160,28 @@ namespace GourdUI
             }
             
             // Optionally update the dynamic rect
-            if (forceUpdate)
+            if (updateElementPosition)
             {
                 source.ForceUpdate();
             }
+        }
+
+        private bool RefreshGroupFreeSpaces()
+        {
+            // If we're part of a group, we need to get the refined group container space
+            if (group != null && _hasInitialized)
+            {
+                // Get container from group
+                _positionEvaluationSpace = group.GetGroupedElementEvaluationBoundary(
+                    this,
+                    new RectSpace(source.dynamicTransform), 
+                    new RectSpace(container),
+                    _currentElementFreeSpaces,
+                    out _currentElementFreeSpaces);
+
+                return true;
+            }
+            return false;
         }
 
         #endregion Container
@@ -161,24 +189,31 @@ namespace GourdUI
 
         #region Overlap
 
-        Vector2 IUIDynamicRectFilter.FilterPositionAdjustment()
+        /// <summary>
+        /// Updates the bounds of the freespaces when this element's container is updated
+        /// </summary>
+        private void OnContainerSpaceUpdated()
         {
             // Update our source's space
-            sourceSpace = new RectSpace(source.dynamicTransform);
-            if (source.activeControl)
-            {
-                RefreshContainerBoundary(false);
-            }
+            RefreshContainerBoundary(!source.activeControl);
+        }
+
+        Tuple<Vector2, bool, bool> IUIDynamicRectPositionFilter.GetFilteredPosition()
+        {
+            // Refersh container
+            RefreshContainerBoundary();
             
-            // Find any overlap outside of our object's container
-            Vector2 boundaryOverlap =
-                RectBoundariesUtility.GetRectSpaceOverlap(sourceSpace, _positionEvaluationSpace);
-             
-            return boundaryOverlap;
+            // Find the overlap with the current container
+            Vector2 boundaryOverlap = RectBoundariesUtility.GetRectSpaceOverlap(
+                new RectSpace(source.dynamicTransform),
+                _positionEvaluationSpace);
+
+            return new Tuple<Vector2, bool, bool>(
+                boundaryOverlap,
+                boundaryOverlap.x != 0,
+                boundaryOverlap.y != 0);
         }
 
         #endregion Overlap
-
-        
     }
 }

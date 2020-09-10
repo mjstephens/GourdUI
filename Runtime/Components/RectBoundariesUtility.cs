@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace GourdUI
@@ -27,45 +28,56 @@ namespace GourdUI
         public static RectSpace[] GetSplitSpacesFromObstacle(RectSpace obstacle, RectSpace spaceToSplit)
         {
             // Left, top, right, bottom
-            RectSpace[] splitSpaces = new RectSpace[4];
+            List<RectSpace> splitSpaces = new List<RectSpace>();
 
             // Left space
-            splitSpaces[0] = new RectSpace
+            splitSpaces.Add(new RectSpace
             {
                 lowerLeft = spaceToSplit.lowerLeft,
                 upperLeft = spaceToSplit.upperLeft,
                 upperRight = new Vector3(obstacle.left, spaceToSplit.top, 0),
                 lowerRight = new Vector3(obstacle.left, spaceToSplit.bottom, 0),
-            };
+            });
             
             // Top space
-            splitSpaces[1] = new RectSpace
+            splitSpaces.Add(new RectSpace
             {
                 lowerLeft = new Vector3(spaceToSplit.left, obstacle.top, 0),
                 upperLeft = spaceToSplit.upperLeft,
                 upperRight = spaceToSplit.upperRight,
                 lowerRight = new Vector3(spaceToSplit.right, obstacle.top, 0),
-            };
+            });
             
             // Right space
-            splitSpaces[2] = new RectSpace
+            splitSpaces.Add(new RectSpace
             {
                 lowerLeft = new Vector3(obstacle.right, spaceToSplit.bottom, 0),
                 upperLeft = new Vector3(obstacle.right, spaceToSplit.top, 0),
                 upperRight = spaceToSplit.upperRight,
                 lowerRight = spaceToSplit.lowerLeft,
-            };
+            });
             
             // Bottom space
-            splitSpaces[3] = new RectSpace
+            splitSpaces.Add(new RectSpace
             {
                 lowerLeft = spaceToSplit.lowerLeft,
                 upperLeft = new Vector3(spaceToSplit.left, obstacle.bottom, 0),
                 upperRight = new Vector3(spaceToSplit.right, obstacle.bottom, 0),
                 lowerRight = spaceToSplit.lowerRight,
-            };
+            });
 
-            return splitSpaces;
+            // Remove any created spaces that are too small
+            const float epsilon = 0.001f;
+            for (int i = splitSpaces.Count - 1; i >= 0; i--)
+            {
+                if (Mathf.Abs(splitSpaces[i].top - splitSpaces[i].bottom) <= epsilon ||
+                    Mathf.Abs(splitSpaces[i].left - splitSpaces[i].right) <= epsilon)
+                {
+                    splitSpaces.RemoveAt(i);
+                }
+            }
+
+            return splitSpaces.ToArray();
         }
         
         

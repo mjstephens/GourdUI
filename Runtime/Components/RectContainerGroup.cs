@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -17,10 +18,13 @@ namespace GourdUI
         {
             _elements.Remove(element);
         }
-        
-        
-        
-        
+
+
+        public void UpdateGroup()
+        {
+            
+        }
+
 
         /// <summary>
         /// Returns the FreeSpaces within which the given element is completely contained, AFTER
@@ -99,7 +103,7 @@ namespace GourdUI
             {
                 if (e != activeElement)
                 {
-                    obstacles.Add(e.sourceSpace);
+                    obstacles.Add(new RectSpace(e.source.dynamicTransform));
                 }
             }
             
