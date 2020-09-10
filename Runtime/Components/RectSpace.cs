@@ -46,43 +46,15 @@ namespace GourdUI
         public float top => upperLeft.y;
         public float right => upperRight.x;
         public float bottom => lowerRight.y;
+        
+        public float width => right - left;
+        public float height => top - bottom;
+        public Vector2 center => new Vector2(left + (width / 2), bottom + (height / 2));
+        
+        
         public Vector3 lowerLeft;
         public Vector3 upperLeft;
         public Vector3 upperRight;
         public Vector3 lowerRight;
-
-        
-        
-        #region Equality
-
-        // public bool Equals(RectSpace other)
-        // {
-        //     if (ReferenceEquals(null, other)) return false;
-        //     if (ReferenceEquals(this, other)) return true;
-        //     return markedForRemoval == other.markedForRemoval && lowerLeft.Equals(other.lowerLeft) && upperLeft.Equals(other.upperLeft) && upperRight.Equals(other.upperRight) && lowerRight.Equals(other.lowerRight);
-        // }
-        //
-        // public override bool Equals(object obj)
-        // {
-        //     if (ReferenceEquals(null, obj)) return false;
-        //     if (ReferenceEquals(this, obj)) return true;
-        //     if (obj.GetType() != this.GetType()) return false;
-        //     return Equals((RectSpace) obj);
-        // }
-        //
-        // public override int GetHashCode()
-        // {
-        //     unchecked
-        //     {
-        //         var hashCode = markedForRemoval.GetHashCode();
-        //         hashCode = (hashCode * 397) ^ lowerLeft.GetHashCode();
-        //         hashCode = (hashCode * 397) ^ upperLeft.GetHashCode();
-        //         hashCode = (hashCode * 397) ^ upperRight.GetHashCode();
-        //         hashCode = (hashCode * 397) ^ lowerRight.GetHashCode();
-        //         return hashCode;
-        //     }
-        // }
-
-        #endregion Equality
     }
 }

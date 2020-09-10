@@ -7,13 +7,29 @@ namespace GourdUI
     [RequireComponent(typeof(RectTransform))]
     public class RectContainerElement : MonoBehaviour, IUIDynamicRectPositionFilter, IScreenRectUpdateListener
     {
+        #region Enum
+
+        /// <summary>
+        /// EDGE = element will stop when any of its edges overlaps the container
+        /// CENTER = element will be allowed to leave the contaner in any direction up to it center point
+        /// </summary>
+        public enum ElementBoundaryMode
+        {
+            Edge,
+            Center
+        }
+
+        #endregion Enum
+        
+
         #region Properties
 
         [Header("References")]
         public RectTransform container;
 
-        public bool debug;
-
+        [Header("Settings")] 
+        public ElementBoundaryMode boundaryMode;
+        
         #endregion Properties
         
         
@@ -206,7 +222,8 @@ namespace GourdUI
             // Find the overlap with the current container
             Vector2 boundaryOverlap = RectBoundariesUtility.GetRectSpaceOverlap(
                 new RectSpace(source.dynamicTransform),
-                _positionEvaluationSpace);
+                _positionEvaluationSpace,
+                boundaryMode);
 
             return new Tuple<Vector2, bool, bool>(
                 boundaryOverlap,

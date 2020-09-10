@@ -57,7 +57,9 @@ namespace GourdUI
                 {
                     overlapDistances [i] = 
                         RectBoundariesUtility.GetRectSpaceOverlap(
-                            activeSpace, previousFreeSpaces[i]);
+                            activeSpace, 
+                            previousFreeSpaces[i],
+                            RectContainerElement.ElementBoundaryMode.Edge);
                 }
                 
                 // Which overlap distance was closest? That's the one we want!
@@ -150,7 +152,11 @@ namespace GourdUI
             List<RectSpace> containingSpaces = new List<RectSpace>();
             foreach (RectSpace space in freespaces)
             {
-                if (RectBoundariesUtility.GetRectSpaceOverlap(element, space) == Vector2.zero)
+                if (RectBoundariesUtility.GetRectSpaceOverlap(
+                    element, 
+                    space,
+                    RectContainerElement.ElementBoundaryMode.Edge) 
+                    == Vector2.zero)
                 {
                     containingSpaces.Add(space);
                 }

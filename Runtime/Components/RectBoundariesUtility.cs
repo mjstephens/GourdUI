@@ -97,30 +97,60 @@ namespace GourdUI
         }
 
 
-        public static Vector2 GetRectSpaceOverlap(RectSpace element, RectSpace container)
+        public static Vector2 GetRectSpaceOverlap(
+            RectSpace element, 
+            RectSpace container,
+            RectContainerElement.ElementBoundaryMode mode)
         {
             Vector2 overlap = Vector2.zero;
-            
-            // X overlap
-            if (element.left < container.left)
-            {
-                overlap = new Vector2(element.left - container.left, overlap.y);
-            }
 
-            if (element.right > container.right)
+            if (mode == RectContainerElement.ElementBoundaryMode.Edge)
             {
-                overlap = new Vector2(element.right - container.right, overlap.y);
-            }
-            
-            // Y overlap
-            if (element.top > container.top)
-            {
-                overlap = new Vector2(overlap.x, element.top - container.top);
-            }
+                // X overlap
+                if (element.left < container.left)
+                {
+                    overlap = new Vector2(element.left - container.left, overlap.y);
+                }
 
-            if (element.bottom < container.bottom)
+                if (element.right > container.right)
+                {
+                    overlap = new Vector2(element.right - container.right, overlap.y);
+                }
+            
+                // Y overlap
+                if (element.top > container.top)
+                {
+                    overlap = new Vector2(overlap.x, element.top - container.top);
+                }
+
+                if (element.bottom < container.bottom)
+                {
+                    overlap = new Vector2(overlap.x, element.bottom - container.bottom);
+                }
+            }
+            else
             {
-                overlap = new Vector2(overlap.x, element.bottom - container.bottom);
+                // X overlap
+                if (element.center.x < container.left)
+                {
+                    overlap = new Vector2(element.center.x - container.left, overlap.y);
+                }
+
+                if (element.center.x > container.right)
+                {
+                    overlap = new Vector2(element.center.x - container.right, overlap.y);
+                }
+            
+                // Y overlap
+                if (element.center.y > container.top)
+                {
+                    overlap = new Vector2(overlap.x, element.center.y - container.top);
+                }
+
+                if (element.center.y < container.bottom)
+                {
+                    overlap = new Vector2(overlap.x, element.center.y - container.bottom);
+                }
             }
 
             return overlap;
