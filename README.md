@@ -1,6 +1,6 @@
 # GourdUI
 
-GourdUI is a utility package + framework designed to make working with complex UI in Unity easier and, most significantly, more maintainable.
+GourdUI is a Unity3D utility package + framework designed to make working with complex UI easier and, most significantly, more maintainable.
 
 **This package is currently under construction - more to come**
 
