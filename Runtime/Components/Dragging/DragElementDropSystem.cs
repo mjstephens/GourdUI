@@ -66,41 +66,60 @@ namespace GourdUI
                 // Act on raycast results
                 if (_dropcastResults.Count == 0 && _activeDepositArea != null)
                 {
-                    _activeDepositArea.OnDroppableRaycastReceiveExit(this);
-                    OnDragElementContainerHoverExit(_activeDepositArea, null);
-                    _activeDepositArea = null;
+                    OnNullDropcast();
                 }
                 else
                 {
                     foreach (RaycastResult result in _dropcastResults)
                     {
                         DepositArea d = result.gameObject.GetComponent<DepositArea>();
-                        if (d != null && d.gameObject != gameObject)
+                        if (d != null)
                         {
-                            if (d != _activeDepositArea)
+                            if (d.gameObject != gameObject)
                             {
-                                if (_activeDepositArea != null)
+                                if (d != _activeDepositArea)
                                 {
-                                    _activeDepositArea.OnDroppableRaycastReceiveExit(this);
-                                    OnDragElementContainerHoverExit(_activeDepositArea, d);
-                                }
+                                    if (_activeDepositArea != null)
+                                    {
+                                        _activeDepositArea.OnDroppableRaycastReceiveExit(this);
+                                        OnDragElementContainerHoverExit(_activeDepositArea, d);
+                                    }
 
-                                _activeDepositArea = d;
-                                _activeDepositArea.OnDroppableRaycastReceiveEnter(this);
-                                OnDragElementContainerHoverEnter(_activeDepositArea);
-                            }
-                            else
-                            {
-                                _activeDepositArea.OnDroppableRaycastReceiveStay(this);
+                                    _activeDepositArea = d;
+                                    _activeDepositArea.OnDroppableRaycastReceiveEnter(this);
+                                    OnDragElementContainerHoverEnter(_activeDepositArea);
+                                }
+                                else
+                                {
+                                    _activeDepositArea.OnDroppableRaycastReceiveStay(this);
+                                }
                             }
                         
                             break;
+                        }
+                        else
+                        {
+                            dynamicTransform.SetParent(result.gameObject.transform);
+                            OnNullDropcast();
                         }
                     }
                 }
                 
                 yield return null;
             }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private void OnNullDropcast()
+        {
+            if (_activeDepositArea != null)
+            {
+                _activeDepositArea.OnDroppableRaycastReceiveExit(this);
+                OnDragElementContainerHoverExit(_activeDepositArea, null);
+            }
+            _activeDepositArea = null;
         }
 
         /// <summary>
@@ -112,6 +131,10 @@ namespace GourdUI
             if (_activeDepositArea != null)
             {
                 _activeDepositArea.OnDroppableDrop(this);
+            }
+            else
+            {
+                dynamicTransform.SetParent(_defaultParent);
             }
         }
 

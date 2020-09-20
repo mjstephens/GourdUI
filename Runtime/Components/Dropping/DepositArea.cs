@@ -11,7 +11,7 @@ namespace GourdUI
         /// <summary>
         /// Contains the items (ordered) currently in this container
         /// </summary>
-        public List<IUIDroppable> currentItems { get; protected set; }
+        public List<IUIDroppable> currentItems { get; private set; }
 
         /// <summary>
         /// The transform of this deposit area object
