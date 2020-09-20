@@ -1,12 +1,21 @@
 # GourdUI
 
-GourdUI is a utility package + framework designed to make working with complex UI in Unity easier and, most significantly, more maintainable.
+GourdUI is a Unity3D utility package + framework designed to make working with complex UI easier and, most significantly, more maintainable.
 
-**This package is currently under construction - more to come**
-
-This repository contains the UPM package only. The Unity demo project with examples can be found here: https://github.com/mjstephens/GourdUI_Demo   
+This repository contains the UPM package only. The Unity demo project with examples can be found here: https://github.com/mjstephens/GourdUI_Demo
 
 ---
+
+### Author
+
+**Michael Stephens** - [Github](https://github.com/mjstephens)
+
+### Prerequisites
+
+* Unity 2019.4 or later (_Note this has not been tested with earlier versions of Unity, but should work no problem_)
+
+----
+
 **Screens + Views**
 
 
