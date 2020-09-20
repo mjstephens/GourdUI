@@ -1,30 +1,11 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace GourdUI
 {
-    public class RectContainerGroup : MonoBehaviour
+    public class RectContainerGroup : ElementGroup<RectContainerGroup, RectContainerElement>
     {
-        private readonly List<RectContainerElement> _elements = new List<RectContainerElement>();
-        
-        
-        public void RegisterContainerElement(RectContainerElement element)
-        {
-            _elements.Add(element);
-        }
-        
-        public void UnregisterContainerElement(RectContainerElement element)
-        {
-            _elements.Remove(element);
-        }
-
-
-        public void UpdateGroup()
-        {
-            
-        }
-
+        #region Evaluation
 
         /// <summary>
         /// Returns the FreeSpaces within which the given element is completely contained, AFTER
@@ -32,6 +13,7 @@ namespace GourdUI
         /// </summary>
         public RectSpace GetGroupedElementEvaluationBoundary(
             RectContainerElement activeElement, 
+            RectContainerElement.DragElementContainerBoundary boundaryMode,
             RectSpace activeSpace, 
             RectSpace containerSpace,
             List<RectSpace> previousFreeSpaces,
@@ -44,7 +26,11 @@ namespace GourdUI
                 containerSpace);
             
             // Is our element fully contained within any space?
-            List<RectSpace> fs = CalculateEnclosingFreeSpacesForGroupedElement(activeElement, activeSpace, freespaces);
+            List<RectSpace> fs = CalculateEnclosingFreeSpacesForGroupedElement(
+                activeElement, 
+                boundaryMode,
+                activeSpace, 
+                freespaces);
 
             // If we didn't find a space, that means our element is overlapping
             // We want to apply the correction temporarily, re-check to find the correct space,
@@ -59,7 +45,7 @@ namespace GourdUI
                         RectBoundariesUtility.GetRectSpaceOverlap(
                             activeSpace, 
                             previousFreeSpaces[i],
-                            activeElement.boundaryMode);
+                            boundaryMode);
                 }
                 
                 // Which overlap distance was closest? That's the one we want!
@@ -79,7 +65,11 @@ namespace GourdUI
                 // Now we can re-evaluate current spaces for transformed element
                 RectSpace corrected = new RectSpace(activeSpace).TransformWithOffset(evalDistance);
                 List<RectSpace> postCorrectionFS = 
-                    CalculateEnclosingFreeSpacesForGroupedElement(activeElement, corrected, freespaces);
+                    CalculateEnclosingFreeSpacesForGroupedElement(
+                        activeElement, 
+                        boundaryMode,
+                        corrected, 
+                        freespaces);
                 newFreeSpaces = postCorrectionFS.Count > 0 ? postCorrectionFS : new List<RectSpace> {containerSpace};
                 
                 //
@@ -89,7 +79,12 @@ namespace GourdUI
             newFreeSpaces = fs.Count > 0 ? fs : new List<RectSpace> {containerSpace};
             return fs[0];
         }
+
+        #endregion Evaluation
         
+
+        #region Calculation
+
         /// <summary>
         /// Calculates and returns the array of navigable RectSpaces formed in a group by all of the
         /// group elements, excluding the given active element.
@@ -105,7 +100,7 @@ namespace GourdUI
             {
                 if (e != activeElement)
                 {
-                    obstacles.Add(new RectSpace(e.source.dynamicTransform));
+                    obstacles.Add(new RectSpace(e._source.dynamicTransform));
                 }
             }
             
@@ -147,17 +142,14 @@ namespace GourdUI
         /// </summary>
         private static List<RectSpace> CalculateEnclosingFreeSpacesForGroupedElement(
             RectContainerElement activeElement,
+            RectContainerElement.DragElementContainerBoundary boundaryMode,
             RectSpace element, 
             RectSpace[] freespaces)
         {
             List<RectSpace> containingSpaces = new List<RectSpace>();
             foreach (RectSpace space in freespaces)
             {
-                if (RectBoundariesUtility.GetRectSpaceOverlap(
-                    element, 
-                    space,
-                    activeElement.boundaryMode) 
-                    == Vector2.zero)
+                if (RectBoundariesUtility.GetRectSpaceOverlap(element, space, boundaryMode) == Vector2.zero)
                 {
                     containingSpaces.Add(space);
                 }
@@ -165,5 +157,7 @@ namespace GourdUI
 
             return containingSpaces;
         }
+
+        #endregion Calculation
     }
 }

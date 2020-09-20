@@ -1,27 +1,59 @@
-using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 namespace GourdUI
 {
-    public partial class RectDragSource : UIDynamicRect
+    [RequireComponent(typeof(Image))]
+    public partial class DragElement : UIDynamicElement, IUIDroppable, IPointerDownHandler, IPointerUpHandler
     {
-        #region Variables
+        #region Static
 
-        [Header("References")] 
-        [SerializeField]
-        [Tooltip("The object to be dragged. Defaults to the local transform if left null.")]
-        private RectTransform _dragObject;
+        public static readonly List<IUIDroppable> activeDragElements = new List<IUIDroppable>();
+
+        #endregion Static
+        
+        
+        #region Variables
 
         [Header("Values")]
         [SerializeField]
         [Tooltip("How quickly the drag object matches the position of the active input.")]
         private float _lerpSpeed = 25;
+        
         [SerializeField]
         [Tooltip("How fast the drag object slows down after it is released. " +
                  "Use negative values to indicate no momentum.")]
         private float _flingSlowdown = 15;
+        
+        [Header("Focus")] 
+        [SerializeField]
+        protected bool _setAsLastSiblingOnFocus;
+
+        [Header("Containment")] 
+        [SerializeField]
+        [Tooltip("")]
+        private RectContainerElement.DragElementContainerType _containerType;
+        
+        [SerializeField]
+        [Tooltip("")]
+        private RectContainerElement.DragElementContainerBoundary _containerBoundary;
+
+        [SerializeField] 
+        private Transform _groupParent;
+
+        [Header("Dropping")] 
+        [SerializeField]
+        private bool _checkForDropAreasOnDrag = true;
+        
+        public RectTransform droppableRect { get; private set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private RectTransform _dragObject;
 
         /// <summary>
         /// Describes the offset of the pointer when the drag is initiated.
@@ -53,6 +85,13 @@ namespace GourdUI
         /// </summary>
         private bool _rectIsSlidingWithMomentum;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        private RectContainerElement _container;
+
+        private Transform _defaultParent;
+
         private const float CONST_draggerLimitedMaxDistance = 75;
 
         #endregion Variables
@@ -62,30 +101,51 @@ namespace GourdUI
 
         private void Awake()
         {
-            Load();
-        }
-
-        protected override void Load()
-        {
-            // Make sure we only load once
-            if (_hasLoaded)
-            {
-                return;
-            }
-            
+            // Attach the drag object
+            // TODO: Allow drag object to be different than source object
             if (_dragObject == null)
             {
                 _dragObject = transform.GetComponent<RectTransform>();
             }
             dynamicTransform = _dragObject;
+            droppableRect = dynamicTransform;
+            _defaultParent = dynamicTransform.parent;
             
+            // Create the dragger transform that we will use to calculate drag values
             GameObject draggerObj = new GameObject();
             draggerObj.transform.name = "DragAnchor_" + _dragObject.name;
             draggerObj.transform.SetParent(dynamicTransform.parent);
             _dragger = draggerObj.AddComponent<RectTransform>();
             _dragger.position = dynamicTransform.position;
             
-            base.Load();
+            // If we have a container, give it a class to process containment values
+            if (_containerType != RectContainerElement.DragElementContainerType.None)
+            {
+                // Create our new container
+                _container = new RectContainerElement(this, _groupParent, _containerBoundary);
+                
+                // Find out explicit container, plus the dynamic component if applicable
+                RectTransform explicitContainer = null;
+                IUIDynamicElement dynamicContainer = null;
+                if (_containerType == RectContainerElement.DragElementContainerType.Parent)
+                {
+                    explicitContainer = transform.parent.GetComponent<RectTransform>();
+
+                    if (explicitContainer != null)
+                    {
+                        dynamicContainer = explicitContainer.GetComponent<IUIDynamicElement>();
+                    }
+                }
+                
+                //
+                _container.SetContainerType(_containerType, explicitContainer, dynamicContainer);
+            }
+        }
+
+        protected override void OnDisable()
+        {
+            base.OnDisable();
+            _container?.Disable();
         }
 
         private void OnDestroy()
@@ -101,10 +161,11 @@ namespace GourdUI
 
         #region Interaction
 
-        public override void OnPointerDown(PointerEventData eventData)
-        {           
+        void IPointerDownHandler.OnPointerDown(PointerEventData eventData)
+        {
             BeginDrag();
-            base.OnPointerDown(eventData);
+            activeDragElements.Add(this);
+            ActivateElementInteraction();
         }
         
         protected override void InteractionTick(Vector2 activeInputPosition)
@@ -112,9 +173,10 @@ namespace GourdUI
             OnDragFrame(activeInputPosition);
         }
 
-        public override void OnPointerUp(PointerEventData eventData)
+        void IPointerUpHandler.OnPointerUp(PointerEventData eventData)
         {
-            base.OnPointerUp(eventData);
+            EndElementInteraction();
+            activeDragElements.Remove(this);
             EndDrag();
         }
 
@@ -128,16 +190,31 @@ namespace GourdUI
         /// </summary>
         private void BeginDrag()
         {
+            // Reset drag values
             _offset = GetActiveInputPosition() - (Vector2)dynamicTransform.position;
             _draggerPrevPos = _dragger.position;
             _releaseMomentum = Vector2.zero;
             _xAxisBoundaryReached = false;
             _yAxisBoundaryReached = false;
+            GetComponent<Image>().raycastTarget = false;
 
+            // Bring element to front
+            if (_setAsLastSiblingOnFocus)
+            {
+                dynamicTransform.SetAsLastSibling();
+            }
+
+            // Cancel any existing momentum for this draggable
             if (_rectIsSlidingWithMomentum)
             {
                 _rectIsSlidingWithMomentum = false;
                 StopCoroutine(nameof(OnMomentumSlideFrame));
+            }
+
+            // Listen for our draggable entering drop areas 
+            if (_checkForDropAreasOnDrag)
+            {
+                StartCoroutine(nameof(DropcastHover));
             }
         }
 
@@ -160,11 +237,20 @@ namespace GourdUI
         private void EndDrag()
         {
             _releaseMomentum = (Vector2)_dragger.position - _draggerPrevPos;
+
             if (_releaseMomentum != Vector2.zero)
             {
                 _rectIsSlidingWithMomentum = true;
                 StartCoroutine(nameof(OnMomentumSlideFrame));
             }
+            
+            // Listen for our draggable entering drop areas 
+            if (_checkForDropAreasOnDrag)
+            {
+                StopCoroutine(nameof(DropcastHover));
+                Dropcast();
+            }
+            GetComponent<Image>().raycastTarget = true;
         }
 
         private void LimitDraggerDistance()
@@ -228,12 +314,12 @@ namespace GourdUI
             }
             
             // Once the sliding has stopped, we know the interaction is completely over
-            OnInteractionEnd();
+            EndElementInteraction();
         }
 
         #endregion Momentum
 
-        
+
         #region Update
 
         protected override void UpdateDynamicRect(bool forced = false)

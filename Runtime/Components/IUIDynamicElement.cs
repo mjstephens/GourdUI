@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace GourdUI
 {
-    public interface IUIDynamicRect
+    public interface IUIDynamicElement
     {
         #region Properties
 
@@ -21,8 +21,8 @@ namespace GourdUI
 
         #region Methods
 
-        void SubscribeDynamicRectListener(IUIDynamicRectListener l);
-        void UnsubscribeDynamicRectListener(IUIDynamicRectListener l);
+        void SubscribeDynamicElementListener(IUIDynamicElementListener l);
+        void UnsubscribeDynamicElementListener(IUIDynamicElementListener l);
         
         /// <summary>
         /// Listeners or filters may have need of forcing a dynamic rect update.

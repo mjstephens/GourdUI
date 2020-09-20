@@ -1,12 +1,12 @@
 namespace GourdUI
 {
-    public static class UIDynamicRectFilterEvaluator
+    public static class UIDynamicElementFilterEvaluator
     {
-        public static void EvaluateFilter(UIDynamicRect rect, IUIDynamicRectFilter filter)
+        public static void EvaluateFilter(UIDynamicElement rect, IUIDynamicElementFilter filter)
         {
             switch (filter)
             {
-                case IUIDynamicRectPositionFilter positionFilter:
+                case IUIDynamicElementPositionFilter positionFilter:
                     rect.ApplyPositionFilterResult(
                         positionFilter.GetFilteredPosition());
                     break;

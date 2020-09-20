@@ -22,9 +22,6 @@ namespace GourdUI
                    RectContainsPoint(space.lowerRight, container);
         }
         
-        
-        
-        
         public static RectSpace[] GetSplitSpacesFromObstacle(RectSpace obstacle, RectSpace spaceToSplit)
         {
             // Left, top, right, bottom
@@ -67,15 +64,15 @@ namespace GourdUI
             });
 
             // Remove any created spaces that are too small
-            const float epsilon = 0.001f;
-            for (int i = splitSpaces.Count - 1; i >= 0; i--)
-            {
-                if (Mathf.Abs(splitSpaces[i].top - splitSpaces[i].bottom) <= epsilon ||
-                    Mathf.Abs(splitSpaces[i].left - splitSpaces[i].right) <= epsilon)
-                {
-                    splitSpaces.RemoveAt(i);
-                }
-            }
+            // const float epsilon = 0.001f;
+            // for (int i = splitSpaces.Count - 1; i >= 0; i--)
+            // {
+            //     if (Mathf.Abs(splitSpaces[i].top - splitSpaces[i].bottom) <= epsilon ||
+            //         Mathf.Abs(splitSpaces[i].left - splitSpaces[i].right) <= epsilon)
+            //     {
+            //         splitSpaces.RemoveAt(i);
+            //     }
+            // }
 
             return splitSpaces.ToArray();
         }
@@ -100,11 +97,11 @@ namespace GourdUI
         public static Vector2 GetRectSpaceOverlap(
             RectSpace element, 
             RectSpace container,
-            RectContainerElement.ElementBoundaryMode mode)
+            RectContainerElement.DragElementContainerBoundary mode)
         {
             Vector2 overlap = Vector2.zero;
 
-            if (mode == RectContainerElement.ElementBoundaryMode.Edge)
+            if (mode == RectContainerElement.DragElementContainerBoundary.Edge)
             {
                 // X overlap
                 if (element.left < container.left)

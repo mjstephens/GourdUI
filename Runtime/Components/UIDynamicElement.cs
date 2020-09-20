@@ -2,20 +2,17 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 namespace GourdUI
 {
     [RequireComponent(typeof(RectTransform))]
-    public abstract class UIDynamicRect : MonoBehaviour, IUIDynamicRect, IPointerDownHandler, IPointerUpHandler
+    public abstract class UIDynamicElement : MonoBehaviour, IUIDynamicElement 
     {
         #region Properties
 
         public RectTransform dynamicTransform { get; protected set; }
         
         public bool activeControl { get; protected set; }
-        
-        public Vector2 defaultPosition { get; private set; }
 
         #endregion Properties
 
@@ -25,19 +22,17 @@ namespace GourdUI
         /// <summary>
         /// Collection of listeners that need to be informed when the dynaimc rect is updated.
         /// </summary>
-        private readonly List<IUIDynamicRectListener> _listeners = new List<IUIDynamicRectListener>();
+        private readonly List<IUIDynamicElementListener> _listeners = new List<IUIDynamicElementListener>();
         
         /// <summary>
         /// 
         /// </summary>
-        private readonly List<IUIDynamicRectFilter> _filters = new List<IUIDynamicRectFilter>();
+        private readonly List<IUIDynamicElementFilter> _filters = new List<IUIDynamicElementFilter>();
 
         /// <summary>
         /// True if we are currently interacting with this dynamic rect
         /// </summary>
         protected bool _interacting;
-
-        protected bool _hasLoaded;
 
         protected bool _xAxisBoundaryReached;
         protected bool _yAxisBoundaryReached; 
@@ -47,19 +42,13 @@ namespace GourdUI
 
         #region Initialization
 
-        protected virtual void Load()
-        {
-            defaultPosition = dynamicTransform.position;
-            _hasLoaded = true;
-        }
-        
         protected virtual void OnDisable()
         {
             if (_interacting)
             {
                 _interacting = false;
                 StopCoroutine(nameof(DynamicRectInteractionTick));
-                OnInteractionEnd();
+                EndElementInteraction();
             }
         }
 
@@ -68,25 +57,22 @@ namespace GourdUI
 
         #region Listeners
 
-        void IUIDynamicRect.SubscribeDynamicRectListener(IUIDynamicRectListener l)
+        void IUIDynamicElement.SubscribeDynamicElementListener(IUIDynamicElementListener l)
         {
-            // Listeners may get to us before we've loaded - make sure we're g2g
-            Load();
-            
             if (!_listeners.Contains(l))
             {
                 _listeners.Add(l);
-                if (l is IUIDynamicRectFilter f)
+                if (l is IUIDynamicElementFilter f)
                 {
                     _filters.Add(f);
                 }
             }
         }
 
-        void IUIDynamicRect.UnsubscribeDynamicRectListener(IUIDynamicRectListener l)
+        void IUIDynamicElement.UnsubscribeDynamicElementListener(IUIDynamicElementListener l)
         {
             _listeners.Remove(l);
-            if (l is IUIDynamicRectFilter f)
+            if (l is IUIDynamicElementFilter f)
             {
                 _filters.Remove(f);
             }
@@ -97,7 +83,7 @@ namespace GourdUI
 
         #region Interaction
 
-        public virtual void OnPointerDown(PointerEventData eventData)
+        protected void ActivateElementInteraction()
         {
             if (!_interacting)
             {
@@ -105,13 +91,13 @@ namespace GourdUI
                 activeControl = true;
                 StartCoroutine(nameof(DynamicRectInteractionTick));
                 
-                foreach (IUIDynamicRectListener listener in _listeners)
+                foreach (IUIDynamicElementListener listener in _listeners)
                 {
-                    listener.OnDynamicRectInteractionStart(this);
+                    listener.OnDynamicElementInteractionStart(this);
                 }
             }
         }
-        
+
         protected IEnumerator DynamicRectInteractionTick()
         {
             while (_interacting)
@@ -123,24 +109,21 @@ namespace GourdUI
         
         protected abstract void InteractionTick(Vector2 activeInputPosition);
 
-        public virtual void OnPointerUp(PointerEventData eventData)
+        /// <summary>
+        /// Called from child class when interaction has completely ended
+        /// </summary>
+        protected void EndElementInteraction()
         {
             if (_interacting)
             {
                 _interacting = false;
                 StopCoroutine(nameof(DynamicRectInteractionTick));
             }
-        }
-        
-        /// <summary>
-        /// Called from child class when interaction has completely ended
-        /// </summary>
-        protected void OnInteractionEnd()
-        {
+            
             activeControl = false;
-            foreach (IUIDynamicRectListener listener in _listeners)
+            foreach (IUIDynamicElementListener listener in _listeners)
             {
-                listener.OnDynamicRectInteractionEnd(this);
+                listener.OnDynamicElementInteractionEnd(this);
             }
         }
 
@@ -160,7 +143,7 @@ namespace GourdUI
 
         #region Rect Updates
 
-        void IUIDynamicRect.ForceUpdate()
+        void IUIDynamicElement.ForceUpdate()
         {
             UpdateDynamicRect(true);
         }
@@ -171,15 +154,15 @@ namespace GourdUI
         protected virtual void UpdateDynamicRect(bool forced = false)
         {
             // Apply filtered updates
-            foreach (IUIDynamicRectFilter filter in _filters)
+            foreach (IUIDynamicElementFilter filter in _filters)
             {
-                UIDynamicRectFilterEvaluator.EvaluateFilter(this, filter);
+                UIDynamicElementFilterEvaluator.EvaluateFilter(this, filter);
             }
             
             // Update listeners
-            foreach (IUIDynamicRectListener listener in _listeners)
+            foreach (IUIDynamicElementListener listener in _listeners)
             {
-                listener.OnDynamicRectUpdate(this);
+                listener.OnDynamicElementUpdate(this);
             }
         }
         

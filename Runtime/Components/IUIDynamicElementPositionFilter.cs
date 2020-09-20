@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace GourdUI
 {
-    public interface IUIDynamicRectPositionFilter : IUIDynamicRectFilter
+    public interface IUIDynamicElementPositionFilter : IUIDynamicElementFilter
     {
         Tuple<Vector2, bool, bool> GetFilteredPosition();
     }

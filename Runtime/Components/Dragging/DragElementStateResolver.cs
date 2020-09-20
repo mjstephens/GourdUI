@@ -1,10 +1,10 @@
 namespace GourdUI
 {
-    public partial class RectDragSource
+    public partial class DragElement
     {
         #region State
 
-        public void ApplyState(RectDragSourceState state)
+        public void ApplyState(DragElementState state)
         {
             _interacting = false;
             dynamicTransform.localPosition = state.dtPosition;
@@ -29,9 +29,9 @@ namespace GourdUI
             }
         }
 
-        public RectDragSourceState RetrieveState()
+        public DragElementState RetrieveState()
         {
-            return new RectDragSourceState
+            return new DragElementState
             {
                 activeControl = activeControl,
                 dtPosition = dynamicTransform.localPosition,

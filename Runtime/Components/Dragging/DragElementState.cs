@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace GourdUI
 {
-    public struct RectDragSourceState
+    public struct DragElementState
     {
         public bool activeControl;
         public Vector2 dtPosition;
