@@ -9,13 +9,6 @@ namespace GourdUI
     [RequireComponent(typeof(Image))]
     public partial class DragElement : UIDynamicElement, IUIDroppable, IPointerDownHandler, IPointerUpHandler
     {
-        #region Static
-
-        public static readonly List<IUIDroppable> activeDragElements = new List<IUIDroppable>();
-
-        #endregion Static
-        
-        
         #region Variables
 
         [Header("Values")]
@@ -93,9 +86,12 @@ namespace GourdUI
         private Transform _defaultParent;
 
         private const float CONST_draggerLimitedMaxDistance = 75;
+        
+        private readonly List<IDropElementEventReceivable> _decorators = new List<IDropElementEventReceivable>();
+
 
         #endregion Variables
-         
+
 
         #region Initialization
 
@@ -110,11 +106,12 @@ namespace GourdUI
             dynamicTransform = _dragObject;
             droppableRect = dynamicTransform;
             _defaultParent = dynamicTransform.parent;
+            _defaultScale = dynamicTransform.localScale;
             
             // Create the dragger transform that we will use to calculate drag values
             GameObject draggerObj = new GameObject();
             draggerObj.transform.name = "DragAnchor_" + _dragObject.name;
-            draggerObj.transform.SetParent(dynamicTransform.parent);
+            draggerObj.transform.SetParent(_defaultParent);
             _dragger = draggerObj.AddComponent<RectTransform>();
             _dragger.position = dynamicTransform.position;
             
@@ -157,6 +154,24 @@ namespace GourdUI
         }
 
         #endregion Initialization
+        
+        
+        #region Decorators
+
+        public void SubscribeDecorator(IDropElementEventReceivable decorator)
+        {
+            if (!_decorators.Contains(decorator))
+            {
+                _decorators.Add(decorator);
+            }
+        }
+        
+        public void UnsubscribeDecorator(IDropElementEventReceivable decorator)
+        { 
+            _decorators.Remove(decorator);
+        }
+
+        #endregion Decorators
 
 
         #region Interaction
@@ -164,7 +179,6 @@ namespace GourdUI
         void IPointerDownHandler.OnPointerDown(PointerEventData eventData)
         {
             BeginDrag();
-            activeDragElements.Add(this);
             ActivateElementInteraction();
         }
         
@@ -176,7 +190,6 @@ namespace GourdUI
         void IPointerUpHandler.OnPointerUp(PointerEventData eventData)
         {
             EndElementInteraction();
-            activeDragElements.Remove(this);
             EndDrag();
         }
 

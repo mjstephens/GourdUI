@@ -9,8 +9,21 @@ namespace GourdUI
     {
         #region Variables
 
-        private static DepositArea _activeDepositArea;
-        
+        /// <summary>
+        /// The deposit area we are actively hovering over (null if none)
+        /// </summary>
+        protected static DepositArea _activeDepositArea;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        protected static Transform _originParent;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public DepositArea originalDepositArea { get; private set; }
+
         /// <summary>
         /// Cached event data
         /// </summary>
@@ -21,13 +34,25 @@ namespace GourdUI
         /// </summary>
         private static readonly List<RaycastResult> _dropcastResults = new List<RaycastResult>();
 
+        /// <summary>
+        /// 
+        /// </summary>
+        private Vector3 _defaultScale;
+
         #endregion Variables
         
         
         #region Raycast
 
+        /// <summary>
+        /// Uses event system to raycast to all UI elements as the elemnt is being dragged.
+        /// </summary>
+        /// <returns></returns>
         private IEnumerator DropcastHover()
         {
+            _originParent = dynamicTransform.parent;
+            originalDepositArea = _activeDepositArea;
+            
             while (true)
             {
                 // Raycast with even system
@@ -42,7 +67,7 @@ namespace GourdUI
                 if (_dropcastResults.Count == 0 && _activeDepositArea != null)
                 {
                     _activeDepositArea.OnDroppableRaycastReceiveExit(this);
-                    OnDragElementContainerHoverExit(_activeDepositArea);
+                    OnDragElementContainerHoverExit(_activeDepositArea, null);
                     _activeDepositArea = null;
                 }
                 else
@@ -57,6 +82,7 @@ namespace GourdUI
                                 if (_activeDepositArea != null)
                                 {
                                     _activeDepositArea.OnDroppableRaycastReceiveExit(this);
+                                    OnDragElementContainerHoverExit(_activeDepositArea, d);
                                 }
 
                                 _activeDepositArea = d;
@@ -94,53 +120,52 @@ namespace GourdUI
 
         #region Drop
 
-        public void OnDragElementContainerHoverEnter(DepositArea container)
+        public virtual void OnDragElementContainerHoverEnter(DepositArea container)
         {
             dynamicTransform.SetParent(container.depositAreaTransform);
+            
+            // Inform decorators
+            foreach (IDropElementEventReceivable d in _decorators)
+            {
+                d.OnDragElementContainerHoverEnter(container);
+            }
         }
 
-        public void OnDragElementContainerHoverExit(DepositArea container)
+        public virtual void OnDragElementContainerHoverExit(DepositArea outContainer, DepositArea inContainer)
         {
             dynamicTransform.SetParent(_defaultParent);
+            dynamicTransform.localScale = _defaultScale;
+            
+            // Inform decorators
+            foreach (IDropElementEventReceivable d in _decorators)
+            {
+                d.OnDragElementContainerHoverExit(outContainer, inContainer);
+            }
         }
 
-        public void OnDragElementDrop(DepositArea container)
+        public virtual void OnDragElementDrop(DepositArea container)
         {
-            if (container != null)
+            // Cancel any momentum we may have after dragging
+            if (container != null && 
+                _originParent != container.depositAreaTransform && 
+                _rectIsSlidingWithMomentum)
             {
-                dynamicTransform.SetParent(container.depositAreaTransform);
+                _rectIsSlidingWithMomentum = false;
+                StopCoroutine(nameof(OnMomentumSlideFrame));
             }
-            else
+            
+            // If we drop out of the area we were previously in, we need to inform that area
+            if (originalDepositArea != null && _activeDepositArea != originalDepositArea)
             {
-                dynamicTransform.SetParent(_defaultParent);
+                originalDepositArea.OnDroppableRemove(this);
             }
-            // if (dropZone.snapType == DropZoneElement.SnapOptions.None && !_parentOnDrop)
-            //     return;
-            //
-            // switch (dropZone.snapType)
-            // {
-            //     case DropZoneElement.SnapOptions.ToCenter:
-            //         dynamicTransform.position = dropZone.transform.position;
-            //         break;
-            //     case DropZoneElement.SnapOptions.ToContained:
-            //         Vector2 boundaryOverlap = RectBoundariesUtility.GetRectSpaceOverlap(
-            //             new RectSpace(dynamicTransform),
-            //             new RectSpace(dropZone.dynamicTransform),
-            //             RectContainerElement.DragElementContainerBoundary.Edge);
-            //         dynamicTransform.position -= (Vector3)boundaryOverlap;
-            //         break;
-            // }
-            //
-            // if (_parentOnDrop)
-            // {
-            //     transform.SetParent(dropZone.transform);
-            // }
-            //
-            // if (_rectIsSlidingWithMomentum)
-            // {
-            //     _rectIsSlidingWithMomentum = false;
-            //     StopCoroutine(nameof(OnMomentumSlideFrame));
-            // }
+            dynamicTransform.localScale = _defaultScale;
+            
+            // Inform decorators
+            foreach (IDropElementEventReceivable d in _decorators)
+            {
+                d.OnDragElementDrop(container);
+            }
         }
 
         #endregion Drop
