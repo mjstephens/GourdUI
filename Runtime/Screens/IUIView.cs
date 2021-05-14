@@ -1,7 +1,8 @@
 using GourdUI;
 using UnityEngine;
 
-public interface IUIContractView<in S> where S : UIState
+public interface IUIView<in S> : IBaseUIElement 
+    where S : UIState
 {
     #region Properties
 
@@ -30,9 +31,7 @@ public interface IUIContractView<in S> where S : UIState
     /// Should immediately apply screen state to view
     /// </summary>
     /// <param name="state"></param>
-    /// <param name="isScreenInstantiation"></param>
-    /// <param name="isFirstInstantiate"></param>
-    void ApplyScreenStateToView(S state, bool isScreenInstantiation);
+    void ApplyScreenStateToView(S state);
     
     /// <summary>
     /// Cleans up and destroys the view instance

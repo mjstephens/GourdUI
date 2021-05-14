@@ -7,8 +7,8 @@ namespace GourdUI
     /// See documentation for usage.
     /// </summary>
     [RequireComponent(typeof(Canvas))]
-    public abstract class UIView<C,S> : MonoBehaviour, IUIContractView<S>
-        where C : class, IUIContractScreen
+    public abstract class UIView<C,S> : BaseUIElement, IUIView<S>
+        where C : class, IUIContract
         where S : UIState
     {
         #region Properties
@@ -19,13 +19,13 @@ namespace GourdUI
         public C screenContract { get; set; }
         
         public Canvas viewCanvas { get; private set;  }
-
-
+        
         /// <summary>
         /// 
         /// </summary>
         private UIViewFilterComponent[] _filterComponents;
 
+        protected S state { get; private set; }
 
         #endregion Properties
         
@@ -40,33 +40,23 @@ namespace GourdUI
             // Gather filter components in hierarchy
             _filterComponents = GetComponentsInChildren<UIViewFilterComponent>();
             FilterComponents(deviceData);
-            
-            //
-            if (isScreenInstantiation)
-            {
-                OnScreenInstantiated();
-            }
         }
 
-        protected abstract void OnScreenInstantiated();
-
-        void IUIContractView<S>.OnAppDeviceDataUpdated(AppDeviceData deviceData)
+        void IUIView<S>.OnAppDeviceDataUpdated(AppDeviceData deviceData)
         {
             FilterComponents(deviceData);
         }
 
-        public abstract void ApplyScreenStateToView(S state, bool isScreenInstantiation);
-        
-        void IUIContractView<S>.OnDestroyView()
+        public void ApplyScreenStateToView(S s)
         {
-            OnViewPreDestroy();
+            state = s;
+        }
+        
+        void IUIView<S>.OnDestroyView()
+        {
+            Cleanup();
             Destroy(gameObject);
         }
-
-        /// <summary>
-        /// Called directly before the view instance is destroyed.
-        /// </summary>
-        protected abstract void OnViewPreDestroy();
 
         #endregion View Methods
 

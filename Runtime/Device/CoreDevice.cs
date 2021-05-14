@@ -5,7 +5,7 @@ namespace GourdUI
 {
     public class CoreDevice : ICoreDevice
     {
-        private static RuntimePlatform EquivalentPlatform 
+        private static RuntimePlatform EditorEquivalentPlatform 
         { 
             get
             {
@@ -50,7 +50,7 @@ namespace GourdUI
         #region Variables
 
         /// <summary>
-        /// The currect device data.
+        /// The current device data.
         /// </summary>
         private static AppDeviceData _currentDeviceData;
 
@@ -80,7 +80,7 @@ namespace GourdUI
         
         #region Constructor
 
-        public CoreDevice()
+        public CoreDevice() 
         {
             // Create update hook
             DeviceUpdateHook hook = new GameObject().AddComponent<DeviceUpdateHook>();
@@ -205,7 +205,7 @@ namespace GourdUI
             if (testPlatform == RuntimePlatform.OSXEditor ||
                 testPlatform == RuntimePlatform.WindowsEditor)
             {
-                testPlatform = EquivalentPlatform;
+                testPlatform = EditorEquivalentPlatform;
             }
             
             DevicePlatform devicePlatform;

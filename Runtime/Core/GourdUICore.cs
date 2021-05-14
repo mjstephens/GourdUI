@@ -57,7 +57,6 @@ namespace GourdUI
         void IGourdUI.RegisterScreen(IUIScreen screen)
         {
             _currentUIScreens.Add(screen);
-            screen.OnScreenInstantiated();
         }
 
         // Removes the screen from the core
@@ -87,7 +86,7 @@ namespace GourdUI
             _screenStack.Add(screen);
             
             // Enable the UI screen
-            screen.OnScreenEnabled(data);
+            screen.Show();
 
             // Refresh the stack
             RefreshUIScreenStack();
@@ -106,7 +105,7 @@ namespace GourdUI
                 return;
             
             _screenStack.Remove(screen);
-            screen.OnScreenDisabled();
+            screen.Hide();
             if (screen.ScreenConfigData().lockUIUntilDismissed)
             {
                 _locked = false;

@@ -34,6 +34,7 @@ namespace GourdUI
         public bool lockUIUntilDismissed;
         public bool activeOnLoad;
         public bool persistent;
+        public bool ignoreAutoStacking;
 
         [Header("State Behavior")] 
         public bool resetStateBetweenViewChanges;

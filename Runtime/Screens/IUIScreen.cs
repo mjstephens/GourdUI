@@ -1,10 +1,7 @@
 namespace GourdUI
 {
-    public interface IUIScreen
+    public interface IUIScreen : IBaseUIElement
     {
-        void OnScreenInstantiated();
-        void OnScreenEnabled<T>(T data = default);
-        void OnScreenDisabled();
         void OnScreenSetStackOrder(int index);
         void OnAppDeviceDataUpdated(AppDeviceData deviceData);
         UIScreenConfigData ScreenConfigData();

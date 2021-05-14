@@ -40,7 +40,6 @@ namespace GourdUI.Editor
         // Class generation
         private const string CONST_ClassGenClassNameKey = "#CLASSNAME#";
         private const string CONST_ClassGenContractScreenKey = "#CONTRACTSCREEN#";
-        private const string CONST_ClassGenContractViewKey = "#CONTRACTVIEW#";
         private const string CONST_ClassGenStateKey = "#STATE#";
         private const string CONST_ClassGenScreenKey = "#SCREEN#";
         private const string CONST_ClassGenViewKey = "#VIEW#";
@@ -173,8 +172,7 @@ namespace GourdUI.Editor
                 "Compiling Scripts...", 0.6f);
             
             // Class names
-            string contractScreenClass = "IUIContractScreen_" + screenName;
-            string contractViewClass = "IUIContractView_" + screenName;
+            string contractScreenClass = "IUIContract_" + screenName;
             string stateClass = "UIState_" + screenName;
             string screenClass = "UIScreen_" + screenName;
             string viewClass = "UIView_" + screenName;
@@ -186,27 +184,12 @@ namespace GourdUI.Editor
                     contractScreenClass, 
                     "IUIContractScreenTemplate.txt",
                     contractScreenClass,
-                    contractViewClass,
                     stateClass,
                     screenClass,
                     viewClass);
                 fs.Write(data, 0, data.Length);
-            } 
-            
-            // View contract
-            using (FileStream fs = File.Create(Path.Combine(scriptsPath, contractViewClass + ".cs")))
-            {
-                byte[] data = GetScriptTemplateContents(
-                    contractViewClass, 
-                    "IUIContractViewTemplate.txt",
-                    contractScreenClass,
-                    contractViewClass,
-                    stateClass,
-                    screenClass,
-                    viewClass);
-                fs.Write(data, 0, data.Length);
-            } 
-            
+            }
+
             // UI state
             using (FileStream fs = File.Create(Path.Combine(scriptsPath, stateClass + ".cs")))
             {
@@ -214,7 +197,6 @@ namespace GourdUI.Editor
                     stateClass, 
                     "UIStateTemplate.txt",
                     contractScreenClass,
-                    contractViewClass,
                     stateClass,
                     screenClass,
                     viewClass);
@@ -228,7 +210,6 @@ namespace GourdUI.Editor
                     screenClass, 
                     "UIScreenTemplate.txt",
                     contractScreenClass,
-                    contractViewClass,
                     stateClass,
                     screenClass,
                     viewClass);
@@ -242,7 +223,6 @@ namespace GourdUI.Editor
                     viewClass, 
                     "UIViewTemplate.txt",
                     contractScreenClass,
-                    contractViewClass,
                     stateClass,
                     screenClass,
                     viewClass);
@@ -257,7 +237,6 @@ namespace GourdUI.Editor
             string className, 
             string templatePath,
             string screenContractClass,
-            string viewContractClass,
             string stateClass,
             string screenClass,
             string viewClass)
@@ -266,7 +245,6 @@ namespace GourdUI.Editor
                 CONST_ClassTemplatesDirectory + templatePath).text;
             contents = contents.Replace(CONST_ClassGenClassNameKey, className);
             contents = contents.Replace(CONST_ClassGenContractScreenKey, screenContractClass);
-            contents = contents.Replace(CONST_ClassGenContractViewKey, viewContractClass);
             contents = contents.Replace(CONST_ClassGenStateKey, stateClass);
             contents = contents.Replace(CONST_ClassGenScreenKey, screenClass);
             contents = contents.Replace(CONST_ClassGenViewKey, viewClass);

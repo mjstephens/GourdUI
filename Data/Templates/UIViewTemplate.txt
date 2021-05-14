@@ -2,48 +2,55 @@ using GourdUI;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class #CLASSNAME# : UIView<#CONTRACTSCREEN#, #STATE#>, 
-    #CONTRACTVIEW#
+public class #CLASSNAME# : UIView<#CONTRACTSCREEN#, #STATE#>
 {
     #region Fields
     
     
 
     #endregion Fields
-
-
-    #region Setup
     
-    protected override void OnScreenInstantiated()
+    
+    #region SETUP & SHOW
+ 
+    public override void Setup()
     {
+        base.Setup();
+         
         // Called when the view is instantiated along with the screen.
         // You can use this to call setup animations, fx, etc
         
-        // Is NOT called when a view is being instantiated because of a device/filter change - only when
-        // a screen is being instantiated for the first time.
     }
-
-    public override void ApplyScreenStateToView(#STATE# state)
+     
+    public override void Show()
     {
+        base.Show();
+             
+        // Called when the view is enabled.
+        // You can access the current state of the screen with the "state" variable.
+        
+    }
+ 
+    #endregion SETUP & SHOW
+    
+    
+    #region CLEANUP & HIDE
+    
+    public override void Hide()
+    {
+        base.Hide();
+        
+        // Called before the view is disabled/hidden
         
     }
     
-    #endregion Setup
-    
-    
-    #region Teardown
-
-    protected override void OnViewPreDestroy()
+    public override void Cleanup()
     {
-        // Optionally do things here before the view is destroyed
-    }
-
-    #endregion Teardown
-
-
-    #region Screen Updates
-
+        base.Cleanup();
+        
+        // Called before the view is destroyed
+        
+    }   
     
-
-    #endregion Screen Updates
+    #endregion CLEANUP & HIDE
 }

@@ -5,19 +5,48 @@ using UnityEngine;
 /// UIScreen implementation.
 /// </summary>
 public class #CLASSNAME#: 
-    UIScreen <#CONTRACTSCREEN#, #CONTRACTVIEW#, #STATE#>, 
+    UIScreen <#CONTRACTSCREEN#, IUIView<#STATE#>, #STATE#>, 
     #CONTRACTSCREEN#
 {
-    #region Setup
+    #region SETUP & SHOW
 
-    public override void OnScreenInstantiated()
+    public override void Setup()
     {
-        base.OnScreenInstantiated();
+        base.Setup();
         
         // Opportunity to establish state from external sources before view is updated
     }
+    
+    public override void Show()
+    {
+        base.Show();
+            
+        // Called when the screen is enabled
+            
+    }
 
-    #endregion Setup
+    #endregion SETUP & SHOW
+    
+    
+    #region CLEANUP & HIDE
+    
+    public override void Hide()
+    {
+        base.Hide();
+        
+        // Called before the screen is disabled/hidden
+        
+    }
+    
+    public override void Cleanup()
+    {
+        base.Cleanup();
+        
+        // Called before the screen is destroyed
+        
+    }   
+    
+    #endregion CLEANUP & HIDE
 
 
     #region State
@@ -27,11 +56,5 @@ public class #CLASSNAME#:
         // Use "state" variable to access #STATE#
     }
     
-    protected override void OnViewPreDestroy()
-    {
-        // This is called just before a view is destroyed to be swapped with a new view.
-        // You can grab any values from the view you may need for state data (position, scale, etc)
-    }
-
     #endregion State
 }
